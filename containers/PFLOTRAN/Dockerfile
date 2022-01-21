@@ -26,6 +26,15 @@ CMD ["pwd"]
 CMD ["ls" "-l"]
 CMD ["./test.sh test line in Dockerfile"]
 
+#------------------------------------
+# Configure time zone so apt-get update
+# does not hang.  Thanks to Grigor Khachatryan at:
+# https://grigorkh.medium.com/fix-tzdata-hangs-docker-image-build-cdb52cc3360d
+
+ENV TZ=America/New_York
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+#------------------------------------
+
 # Valgrind is encouraged by PETSC, but I think
 # it might be an optional memory leak tracking
 # tool. Cmake is required by ParMETIS
@@ -48,8 +57,11 @@ RUN apt-get update && apt-get install -y \
 
 # PETSC, need to use current suppored version.
 # As listed on the PFLOTRAN website - note this
-# is not the same as the current version
-# (3.11.2, as of June 3, 2019).
+# is not the same as the current version.
+# Container build is interrupted if the correct
+# PETSC version is not included and it says which
+# version to use (e.g. v3.16.2), which is included
+# below.
 #
 # PETSC can be configured to download and install
 # its own dependencies, in particular HDF5 which
@@ -68,9 +80,9 @@ ENV PETSC_DIR /app/petsc
 ENV PETSC_ARCH arch-linux2-c-opt
 RUN git clone https://bitbucket.org/petsc/petsc petsc; \
     cd petsc; \
-    git checkout v3.10.2; \
+    git checkout v3.16.2; \
     ./configure --CFLAGS='-O3' --CXXFLAGS='-O3' --FFLAGS='-O3' --with-debugging=no --download-mpich=yes --download-hdf5=yes --download-fblaslapack=yes --download-metis=yes --download-parmetis=yes; \
-    make all;
+    make all; \
     cd ../
 
 # PFLOTRAN
