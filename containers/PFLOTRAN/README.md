@@ -23,9 +23,9 @@ docker build -t parallelworks/pflotran .
 
 You can start the container in a `bash` shell with:
 ```bash
-docker run -it --rm parallelworks/pflotran /bin/bash
+docker run -it --rm parallelworks/pflotran:v4.0 /bin/bash
 ```
-If you don't already have the container downloaded to your computer, Docker will automatically pull the container from a public registry.
+If you don't already have the container downloaded to your computer, Docker will automatically pull the container from a public registry.  The last part of the container name (the "tag" or `v4.0` was added later, see below.  If it is not specified, Docker will by default pull the most recent version.)
 
 ## Push container
 
@@ -41,6 +41,7 @@ docker push parallelworks/pfortran:v4.0
 ```
 Now, with
 ```bash
-docker pull parallelworks/pflotran:v4.0`
+docker pull parallelworks/pflotran:v4.0
+```
 this container can be downloaded to any machine
 with Docker.  The download is about 3GB.
