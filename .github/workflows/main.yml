@@ -1,0 +1,19 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  test-workflow:
+    runs-on: ubuntu-latest
+    name: modex-iteration-cloud-pw
+    steps:
+      - name: run-workflow
+        id: run-cloud-pw
+        uses: parallelworks/test-workflow-action@v5
+        with:
+          pw-user-host: 'cloud.parallel.works'
+          pw-api-key: ${{ secrets.PW_API_KEY }}
+          pw-user: 'sfgary'
+          resource-pool-names: 'cloud'
+          workflow-name: 'sl_core'
+          workflow-parameters: '{"commands|conda_env": "parsl-pw", "commands|remote_dir": "/tmp", "commands|conda_sh": "/tmp/pworks/.miniconda3/etc/profile.d/conda.sh", "commands|n_jobs": "4", "commands|num_inputs": "9", "commands|cross_val_score": "False", "commands|model_dir": "./model_dir", "commands|hpo": "False", "commands|backend": "threading", "commands|sanity_test": "None"}'
