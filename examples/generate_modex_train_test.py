@@ -15,7 +15,7 @@ import pandas as pd
 num_init = 100
 
 # Size of subsequent "batches"
-num_batch = 50
+num_batch = 74
 
 #============================
 # Load dataframe
@@ -23,12 +23,15 @@ num_batch = 50
 
 all_data = pd.read_csv('sl_pca_training.csv')
 
+# Total number of rows (Pandas automatically
+# accounts for the header line)
+num_rows = all_data.shape[0]
+
 #============================
 # Random shuffle dataframe
 #============================ 
 
 all_shuffled = all_data.sample(frac=1).reset_index(drop=True)
-print(all_shuffled)
 
 #============================
 # Sort dataframe by pca.dist
@@ -36,7 +39,6 @@ print(all_shuffled)
 
 # We want the highest distances first
 all_sorted = all_data.sort_values(by='pca.dist',axis=0,ascending=False).reset_index(drop=True)
-print(all_sorted)
 
 #============================
 # Plot progression of pca.dist
@@ -64,3 +66,23 @@ all_sorted.pop('pca.dist')
 # larger and larger
 #===========================
 
+# Initial data set
+all_shuffled.iloc[0:num_init,:].to_csv('r_1.csv')
+all_sorted.iloc[0:num_init,:].to_csv('o_1.csv')
+
+# Loop over subsequent data sets
+nn = num_init
+n_file = 2
+while nn <= num_rows:
+    nn = nn + num_batch
+    if nn > num_rows:
+        # We have overrun the end of the file, so simply print the whole DF
+        all_shuffled.iloc[0:num_rows,:].to_csv('r_'+str(n_file)+'.csv')
+        all_sorted.iloc[0:num_rows,:].to_csv('o_'+str(n_file)+'.csv')        
+    else:
+        # We are still marching down the file
+        all_shuffled.iloc[0:nn,:].to_csv('r_'+str(n_file)+'.csv')
+        all_sorted.iloc[0:nn,:].to_csv('o_'+str(n_file)+'.csv')
+    n_file = n_file + 1
+
+print("Done")
