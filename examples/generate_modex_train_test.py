@@ -67,8 +67,8 @@ all_sorted.pop('pca.dist')
 #===========================
 
 # Initial data set
-all_shuffled.iloc[0:num_init,:].to_csv('r_1.csv')
-all_sorted.iloc[0:num_init,:].to_csv('o_1.csv')
+all_shuffled.iloc[0:num_init,:].to_csv('r_1.csv', index=False)
+all_sorted.iloc[0:num_init,:].to_csv('o_1.csv', index=False)
 
 # Loop over subsequent data sets
 nn = num_init
@@ -77,12 +77,12 @@ while nn <= num_rows:
     nn = nn + num_batch
     if nn > num_rows:
         # We have overrun the end of the file, so simply print the whole DF
-        all_shuffled.iloc[0:num_rows,:].to_csv('r_'+str(n_file)+'.csv')
-        all_sorted.iloc[0:num_rows,:].to_csv('o_'+str(n_file)+'.csv')        
+        all_shuffled.iloc[0:num_rows,:].to_csv('r_'+str(n_file)+'.csv', index=False)
+        all_sorted.iloc[0:num_rows,:].to_csv('o_'+str(n_file)+'.csv', index=False)        
     else:
         # We are still marching down the file
-        all_shuffled.iloc[0:nn,:].to_csv('r_'+str(n_file)+'.csv')
-        all_sorted.iloc[0:nn,:].to_csv('o_'+str(n_file)+'.csv')
+        all_shuffled.iloc[0:nn,:].to_csv('r_'+str(n_file)+'.csv', index=False)
+        all_sorted.iloc[0:nn,:].to_csv('o_'+str(n_file)+'.csv', index=False)
     n_file = n_file + 1
 
 print("Done")
