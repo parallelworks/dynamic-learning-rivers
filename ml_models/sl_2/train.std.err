@@ -1,31 +1,5 @@
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/xgboost/compat.py:36: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
   from pandas import MultiIndex, Int64Index
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
-  warnings.warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
   warnings.warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
@@ -64,36 +38,14 @@ STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
 Increase the number of iterations (max_iter) or scale the data as shown in:
     https://scikit-learn.org/stable/modules/preprocessing.html
   self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:549: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  warnings.warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/neural_network/_multilayer_perceptron.py:692: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.
+  warnings.warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
   warnings.warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
@@ -104,169 +56,155 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
   warnings.warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
   warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=9.12665e-10): result may not be accurate.
-  dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=2.88022e-09): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=3.225e-10): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
   warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=1.74318e-09): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=8.24074e-10): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
   warnings.warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
   warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=4.70712e-10): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:157: LinAlgWarning: Ill-conditioned matrix (rcond=1.06704e-08): result may not be accurate.
+  return linalg.solve(A, Xy, sym_pos=True, overwrite_a=True).T
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:157: LinAlgWarning: Ill-conditioned matrix (rcond=1.13947e-08): result may not be accurate.
+  return linalg.solve(A, Xy, sym_pos=True, overwrite_a=True).T
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:157: LinAlgWarning: Ill-conditioned matrix (rcond=1.0941e-08): result may not be accurate.
+  return linalg.solve(A, Xy, sym_pos=True, overwrite_a=True).T
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:157: LinAlgWarning: Ill-conditioned matrix (rcond=9.87091e-09): result may not be accurate.
+  return linalg.solve(A, Xy, sym_pos=True, overwrite_a=True).T
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:157: LinAlgWarning: Ill-conditioned matrix (rcond=1.06113e-08): result may not be accurate.
+  return linalg.solve(A, Xy, sym_pos=True, overwrite_a=True).T
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=3.88596e-09): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=1.27329e-09): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=3.63631e-09): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=1.54477e-09): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=4.25543e-09): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=6.99082e-10): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=2.21776e-09): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=7.99912e-10): result may not be accurate.
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:194: LinAlgWarning: Ill-conditioned matrix (rcond=8.33791e-09): result may not be accurate.
   dual_coef = linalg.solve(K, y, sym_pos=True, overwrite_a=False)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_ridge.py:196: UserWarning: Singular matrix in solving dual problem. Using least-squares solution instead.
-  warnings.warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.480e-03, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.047e-03, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.831e-03, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.787e-04, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.832e-02, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.422e-02, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.091e-02, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.208e-02, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.939e-03, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.785e-03, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.946e-03, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.935e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.462e-03, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.658e-02, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.099e-02, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.514e-02, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.289e-02, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.631e-03, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.573e-03, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.750e-02, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.871e-03, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.951e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.209e-03, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.531e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.076e-02, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.667e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.188e-02, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.546e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.066e-04, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.393e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.045e-01, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.474e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.204e-01, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.328e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.946e-01, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.083e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.805e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.385e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.431e-01, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.370e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 9.628e-03, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.481e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.806e-03, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.328e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.485e-02, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.085e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.170e-02, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.386e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.447e-03, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.371e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.912e-02, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.734e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.440e-02, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.991e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.919e-01, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.222e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.000e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.995e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 9.158e-02, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.150e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.332e-03, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.474e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.954e-03, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.327e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.127e-02, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.083e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.291e-02, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.385e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.307e-02, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.370e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.485e-03, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.812e-03, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.253e-02, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 9.137e-03, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.555e-02, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.292e-02, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.098e-01, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.737e-03, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.111e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.506e-01, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.137e-01, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.513e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.275e-02, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.897e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.584e-02, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.556e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.105e-01, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.844e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.115e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.459e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.140e-01, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.319e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.261e-01, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.075e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.793e-01, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.380e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.676e-01, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.336e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.736e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.737e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.599e-01, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.187e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.694e-02, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.347e-01, tolerance: 3.542e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.563e-02, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.247e-01, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 9.404e-02, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.172e-01, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.117e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.523e-02, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.315e-02, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.339e-01, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.265e-01, tolerance: 2.175e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.097e-01, tolerance: 3.542e-04
+  model = cd_fast.enet_coordinate_descent(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.394e-01, tolerance: 2.591e-04
+  model = cd_fast.enet_coordinate_descent(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.382e-01, tolerance: 2.516e-04
+  model = cd_fast.enet_coordinate_descent(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.802e-03, tolerance: 2.810e-04
   model = cd_fast.enet_coordinate_descent(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
 STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
@@ -544,66 +482,36 @@ STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
 Increase the number of iterations (max_iter) or scale the data as shown in:
     https://scikit-learn.org/stable/modules/preprocessing.html
   self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
-  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
   warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
@@ -646,20 +554,108 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
   warn(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
   warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.265e-01, tolerance: 2.175e-04
-  model = cd_fast.enet_coordinate_descent(
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
   warn(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.275e-02, tolerance: 1.893e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:396: FutureWarning: Criterion 'mse' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='squared_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.802e-03, tolerance: 2.810e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.584e-02, tolerance: 1.496e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/ensemble/_forest.py:403: FutureWarning: Criterion 'mae' was deprecated in v1.0 and will be removed in version 1.2. Use `criterion='absolute_error'` which is equivalent.
+  warn(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.812e-03, tolerance: 2.554e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.105e-01, tolerance: 2.437e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 9.137e-03, tolerance: 2.588e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.115e-01, tolerance: 2.004e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.292e-02, tolerance: 2.591e-04
   model = cd_fast.enet_coordinate_descent(
-/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.140e-01, tolerance: 2.048e-04
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:647: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.737e-03, tolerance: 2.516e-04
   model = cd_fast.enet_coordinate_descent(
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/linear_model/_huber.py:332: ConvergenceWarning: lbfgs failed to converge (status=1):
 STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
 

@@ -1,17 +1,2 @@
 /home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/xgboost/compat.py:36: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
   from pandas import MultiIndex, Int64Index
-Traceback (most recent call last):
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 197, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 87, in _run_code
-    exec(code, run_globals)
-  File "/home/sfgary/sl_core/predict.py", line 158, in <module>
-    print("RSE vs s: "+str(np.corrcoef(rse,s*np.ones(np.shape(Y_test)))))
-  File "<__array_function__ internals>", line 180, in corrcoef
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/numpy/lib/function_base.py", line 2821, in corrcoef
-    c = cov(x, y, rowvar, dtype=dtype)
-  File "<__array_function__ internals>", line 180, in cov
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/numpy/lib/function_base.py", line 2615, in cov
-    X = np.concatenate((X, y), axis=0)
-  File "<__array_function__ internals>", line 180, in concatenate
-ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 25 and the array at index 1 has size 1
