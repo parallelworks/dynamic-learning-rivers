@@ -15,10 +15,10 @@ Shapes after NaN, x, y, error separation:
 (10445, 2)
 (10445, 1)
 Training data shape:
-(322, 23)
+(395, 23)
 data_all shape after adding training data:
-(10767, 24)
+(10840, 24)
 data_all shape after removing NaN:
-(10646, 24)
+(10696, 24)
 1.0
 Done!

@@ -35,11 +35,11 @@ Training estimator for output: rate.mg.per.L.per.h
 Evaluating estimator for output: rate.mg.per.L.per.h
 Hold out metrics:
 {
-    "rate.mg.per.L.per.h": 0.29187949461036866
+    "rate.mg.per.L.per.h": 0.286593671228188
 }
 Evaluating estimator for output: rate.mg.per.L.per.h
 Classical metrics:
 {
-    "rate.mg.per.L.per.h": 0.3869236334158612
+    "rate.mg.per.L.per.h": 0.43667131170498696
 }
 Save train/test data
