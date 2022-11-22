@@ -1,0 +1,45 @@
+1.1.1
+Parsing SuperLearner train arguments...
+--conda_sh
+--superlearner_conf
+--n_jobs
+--num_inputs
+--cross_val_score
+--model_dir
+--hpo
+--data
+--backend
+NOTICE: Filling any NaN with mean values!
+NaN in training data will cause a crash.
+Loading SuperLearner configuration...
+Loading from: /home/sfgary/sl_core/sample_inputs/superlearner_conf.py
+Dirname:  /home/sfgary/sl_core/sample_inputs
+Basename: superlearner_conf
+Running HPO for output rate.mg.per.L.per.h and estimator nusvr-rbf
+Running HPO for output rate.mg.per.L.per.h and estimator nusvr-lin
+Running HPO for output rate.mg.per.L.per.h and estimator nusvr-poly
+Running HPO for output rate.mg.per.L.per.h and estimator nusvr-sig
+Running HPO for output rate.mg.per.L.per.h and estimator knn-uni
+Running HPO for output rate.mg.per.L.per.h and estimator knn-dist
+Running HPO for output rate.mg.per.L.per.h and estimator pls
+Running HPO for output rate.mg.per.L.per.h and estimator mlp
+Running HPO for output rate.mg.per.L.per.h and estimator ridge
+Running HPO for output rate.mg.per.L.per.h and estimator lasso
+Running HPO for output rate.mg.per.L.per.h and estimator linear
+Running HPO for output rate.mg.per.L.per.h and estimator enet
+Running HPO for output rate.mg.per.L.per.h and estimator huber
+Running HPO for output rate.mg.per.L.per.h and estimator xgb
+Running HPO for output rate.mg.per.L.per.h and estimator etr
+Defining estimator for output: rate.mg.per.L.per.h
+Training estimator for output: rate.mg.per.L.per.h
+Evaluating estimator for output: rate.mg.per.L.per.h
+Hold out metrics:
+{
+    "rate.mg.per.L.per.h": 0.5450884222998471
+}
+Evaluating estimator for output: rate.mg.per.L.per.h
+Classical metrics:
+{
+    "rate.mg.per.L.per.h": 0.20888979807950014
+}
+Save train/test data
