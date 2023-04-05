@@ -26,15 +26,31 @@ core_vars = data[vars_to_use]
 # Drop any data points with no respiration rate
 # (no target data)
 targets = core_vars.dropna(
-    axis='index', 
+    axis='index',
     subset=['Respiration_Rate_mg_per_L_per_H'])
+
+targets.to_csv('tmp1.csv')
 
 # Drop any data points with no oxygen (both missing)
 #targets.dropna(
 #    axis='index',
 #    how='all',
-#    inplace='true',
+#    inplace=True,
 #    subset=['Mean_DO_mg_per_L','Mean_DO_percent_saturation'])
+
+# Drop any data points with no temperature
+targets.dropna(
+    axis='index',
+    inplace=True,
+    subset=['Mean_Temp_Deg_C'])
+
+# Drop any data points with no pH
+targets.dropna(
+    axis='index',
+    inplace=True,
+    subset=['pH'])
+
+targets.to_csv('tmp2.csv')
 
 #-------------------------------------------------
 # Try to recover as much oxygen data as possible - if there
@@ -47,7 +63,7 @@ targets = core_vars.dropna(
 # Example using sw_o2sat with sa=0 and whatever temperature 
 # is at a given time.  Then, to compute the percent saturated oxygen,
 #
-# percent_o2sat = 100*o2/o2sat(0.0, temperature)
+# percent_o2sat = 100*o2/sw_o2sat(0.0, temperature)
 #-------------------------------------------------
 # Units
 #
@@ -62,19 +78,23 @@ targets = core_vars.dropna(
 
 # Loop over all rows
 for index, row in targets.iterrows():
-    o2_sat_mg_per_l = o2sat(0.0, row['Mean_Temp_Deg_C'])*1.4291
-    if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
-        print(row['Mean_DO_mg_per_L'])
-        print(row['Mean_DO_percent_saturation'])
-        print('Missing regular DO!')
-        # Compute any missing DO_mg_per_L from T and DOSAT  
-        targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2sat_mg_per_l/100.0
-    elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
-        print(row['Mean_DO_mg_per_L'])
-        print(row['Mean_DO_percent_saturation'])
-        print('Missing DOSAT')
-        # Compute any missing DOSAT from T and DO_mg_per_L.
-        targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2sat_mg_per_l 
+    #print('Temp '+str(row['Mean_Temp_Deg_C']))
+    #print('DO '+str(row['Mean_DO_mg_per_L']))
+    #print('DOsat '+str(row['Mean_DO_percent_saturation']))
+
+    # Must have temperature to attempt reconstruction
+    if ( not np.isnan(row['Mean_Temp_Deg_C']) ):
+        o2_sat_mg_per_l = o2sat.sw_o2sat(0.0, row['Mean_Temp_Deg_C'])*1.4291
+        #print('sw_O2_sat'+str(o2_sat_mg_per_l))
+
+        if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
+            #print('Missing regular DO!')
+            # Compute any missing DO_mg_per_L from T and DOSAT  
+            targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
+        elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
+            #print('Missing DOSAT')
+            # Compute any missing DOSAT from T and DO_mg_per_L.
+            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
 
 # Save results
 #core_vars.to_csv('core_vars.csv', mode='w')
