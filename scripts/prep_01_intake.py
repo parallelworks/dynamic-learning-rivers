@@ -29,8 +29,6 @@ targets = core_vars.dropna(
     axis='index',
     subset=['Respiration_Rate_mg_per_L_per_H'])
 
-targets.to_csv('tmp1.csv')
-
 # Drop any data points with no oxygen (both missing)
 #targets.dropna(
 #    axis='index',
@@ -39,18 +37,16 @@ targets.to_csv('tmp1.csv')
 #    subset=['Mean_DO_mg_per_L','Mean_DO_percent_saturation'])
 
 # Drop any data points with no temperature
-targets.dropna(
-    axis='index',
-    inplace=True,
-    subset=['Mean_Temp_Deg_C'])
+#targets.dropna(
+#    axis='index',
+#    inplace=True,
+#    subset=['Mean_Temp_Deg_C'])
 
 # Drop any data points with no pH
-targets.dropna(
-    axis='index',
-    inplace=True,
-    subset=['pH'])
-
-targets.to_csv('tmp2.csv')
+#targets.dropna(
+#    axis='index',
+#    inplace=True,
+#    subset=['pH'])
 
 #-------------------------------------------------
 # Try to recover as much oxygen data as possible - if there
@@ -98,4 +94,4 @@ for index, row in targets.iterrows():
 
 # Save results
 #core_vars.to_csv('core_vars.csv', mode='w')
-targets.to_csv('targets.csv', mode='w')
+targets.to_csv('prep_01_output.csv', mode='w')
