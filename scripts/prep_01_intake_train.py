@@ -93,4 +93,6 @@ for index, row in targets.iterrows():
             targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
 
 # Save results
-targets.to_csv('prep_01_output.csv', mode='w')
+# Drop dataframe index
+# Overwrite existing file
+targets.to_csv('prep_01_output.csv', mode='w', index=False)
