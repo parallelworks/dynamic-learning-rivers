@@ -12,8 +12,8 @@ data = pd.read_csv("../input_data/ICON_ModEx_Collaborator_Site_Water_Chemistry_D
 # Put oxygen last b/c need to add DOSAT on the left side.
 vars_to_use=[
     'Site_ID',
-    'Sample_Latitude',
     'Sample_Longitude',
+    'Sample_Latitude',
     'Mean_Temp_Deg_C',
     'pH',
     'Mean_DO_mg_per_L'

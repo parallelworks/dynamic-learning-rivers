@@ -11,8 +11,8 @@ data = pd.read_csv("../input_data/ICON_ModEx_Data.csv")
 # Sample_Kit_ID is not unique - shared among sites
 vars_to_use=[
     'Sample_ID',
-    'Sample_Latitude',
     'Sample_Longitude',
+    'Sample_Latitude',
     'Mean_Temp_Deg_C',
     'pH',
     'Mean_DO_mg_per_L',
