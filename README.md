@@ -2,7 +2,8 @@
 
 Dynamic river model with observation-driven machine learning. This repository
 is a machine learning (ML) archive repository; the training data and corresponding 
-trained models are stored here.
+trained models are stored here. Also, ancilliary preprocessing scripts for
+some data wrangling are stored here.
 
 This ML archive repository is set up to use a [SuperLearner ML workflow repository](https://github.com/parallelworks/sl_core)
 that holds the training code itself.  The workflow is divided into two stages:
@@ -25,6 +26,7 @@ would start another round of training.
 3. `ml_models` machine learning models trained on the `input_data`.
 4. `examples` files for direct experimentation with the ML model.
 5. `test_deploy_key.sh` allows for testing the deploy key of a repository by cloning, making a branch, and pushing changes on that branch back to the repository.
+6. `scripts` contains data preprocessing/wrangling/postprocessing scripts specific to this data set that bookend the workflow.
 
 ## Automation Setup
 
