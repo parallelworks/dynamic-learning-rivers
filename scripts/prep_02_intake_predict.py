@@ -4,49 +4,39 @@ import pandas as pd
 import numpy as np
 import o2sat
 
-data = pd.read_csv("../input_data/ICON_ModEx_Data.csv")
+data = pd.read_csv("../input_data/ICON_ModEx_Collaborator_Site_Water_Chemistry_Data.csv")
 
 # List the variables we want here.
 # Order of the list sets left-to-right column order in dataframe/csv output
 # Sample_Kit_ID is not unique - shared among sites
+# Put oxygen last b/c need to add DOSAT on the left side.
 vars_to_use=[
-    'Sample_ID',
+    'Site_ID',
     'Sample_Latitude',
     'Sample_Longitude',
-    'Mean_DO_mg_per_L',
-    'Mean_DO_percent_saturation',
     'Mean_Temp_Deg_C',
     'pH',
-    'Respiration_Rate_mg_per_L_per_H'
+    'Mean_DO_mg_per_L'
 ]
 
 # Grab a view of just the subset we want
 core_vars = data[vars_to_use]
 
-# Drop any data points with no respiration rate
-# (no target data)
-targets = core_vars.dropna(
-    axis='index',
-    subset=['Respiration_Rate_mg_per_L_per_H'])
+# Add a column for DOSAT, all NaN
+core_vars.insert(
+    len(core_vars.columns),
+    'Mean_DO_percent_saturation',
+    np.nan)
 
-# Drop any data points with no oxygen (both missing)
-#targets.dropna(
-#    axis='index',
-#    how='all',
-#    inplace=True,
-#    subset=['Mean_DO_mg_per_L','Mean_DO_percent_saturation'])
+# Change all -9999 values to NaN
+core_vars.replace(
+    to_replace=-9999,
+    value=np.nan,
+    inplace=True)
 
-# Drop any data points with no temperature
-#targets.dropna(
-#    axis='index',
-#    inplace=True,
-#    subset=['Mean_Temp_Deg_C'])
-
-# Drop any data points with no pH
-#targets.dropna(
-#    axis='index',
-#    inplace=True,
-#    subset=['pH'])
+# NO RESPIRATION RATES IN PREDICT DATA
+# DO NOT FILTER MISSING VALUES - REPLACE
+# WITH MEANS LATER
 
 #-------------------------------------------------
 # Try to recover as much oxygen data as possible - if there
@@ -73,7 +63,7 @@ targets = core_vars.dropna(
 #-------------------------------------------------
 
 # Loop over all rows
-for index, row in targets.iterrows():
+for index, row in core_vars.iterrows():
     #print('Temp '+str(row['Mean_Temp_Deg_C']))
     #print('DO '+str(row['Mean_DO_mg_per_L']))
     #print('DOsat '+str(row['Mean_DO_percent_saturation']))
@@ -86,12 +76,11 @@ for index, row in targets.iterrows():
         if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
             #print('Missing regular DO!')
             # Compute any missing DO_mg_per_L from T and DOSAT  
-            targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
+            core_vars.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
         elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
             #print('Missing DOSAT')
             # Compute any missing DOSAT from T and DO_mg_per_L.
-            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
+            core_vars.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
 
 # Save results
-#core_vars.to_csv('core_vars.csv', mode='w')
-targets.to_csv('prep_01_output.csv', mode='w')
+core_vars.to_csv('prep_02_output.csv', mode='w')
