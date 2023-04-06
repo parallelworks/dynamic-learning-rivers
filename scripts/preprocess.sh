@@ -23,11 +23,11 @@ python prep_02_intake_predict.py
 # and ensure that the data are prepared in advance.
 prep_dir=$(pwd)
 cd ${grd_abs_path}/scripts
-./run_colocate header 42.0 42.0
+./run_colocate.sh header 42.0 42.0
 cd $prep_dir
 
 # Run multiple instances of run_colocate, one for each site
-#awk -F, -v grd=grd_abs_path ' NR>1 {system("cd "grd"/scripts; sbatch -n 1 -c 1 --mem=0 --output=$HOME/slurm-%j.out --wrap \"./run_colocate.sh "$1" "$2" "$3"\"")}' prep_01_output.csv
+awk -F, -v grd=${grd_abs_path} ' NR>1 {system("cd "grd"/scripts; sbatch -n 1 -c 1 --mem=0 --output=$HOME/slurm-%j.out --wrap \"./run_colocate.sh "$1" "$2" "$3"\"")}' prep_01_output.csv
 
 # Concatenate
 
