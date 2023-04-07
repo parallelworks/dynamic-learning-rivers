@@ -105,7 +105,6 @@ cp ${grd_abs_path}/scripts/colocated.header.tmp prep_04_output_colocated_predict
 sudo rm -f ${grd_abs_path}/scripts/*.tmp
 
 #=============================================
-# Paste
+# Merge/paste/cut columns
 #=============================================
-
-#-------------Training Data----------------
+python prep_05_merge.py
