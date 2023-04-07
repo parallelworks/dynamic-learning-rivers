@@ -57,8 +57,8 @@ predict_merged['RA_ms_di'] = (predict_merged['RA_cms_cmx'] - predict_merged['RA_
 train_merged['RA_ms_av'] = train_merged['RA_cms_cyr']/train_merged['RA_xam2']
 train_merged['RA_ms_di'] = (train_merged['RA_cms_cmx'] - train_merged['RA_cms_cmn'])/train_merged['RA_xam2']
 
-# Cut all columns
-predict_cols = [
+# Cut all columns (separate ID, lon, lat as ixy)
+csv_cols = [
     "RA_SO",
     "RA_dm",
     "run_mm_cyr",
@@ -85,16 +85,33 @@ predict_cols = [
     "RA_ms_av",
     "RA_ms_di"]
 
+ixy_cols = [
+    "Sample_ID",
+    "Sample_Longitude",
+    "Sample_Latitude"]
+
 # Save merged train and predict (cut in process)
 predict_merged.to_csv(
     'prep_06_output_final_predict.csv',
-    columns=predict_cols,
+    columns=csv_cols,
     mode='w',
     index=False)
 
-predict_cols.append('Respiration_Rate_mg_per_L_per_H')
+predict_merged.to_csv(
+    'prep_06_output_final_predict.ixy',
+    columns=ixy_cols,
+    mode='w',
+    index=False)
+
+csv_cols.append('Respiration_Rate_mg_per_L_per_H')
 train_merged.to_csv(
     'prep_06_output_final_train.csv',
-    columns=predict_cols,
+    columns=csv_cols,
+    mode='w',
+    index=False)
+
+train_merged.to_csv(
+    'prep_06_output_final_train.ixy',
+    columns=csv_cols,
     mode='w',
     index=False)
