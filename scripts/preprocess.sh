@@ -4,6 +4,8 @@
 # orchestration script
 #======================
 
+# ASSUMING THAT THIS SCRIPT IS RUNNING IN ./dynamic-learning-rivers/scripts
+
 miniconda_loc=$1
 my_env=$2
 grd_abs_path=$3
@@ -12,14 +14,18 @@ grd_abs_path=$3
 source ${miniconda_loc}/etc/profile.d/conda.sh
 conda activate $my_env
 
+# Delete any .csv files here to ensure all data are
+# created from fresh
+rm -f *.csv
+
 #=============================================
-# Intake training and predict data
+# Steps 1 & 2: Intake training and predict data
 #=============================================
 python prep_01_intake_train.py
 python prep_02_intake_predict.py
 
 #=============================================
-# Colocate (in parallel) using data/tools in global-river-databases
+# Steps 3 & 4: Colocate using data/tools in global-river-databases
 #=============================================
 
 #-------------Training Data----------------
@@ -105,6 +111,17 @@ cp ${grd_abs_path}/scripts/colocated.header.tmp prep_04_output_colocated_predict
 sudo rm -f ${grd_abs_path}/scripts/*.tmp
 
 #=============================================
+# Step 5: Get larger predict data
+#=============================================
+large_predict_csv=${grd_abs_path}/scripts/step_10_output.csv
+
+# Copy it here because I want an archive of this in
+# dynamic-learning-rivers and I don't want to have to
+# pass the location of the file into prep_06_merge.py.
+cp $large_predict_csv prep_05_output_large_predict.csv
+
+#=============================================
 # Merge/paste/cut columns
 #=============================================
-python prep_05_merge.py
+python prep_06_merge.py
+
