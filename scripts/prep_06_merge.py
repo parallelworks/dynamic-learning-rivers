@@ -112,6 +112,6 @@ train_merged.to_csv(
 
 train_merged.to_csv(
     'prep_06_output_final_train.ixy',
-    columns=csv_cols,
+    columns=ixy_cols,
     mode='w',
     index=False)
