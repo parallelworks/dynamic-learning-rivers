@@ -61,7 +61,7 @@ sudo cat ${grd_abs_path}/scripts/colocated.??????????.tmp >> ${grd_abs_path}/scr
 cp ${grd_abs_path}/scripts/colocated.header.tmp prep_03_output_colocated_train.csv
 
 # Clean up
-sudo rm -f ${grd_abs_path}/*.tmp
+sudo rm -f ${grd_abs_path}/scripts/*.tmp
 
 echo -------------Predict Data----------------
 # Run colocate in header mode first to get the header
@@ -102,7 +102,7 @@ sudo cat ${grd_abs_path}/scripts/colocated.??????????.tmp >> ${grd_abs_path}/scr
 cp ${grd_abs_path}/scripts/colocated.header.tmp prep_04_output_colocated_predict.csv
 
 # Clean up
-sudo rm -f ${grd_abs_path}/*.tmp
+sudo rm -f ${grd_abs_path}/scripts/*.tmp
 
 #=============================================
 # Paste
