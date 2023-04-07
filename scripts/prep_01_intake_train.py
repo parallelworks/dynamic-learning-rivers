@@ -95,4 +95,4 @@ for index, row in targets.iterrows():
 # Save results
 # Drop dataframe index
 # Overwrite existing file
-targets.to_csv('prep_01_output.csv', mode='w', index=False)
+targets.to_csv('prep_01_output_train.csv', mode='w', index=False)

@@ -85,4 +85,4 @@ for index, row in core_vars.iterrows():
 # Save results
 # Drop the dataframe index
 # Overwrite existing file
-core_vars.to_csv('prep_02_output.csv', mode='w', index=False)
+core_vars.to_csv('prep_02_output_predict.csv', mode='w', index=False)
