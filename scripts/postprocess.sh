@@ -13,5 +13,6 @@ conda activate $my_env
 # Use Pandas to flatten all results from each ML model
 python post_01_flatten.py
 
-# Filter sites that have already been sampled and rank
-post_02_filter_rank.sh
+# Filter sites that have already been sampled
+post_02_filter.sh
+
