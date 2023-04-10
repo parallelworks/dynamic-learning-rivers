@@ -41,8 +41,8 @@ mean = np.mean(hold_out)
 std = np.std(hold_out)
 
 with open('post_01_output_holdout_score.txt', 'w', encoding="utf-8") as f:
-    f.write("Avg: "+str(mean))
-    f.write("Std: "+str(std))
+    f.write("Avg: "+str(mean)+"\n")
+    f.write("Std: "+str(std)+"\n")
 
 # Flatten 
 ml_output_all_df = pd.concat(ml_output_df_list)
