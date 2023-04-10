@@ -12,7 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import glob
 
-workdir="/pw/jobs/58249/"
+workdir="../"
 
 # Overall results (mean and std of
 # overall model scores)

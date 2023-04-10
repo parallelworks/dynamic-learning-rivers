@@ -25,18 +25,35 @@ obslist=$(sed 's/MP-//g' $obsfile | awk ' NR > 1 {print "-e ^"$1","}' | sort | u
 # Need to put Sample_ID in rightmost
 # column so it is not interpreted as a lon,lat
 # grep -v means invert selection  (i.e. remove the matches)
-grep -v ${obslist} $input | awk -F, '{print $2,$3,$4,$5,$6,$7,$8,$9,$10,$1}' >> obs_filter.xyz.tmp
+# Skip over header line.
+# Remove all "SP-" prefixes because they are converted to NaN by GMT later
+grep -v ${obslist} $input | awk -F, 'NR > 1 {print $2,$3,$4,$5,$6,$7,$8,$9,$10,$1}' | sed 's/SP-//g' > obs_filter.xyz.tmp
 
-# Skip over 1 header line
-gmt_cmd="gmt gmtselect obs_filter.xyz.tmp -Fus.xy.tmp -h1 > conus_filter.xyz.tmp"
-sudo docker run --rm -v -v $(pwd):/work -w /work parallelworks/gmt $gmt_cmd
+# Get header for later
+awk 'NR == 1 {print $0}' $input > $output
+
+# Check Docker daemon is running
+if [ `sudo systemctl is-active docker` == "active" ]
+then
+    #echo Docker daemon is already started. Do nothing.
+    sleep 1
+else
+    #echo Docker daemon not started. Starting Docker daemon...
+    sudo systemctl start docker
+fi
+
+# Select points only inside CONUS polygon
+# Docs say -a9=name:STRING should do the trick, but doesn't work for me.
+# (https://docs.generic-mapping-tools.org/6.0/gmt.html#aspatial-full)
+gmt_cmd="gmt gmtselect obs_filter.xyz.tmp -Fus.xy.tmp > conus_filter.xyz.tmp"
+sudo docker run --rm -v $(pwd):/work -w /work parallelworks/gmt $gmt_cmd
 sudo chmod a+rw conus_filter.xyz.tmp
 
 # Put Sample_ID in left column again, add commas, sort points by metric (last column)
-awk '{OFS=","; print $10,$1,$2,$3,$4,$5,$6,$7,$8,$9}' conus_filter.xyz.tmp | sort -n +10 > $output
+# Insert "SP-" again for sampler picked sites and "MP-" for ML predicted sites.
+awk '{OFS=","; if ($10 < 10000 ) {print "SP-"$10,$1,$2,$3,$4,$5,$6,$7,$8,$9} else {print "MP-"$10,$1,$2,$3,$4,$5,$6,$7,$8,$9} }' conus_filter.xyz.tmp | sort -t "," -n +9 -10 >> $output
 
 # Clean up
 rm -f obs_filter.xyz.tmp
 rm -f conus_filter.xyz.tmp
 rm -f us.xy.tmp
-
