@@ -21,4 +21,5 @@ post_02_filter_sort.sh
 # Send a copy of the key output to ../output_data
 #cp post_01_output_ml_predict_avg.csv ../output_data/unfiltered_predict_output_avg.csv
 #cp post_01_output_ml_predict_std.csv ../output_data/unfiltered_predict_output_std.csv
+cp post_01_output_holdout_score.txt ../output_data/holdout_score.txt
 cp post_02_output_ml_pred_avg_filtered.csv ../output_data/filtered_predict_output.csv

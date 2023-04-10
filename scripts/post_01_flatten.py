@@ -37,12 +37,12 @@ for dir in sl_dirs:
         # (predictions and error/metric)
         ml_output_df_list.append(pd.read_csv(dir+"/sl_pca.csv"))
 
-#print(hold_out)
 mean = np.mean(hold_out)
 std = np.std(hold_out)
 
-print("Hold out: "+str(mean))
-print("Std : "+str(std))
+with open('post_01_output_holdout_score.txt', 'w', encoding="utf-8") as f:
+    f.write("Avg: "+str(mean))
+    f.write("Std: "+str(std))
 
 # Flatten 
 ml_output_all_df = pd.concat(ml_output_df_list)
