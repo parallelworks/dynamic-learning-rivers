@@ -42,4 +42,15 @@ PW account to push commits back to this repository after the training is complet
 There's no manual installation assocaited with this repository since the running
 code is already setup in `.github/workflows/main.yml`. However, the code for the
 ML workflow (i.e. the SuperLearner) does need to be established on the platform.
-Please see teh `README.md` in the [SuperLearner workflow](https://github.com/parallelworks/sl_core) for more details.
+Please see the `README.md` in the [SuperLearner workflow](https://github.com/parallelworks/sl_core) for more details.
+
+## Branch, tag (version), and release naming conventions
+
+This ML archive repository tracks the status of inputs and outputs of the ML
+workflow as more data become available. Each model-experiment (ModEx) iteration
+is treated as a separate branch. This allows the core fabric of this repository
+to evolve over time while also "sprouting" distinct ML models that are a snapshot
+of a particular ModEx iteration. Some basic guidelines:
++ **Branches** can have human readable names (e.g. mid-April-2023-test).
++ **Tags** (e.g. `v2.2.1`) are assigned to the state of a branch immediately before the machine learning workflow is run. This is because the ML workflow is started when a release is published, and each release gets a tag. `v2` indicates that the workflow is fully automated (`v1` is partial automation). The middle digit (`v2.2`) reflects changes in the `main` branch and is incremented. The last digit indicates the number of ModEx iterations for this particular state of the `main` branch.
++ **Releases** are automatically named using the create release notes button.
