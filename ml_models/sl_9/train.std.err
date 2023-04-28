@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/sfgary/sl_core/train.py", line 179, in <module>
+    X, Y, inames, onames = load_data_csv_io(args.data, int(args.num_inputs))
+  File "/home/sfgary/sl_core/train.py", line 77, in load_data_csv_io
+    data_df = pd.read_csv(data_csv).astype(np.float32)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sfgary/dynamic-learning-rivers/scripts/prep_06_output_final_train.csv'
