@@ -1,0 +1,144 @@
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Control socket connect(/home/sfgary/.ssh/control:cloud.clusters.pw:22:sfgary): No such file or directory
+Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'github.com,140.82.114.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Switched to branch 'May-2023'
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Control socket connect(/home/sfgary/.ssh/control:cloud.clusters.pw:22:sfgary): No such file or directory
+Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'github.com,140.82.114.3' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+ls: cannot access /home/sfgary/.miniconda*: No such file or directory
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+/home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  core_vars.replace(
+Unable to find image 'parallelworks/gmt:latest' locally
+Trying to pull repository docker.io/parallelworks/gmt ... 
+latest: Pulling from docker.io/parallelworks/gmt
+06d39c85623a: Pulling fs layer
+44f803d09bef: Pulling fs layer
+02932b6ffd48: Pulling fs layer
+8ed4e8630103: Pulling fs layer
+0014b75e7078: Pulling fs layer
+be071655d959: Pulling fs layer
+2276fdfeb463: Pulling fs layer
+8ed4e8630103: Waiting
+0014b75e7078: Waiting
+be071655d959: Waiting
+2276fdfeb463: Waiting
+44f803d09bef: Verifying Checksum
+44f803d09bef: Download complete
+02932b6ffd48: Verifying Checksum
+02932b6ffd48: Download complete
+06d39c85623a: Verifying Checksum
+06d39c85623a: Download complete
+8ed4e8630103: Verifying Checksum
+8ed4e8630103: Download complete
+be071655d959: Verifying Checksum
+be071655d959: Download complete
+2276fdfeb463: Verifying Checksum
+2276fdfeb463: Download complete
+06d39c85623a: Pull complete
+44f803d09bef: Pull complete
+02932b6ffd48: Pull complete
+8ed4e8630103: Pull complete
+0014b75e7078: Verifying Checksum
+0014b75e7078: Download complete
+0014b75e7078: Pull complete
+be071655d959: Pull complete
+2276fdfeb463: Pull complete
+Digest: sha256:9b4274e2b29d9678583fd5ad1d64cc5cb7c6b830de542d418fd2a3a76399c871
+Status: Downloaded newer image for docker.io/parallelworks/gmt:latest
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
