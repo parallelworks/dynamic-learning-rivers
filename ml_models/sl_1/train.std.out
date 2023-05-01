@@ -37,11 +37,11 @@ Training estimator for output: Respiration_Rate_mg_per_L_per_H
 Evaluating estimator for output: Respiration_Rate_mg_per_L_per_H
 Hold out metrics:
 {
-    "Respiration_Rate_mg_per_L_per_H": 0.11040381140774347
+    "Respiration_Rate_mg_per_L_per_H": -0.7000234001012506
 }
 Evaluating estimator for output: Respiration_Rate_mg_per_L_per_H
 Classical metrics:
 {
-    "Respiration_Rate_mg_per_L_per_H": 0.6681183031337639
+    "Respiration_Rate_mg_per_L_per_H": 0.8335772074551889
 }
 Save train/test data
