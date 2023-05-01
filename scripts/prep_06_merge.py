@@ -2,7 +2,7 @@
 # Merge the physical properties of a site
 # (colocated from RiverAtlas) with the 
 # chemical properties of a site (from
-# ICON_ModEx_ data and collaborators)
+# ICON-ModEx_ data and collaborators)
 # into single training file and 
 # single prediction file.
 #==========================================

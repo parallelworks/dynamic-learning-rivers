@@ -11,7 +11,7 @@ input=post_01_output_ml_predict_avg.csv
 output=post_02_output_ml_pred_avg_filtered.csv
 
 # First, get list of sites we want to filter out (already observed):
-obsfile="../input_data/ICON_ModEx_Sites_To_Remove.csv"
+obsfile="../input_data/ICON-ModEx_Sites_To_Remove.csv"
 
 # Remove the MP- prefix from the list, (but allow all SP- to remain!)
 # (Matches Sample_ID format)

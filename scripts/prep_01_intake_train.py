@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import o2sat
 
-data = pd.read_csv("../input_data/ICON_ModEx_Data.csv")
+data = pd.read_csv("../input_data/ICON-ModEx_Data.csv")
 
 # List the variables we want here.
 # Order of the list sets left-to-right column order in dataframe/csv output
