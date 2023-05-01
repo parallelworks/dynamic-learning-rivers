@@ -2,23 +2,39 @@ Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known host
 Control socket connect(/home/sfgary/.ssh/control:cloud.clusters.pw:22:sfgary): No such file or directory
 Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'github.com,140.82.114.4' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Switched to branch 'May-2023'
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Control socket connect(/home/sfgary/.ssh/control:cloud.clusters.pw:22:sfgary): No such file or directory
+ControlSocket /home/sfgary/.ssh/control:cloud.clusters.pw:22:sfgary already exists, disabling multiplexing
+fatal: destination path 'dynamic-learning-rivers' already exists and is not an empty directory.
+Checking out files:  50% (101/202)   Checking out files:  51% (104/202)   Checking out files:  52% (106/202)   Checking out files:  53% (108/202)   Checking out files:  54% (110/202)   Checking out files:  55% (112/202)   Checking out files:  56% (114/202)   Checking out files:  57% (116/202)   Checking out files:  58% (118/202)   Checking out files:  59% (120/202)   Checking out files:  60% (122/202)   Checking out files:  61% (124/202)   Checking out files:  62% (126/202)   Checking out files:  63% (128/202)   Checking out files:  64% (130/202)   Checking out files:  65% (132/202)   Checking out files:  66% (134/202)   Checking out files:  67% (136/202)   Checking out files:  68% (138/202)   Checking out files:  69% (140/202)   Checking out files:  70% (142/202)   Checking out files:  71% (144/202)   Checking out files:  72% (146/202)   Checking out files:  73% (148/202)   Checking out files:  74% (150/202)   Checking out files:  75% (152/202)   Checking out files:  76% (154/202)   Checking out files:  77% (156/202)   Checking out files:  78% (158/202)   Checking out files:  79% (160/202)   Checking out files:  80% (162/202)   Checking out files:  81% (164/202)   Checking out files:  82% (166/202)   Checking out files:  83% (168/202)   Checking out files:  84% (170/202)   Checking out files:  85% (172/202)   Checking out files:  86% (174/202)   Checking out files:  87% (176/202)   Checking out files:  88% (178/202)   Checking out files:  89% (180/202)   Checking out files:  90% (182/202)   Checking out files:  91% (184/202)   Checking out files:  92% (186/202)   Checking out files:  93% (188/202)   Checking out files:  94% (190/202)   Checking out files:  95% (192/202)   Checking out files:  96% (194/202)   Checking out files:  97% (196/202)   Checking out files:  98% (198/202)   Checking out files:  99% (200/202)   Checking out files: 100% (202/202)   Checking out files: 100% (202/202), done.
+fatal: Not a valid object name: 'master'.
+error: pathspec 'May-2023' did not match any file(s) known to git.
+fatal: branch 'May-2023' does not exist
+Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'github.com,140.82.114.3' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-ls: cannot access /home/sfgary/.miniconda*: No such file or directory
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
+ControlSocket /home/sfgary/.ssh/control:cloud.clusters.pw:22:sfgary already exists, disabling multiplexing
+Warning: Permanently added 'github.com,140.82.121.3' (ECDSA) to the list of known hosts.
+From github.com:parallelworks/dynamic-learning-rivers
+ * [new branch]      ICON-ModEx-v2.1-April-2023-replicate-01 -> origin/ICON-ModEx-v2.1-April-2023-replicate-01
+ * [new branch]      ICON-ModEx-v2.1-April-2023-replicate-02 -> origin/ICON-ModEx-v2.1-April-2023-replicate-02
+ * [new branch]      May-2023   -> origin/May-2023
+ * [new branch]      ModEx-ordered-add -> origin/ModEx-ordered-add
+ * [new branch]      ModEx-random-add -> origin/ModEx-random-add
+ * [new branch]      main       -> origin/main
+ * [new tag]         v2.2.1     -> v2.2.1
+From github.com:parallelworks/dynamic-learning-rivers
+ * [new tag]         v1.1.1     -> v1.1.1
+ * [new tag]         v1.1.2     -> v1.1.2
+ * [new tag]         v1.1.3     -> v1.1.3
+ * [new tag]         v1.1.4     -> v1.1.4
+ * [new tag]         v1.1.5     -> v1.1.5
+ * [new tag]         v1.2.1     -> v1.2.1
+ * [new tag]         v1.2.2     -> v1.2.2
+ * [new tag]         v1.2.3     -> v1.2.3
+ * [new tag]         v1.2.4     -> v1.2.4
+ * [new tag]         v1.2.5     -> v1.2.5
+ * [new tag]         v2.0.0     -> v2.0.0
+ * [new tag]         v2.1.0     -> v2.1.0
+ * [new tag]         v2.1.1     -> v2.1.1
 /home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
@@ -42,87 +58,25 @@ be071655d959: Waiting
 44f803d09bef: Download complete
 02932b6ffd48: Verifying Checksum
 02932b6ffd48: Download complete
-06d39c85623a: Verifying Checksum
-06d39c85623a: Download complete
 8ed4e8630103: Verifying Checksum
 8ed4e8630103: Download complete
+06d39c85623a: Verifying Checksum
+06d39c85623a: Download complete
 be071655d959: Verifying Checksum
 be071655d959: Download complete
 2276fdfeb463: Verifying Checksum
 2276fdfeb463: Download complete
+0014b75e7078: Verifying Checksum
+0014b75e7078: Download complete
 06d39c85623a: Pull complete
 44f803d09bef: Pull complete
 02932b6ffd48: Pull complete
 8ed4e8630103: Pull complete
-0014b75e7078: Verifying Checksum
-0014b75e7078: Download complete
 0014b75e7078: Pull complete
 be071655d959: Pull complete
 2276fdfeb463: Pull complete
 Digest: sha256:9b4274e2b29d9678583fd5ad1d64cc5cb7c6b830de542d418fd2a3a76399c871
 Status: Downloaded newer image for docker.io/parallelworks/gmt:latest
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
