@@ -1,0 +1,707 @@
+Running Workflow Job
+
+Cloning github repo to job directory...
+
+Cloning into 'clone'...
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+bash  workflow.sh --superlearner_conf 'sample_inputs/superlearner_conf.py' --n_jobs '8' --work_dir_base 'ml_models/sl_' --onnx 'False' --num_inputs '25' --train_test_data 'scripts/prep_06_output_final_train.csv' --smogn 'False' --num_inst '10' --hpo 'True' --cross_val_score 'False' --predict_data 'scripts/prep_06_output_final_predict' --backend 'loky' --ml_code_repo 'https://github.com/parallelworks/sl_core' --ml_data_repo 'https://github.com/parallelworks/global-river-databases' --ml_arch_branch 'Nov-2022' --my_env 'superlearner' --ml_arch_repo 'git@github.com:parallelworks/dynamic-learning-rivers' --whost 'cloud.clusters.pw' --miniconda_loc '/home/__USER__/.miniconda3' --push_to_gh 'True'
+ 
+====================================
+Step 1: Local setup on PW platform
+Execution is in workflow.sh at Fri May 5 01:13:43 UTC 2023
+ 
+Workflow parameters from workflow.xml, apirun/main.py, or ./github/workflows/main.yaml:
+--superlearner_conf sample_inputs/superlearner_conf.py --n_jobs 8 --work_dir_base ml_models/sl_ --onnx False --num_inputs 25 --train_test_data scripts/prep_06_output_final_train.csv --smogn False --num_inst 10 --hpo True --cross_val_score False --predict_data scripts/prep_06_output_final_predict --backend loky --ml_code_repo https://github.com/parallelworks/sl_core --ml_data_repo https://github.com/parallelworks/global-river-databases --ml_arch_branch Nov-2022 --my_env superlearner --ml_arch_repo git@github.com:parallelworks/dynamic-learning-rivers --whost cloud.clusters.pw --miniconda_loc /home/__USER__/.miniconda3 --push_to_gh True
+ 
+=========================================================
+Starting sl_core
+Running in /home/sfgary/pw/jobs/58427 with job number: 58427
+ 
+List of inputs converted to environment variables:
+WFP_smogn=False
+WFP_n_jobs=8
+WFP_predict_data=scripts/prep_06_output_final_predict
+WFP_superlearner_conf=sample_inputs/superlearner_conf.py
+WFP_num_inst=10
+WFP_miniconda_loc=/home/__USER__/.miniconda3
+WFP_ml_data_repo=https://github.com/parallelworks/global-river-databases
+WFP_my_env=superlearner
+WFP_work_dir_base=ml_models/sl_
+WFP_train_test_data=scripts/prep_06_output_final_train.csv
+WFP_whost=cloud.clusters.pw
+WFP_onnx=False
+WFP_push_to_gh=True
+WFP_ml_arch_repo=git@github.com:parallelworks/dynamic-learning-rivers
+WFP_ml_code_repo=https://github.com/parallelworks/sl_core
+WFP_ml_arch_branch=Nov-2022
+WFP_hpo=True
+WFP_backend=loky
+WFP_num_inputs=25
+WFP_cross_val_score=False
+ 
+=========================================================
+Fri May 5 01:13:43 UTC 2023: Testing echod. Currently on pw-user-sfgary.
+Fri May 5 01:13:43 UTC 2023: Will excute as sfgary@cloud.clusters.pw
+Fri May 5 01:13:43 UTC 2023: Running on the following computer: pw-user-sfgary
+ 
+Checking inputs to test:
+user: sfgary
+remote_node: cloud.clusters.pw
+private_key: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers
+Checking for private_key: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers
+ML archive repo: git@github.com:parallelworks/dynamic-learning-rivers
+ML archive branch: Nov-2022
+ML code repo: https://github.com/parallelworks/sl_core
+ML data repo: https://github.com/parallelworks/global-river-databases
+ 
+Absolute paths on cluster:
+Arch: /home/sfgary/dynamic-learning-rivers
+Data: /home/sfgary/global-river-databases
+Code: /home/sfgary/sl_core
+ 
+Miniconda information:
+Location: /home/sfgary/.miniconda3
+Env. name: superlearner
+ 
+Data flow information:
+Working dir basename: ml_models/sl_
+ 
+Number of instances
+num_inst: 10
+====================================
+Fri May 5 01:13:43 UTC 2023: Step 2: Cluster setup - staging files to head node
+ 
+======> Clone repos to node...
+Fri May  5 01:16:11 UTC 2023
+Cloning into 'dynamic-learning-rivers'...
+Cloning into 'sl_core'...
+Cloning into 'global-river-databases'...
+Already up-to-date.
+Already up-to-date.
+======> Create Nov-2022...
+======> Checkout Nov-2022...
+======> Set upstream branch in case branch exists already Nov-2022...
+Branch Nov-2022 set up to track remote branch Nov-2022 from origin.
+Updating 6dc8588..0e16467
+Fast-forward
+ .github/workflows/main.yml     |    2 +-
+ input_data/ICON-ModEx_Data.csv | 1152 +++++++++++++++++++---------------------
+ 2 files changed, 536 insertions(+), 618 deletions(-)
+======> Test for presence of Conda environment
+======> No Conda found; install Conda environment for SuperLearner.
+Fri May 5 01:17:34 UTC 2023: This process can take several minutes.
+Fri May 5 01:17:34 UTC 2023: See miniconda_install.log for progress.
+====================================
+Fri May 5 01:21:35 UTC 2023: Step 2a: Preprocessing/Data Intake
+Submitted batch job 2
+Submitted batch job 3
+Submitted batch job 4
+Submitted batch job 5
+Submitted batch job 6
+Submitted batch job 7
+Submitted batch job 8
+Submitted batch job 9
+Submitted batch job 10
+Submitted batch job 11
+Submitted batch job 12
+Submitted batch job 13
+Submitted batch job 14
+Submitted batch job 15
+Submitted batch job 16
+Submitted batch job 17
+Submitted batch job 18
+Submitted batch job 19
+Submitted batch job 20
+Submitted batch job 21
+Submitted batch job 22
+Submitted batch job 23
+Submitted batch job 24
+Submitted batch job 25
+Submitted batch job 26
+Submitted batch job 27
+Submitted batch job 28
+Submitted batch job 29
+Submitted batch job 30
+Submitted batch job 31
+Submitted batch job 32
+Submitted batch job 33
+Submitted batch job 34
+Submitted batch job 35
+Submitted batch job 36
+Submitted batch job 37
+Submitted batch job 38
+Submitted batch job 39
+Submitted batch job 40
+Submitted batch job 41
+Submitted batch job 42
+Submitted batch job 43
+Submitted batch job 44
+Submitted batch job 45
+Submitted batch job 46
+Submitted batch job 47
+Submitted batch job 48
+Submitted batch job 49
+Submitted batch job 50
+Submitted batch job 51
+Submitted batch job 52
+Submitted batch job 53
+Submitted batch job 54
+Submitted batch job 55
+Submitted batch job 56
+Submitted batch job 57
+Submitted batch job 58
+Submitted batch job 59
+Submitted batch job 60
+Submitted batch job 61
+Submitted batch job 62
+Submitted batch job 63
+Submitted batch job 64
+Submitted batch job 65
+Submitted batch job 66
+Submitted batch job 67
+Submitted batch job 68
+Submitted batch job 69
+Submitted batch job 70
+Submitted batch job 71
+Submitted batch job 72
+Submitted batch job 73
+Submitted batch job 74
+Submitted batch job 75
+Submitted batch job 76
+Submitted batch job 77
+Submitted batch job 78
+Submitted batch job 79
+Submitted batch job 80
+Submitted batch job 81
+Submitted batch job 82
+Submitted batch job 83
+Submitted batch job 84
+Submitted batch job 85
+Submitted batch job 86
+Submitted batch job 87
+Submitted batch job 88
+Submitted batch job 89
+Submitted batch job 90
+Submitted batch job 91
+Submitted batch job 92
+Submitted batch job 93
+Submitted batch job 94
+Submitted batch job 95
+Submitted batch job 96
+Submitted batch job 97
+Submitted batch job 98
+Submitted batch job 99
+Submitted batch job 100
+Submitted batch job 101
+Submitted batch job 102
+Submitted batch job 103
+Submitted batch job 104
+Submitted batch job 105
+Submitted batch job 106
+Submitted batch job 107
+Submitted batch job 108
+Submitted batch job 109
+Submitted batch job 110
+Submitted batch job 111
+Submitted batch job 112
+Submitted batch job 113
+Submitted batch job 114
+Submitted batch job 115
+Submitted batch job 116
+Submitted batch job 117
+Submitted batch job 118
+Submitted batch job 119
+Submitted batch job 120
+Submitted batch job 121
+Submitted batch job 122
+Submitted batch job 123
+Submitted batch job 124
+Submitted batch job 125
+Submitted batch job 126
+Submitted batch job 127
+Submitted batch job 128
+Submitted batch job 129
+Submitted batch job 130
+Submitted batch job 131
+Submitted batch job 132
+Submitted batch job 133
+Submitted batch job 134
+Submitted batch job 135
+Submitted batch job 136
+Submitted batch job 137
+Submitted batch job 138
+Submitted batch job 139
+Submitted batch job 140
+Submitted batch job 141
+Submitted batch job 142
+Submitted batch job 143
+Submitted batch job 144
+Submitted batch job 145
+Submitted batch job 146
+Submitted batch job 147
+Submitted batch job 148
+Submitted batch job 149
+Submitted batch job 150
+Submitted batch job 151
+Submitted batch job 152
+Submitted batch job 153
+Submitted batch job 154
+Submitted batch job 155
+Submitted batch job 156
+Submitted batch job 157
+Submitted batch job 158
+Submitted batch job 159
+Submitted batch job 160
+Submitted batch job 161
+Submitted batch job 162
+Submitted batch job 163
+Submitted batch job 164
+Submitted batch job 165
+Submitted batch job 166
+Submitted batch job 167
+Submitted batch job 168
+Submitted batch job 169
+Submitted batch job 170
+Submitted batch job 171
+Submitted batch job 172
+Submitted batch job 173
+Submitted batch job 174
+Submitted batch job 175
+Submitted batch job 176
+Submitted batch job 177
+Submitted batch job 178
+Submitted batch job 179
+Submitted batch job 180
+Submitted batch job 181
+Submitted batch job 182
+Submitted batch job 183
+Submitted batch job 184
+Submitted batch job 185
+Submitted batch job 186
+Submitted batch job 187
+Submitted batch job 188
+Submitted batch job 189
+Submitted batch job 190
+Submitted batch job 191
+Submitted batch job 192
+Submitted batch job 193
+Submitted batch job 194
+Submitted batch job 195
+Submitted batch job 196
+Submitted batch job 197
+Submitted batch job 198
+Submitted batch job 199
+Submitted batch job 200
+Submitted batch job 201
+Submitted batch job 202
+Submitted batch job 203
+Submitted batch job 204
+Submitted batch job 205
+Submitted batch job 206
+Submitted batch job 207
+Submitted batch job 208
+Submitted batch job 209
+Submitted batch job 210
+Submitted batch job 211
+Submitted batch job 212
+Submitted batch job 213
+Submitted batch job 214
+Submitted batch job 215
+Submitted batch job 216
+Submitted batch job 217
+Submitted batch job 218
+Submitted batch job 219
+Submitted batch job 220
+Submitted batch job 221
+Submitted batch job 222
+Submitted batch job 223
+Submitted batch job 224
+Submitted batch job 225
+Submitted batch job 226
+Submitted batch job 227
+Submitted batch job 228
+Submitted batch job 229
+Submitted batch job 230
+Submitted batch job 231
+Submitted batch job 232
+Submitted batch job 233
+Submitted batch job 234
+Submitted batch job 235
+Submitted batch job 236
+Submitted batch job 237
+Submitted batch job 238
+Submitted batch job 239
+Submitted batch job 240
+Submitted batch job 241
+Submitted batch job 242
+Submitted batch job 243
+Submitted batch job 244
+Submitted batch job 245
+Submitted batch job 246
+Submitted batch job 247
+Submitted batch job 248
+Submitted batch job 249
+Submitted batch job 250
+Submitted batch job 251
+Submitted batch job 252
+Submitted batch job 253
+Submitted batch job 254
+Submitted batch job 255
+Submitted batch job 256
+Submitted batch job 257
+Submitted batch job 258
+Submitted batch job 259
+Submitted batch job 260
+Submitted batch job 261
+Submitted batch job 262
+Submitted batch job 263
+Submitted batch job 264
+Submitted batch job 265
+Submitted batch job 266
+Submitted batch job 267
+Submitted batch job 268
+Submitted batch job 269
+Submitted batch job 270
+Submitted batch job 271
+Submitted batch job 272
+Submitted batch job 273
+Submitted batch job 274
+Submitted batch job 275
+Submitted batch job 276
+Submitted batch job 277
+Submitted batch job 278
+Submitted batch job 279
+Submitted batch job 280
+Submitted batch job 281
+Submitted batch job 282
+Submitted batch job 283
+Submitted batch job 284
+Submitted batch job 285
+Submitted batch job 286
+Submitted batch job 287
+Submitted batch job 288
+Submitted batch job 289
+Submitted batch job 290
+Submitted batch job 291
+Submitted batch job 292
+Submitted batch job 293
+Submitted batch job 294
+Submitted batch job 295
+Submitted batch job 296
+Submitted batch job 297
+Submitted batch job 298
+Submitted batch job 299
+Submitted batch job 300
+Submitted batch job 301
+Submitted batch job 302
+Submitted batch job 303
+Submitted batch job 304
+Submitted batch job 305
+Submitted batch job 306
+Submitted batch job 307
+Submitted batch job 308
+Submitted batch job 309
+Submitted batch job 310
+Submitted batch job 311
+Submitted batch job 312
+Submitted batch job 313
+Submitted batch job 314
+Submitted batch job 315
+Submitted batch job 316
+Submitted batch job 317
+Submitted batch job 318
+Submitted batch job 319
+Submitted batch job 320
+Submitted batch job 321
+Submitted batch job 322
+Submitted batch job 323
+Submitted batch job 324
+Submitted batch job 325
+Submitted batch job 326
+Submitted batch job 327
+Submitted batch job 328
+Submitted batch job 329
+Submitted batch job 330
+Submitted batch job 331
+Submitted batch job 332
+Submitted batch job 333
+Submitted batch job 334
+Submitted batch job 335
+Submitted batch job 336
+Submitted batch job 337
+Submitted batch job 338
+Submitted batch job 339
+Submitted batch job 340
+Submitted batch job 341
+Submitted batch job 342
+Submitted batch job 343
+Submitted batch job 344
+Submitted batch job 345
+Submitted batch job 346
+Submitted batch job 347
+Submitted batch job 348
+Submitted batch job 349
+Submitted batch job 350
+Submitted batch job 351
+Submitted batch job 352
+Submitted batch job 353
+Submitted batch job 354
+Submitted batch job 355
+Submitted batch job 356
+Submitted batch job 357
+Submitted batch job 358
+Submitted batch job 359
+Submitted batch job 360
+Submitted batch job 361
+Submitted batch job 362
+Submitted batch job 363
+Submitted batch job 364
+Submitted batch job 365
+Submitted batch job 366
+Submitted batch job 367
+Submitted batch job 368
+Submitted batch job 369
+Submitted batch job 370
+Submitted batch job 371
+Submitted batch job 372
+Submitted batch job 373
+Submitted batch job 374
+Submitted batch job 375
+Submitted batch job 376
+Submitted batch job 377
+Submitted batch job 378
+Submitted batch job 379
+Submitted batch job 380
+Submitted batch job 381
+Submitted batch job 382
+Submitted batch job 383
+Submitted batch job 384
+Submitted batch job 385
+Submitted batch job 386
+Submitted batch job 387
+Submitted batch job 388
+Submitted batch job 389
+Submitted batch job 390
+Submitted batch job 391
+Submitted batch job 392
+Submitted batch job 393
+Submitted batch job 394
+Submitted batch job 395
+Submitted batch job 396
+Submitted batch job 397
+Submitted batch job 398
+Submitted batch job 399
+Submitted batch job 400
+Submitted batch job 401
+Submitted batch job 402
+Submitted batch job 403
+Submitted batch job 404
+Submitted batch job 405
+Submitted batch job 406
+Submitted batch job 407
+Submitted batch job 408
+Submitted batch job 409
+Submitted batch job 410
+Submitted batch job 411
+Submitted batch job 412
+Submitted batch job 413
+Submitted batch job 414
+Submitted batch job 415
+Submitted batch job 416
+Submitted batch job 417
+Submitted batch job 418
+Submitted batch job 419
+Submitted batch job 420
+Submitted batch job 421
+-------------Predict Data----------------
+Submitted batch job 422
+Submitted batch job 423
+Submitted batch job 424
+Submitted batch job 425
+Submitted batch job 426
+Submitted batch job 427
+Submitted batch job 428
+Submitted batch job 429
+Submitted batch job 430
+Submitted batch job 431
+Submitted batch job 432
+Submitted batch job 433
+Submitted batch job 434
+Submitted batch job 435
+Submitted batch job 436
+Submitted batch job 437
+Submitted batch job 438
+Submitted batch job 439
+Submitted batch job 440
+Submitted batch job 441
+Submitted batch job 442
+Submitted batch job 443
+Submitted batch job 444
+Submitted batch job 445
+Submitted batch job 446
+Submitted batch job 447
+Submitted batch job 448
+Submitted batch job 449
+Submitted batch job 450
+Submitted batch job 451
+Submitted batch job 452
+Submitted batch job 453
+Submitted batch job 454
+Submitted batch job 455
+Submitted batch job 456
+Submitted batch job 457
+Submitted batch job 458
+Submitted batch job 459
+Submitted batch job 460
+Submitted batch job 461
+Submitted batch job 462
+Submitted batch job 463
+Submitted batch job 464
+Submitted batch job 465
+Submitted batch job 466
+Submitted batch job 467
+Submitted batch job 468
+Submitted batch job 469
+Submitted batch job 470
+Submitted batch job 471
+Submitted batch job 472
+Submitted batch job 473
+Submitted batch job 474
+Submitted batch job 475
+Submitted batch job 476
+Submitted batch job 477
+Submitted batch job 478
+Submitted batch job 479
+Submitted batch job 480
+Submitted batch job 481
+Submitted batch job 482
+Submitted batch job 483
+Submitted batch job 484
+Submitted batch job 485
+====================================
+Fri May 5 01:25:47 UTC 2023: Step 3: Launch jobs on cluster
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
+======> Launching SuperLearner
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_1
+Submitted batch job 486
+======> Launching SuperLearner
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_2
+======> Launching SuperLearner
+Submitted batch job 487
+Submitted batch job 488
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_3
+======> Launching SuperLearner
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_4
+======> Launching SuperLearner
+Submitted batch job 489
+Submitted batch job 490
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_5
+======> Launching SuperLearner
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_6
+======> Launching SuperLearner
+Submitted batch job 491
+Submitted batch job 492
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_7
+======> Launching SuperLearner
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_8
+======> Launching SuperLearner
+Submitted batch job 493
+Submitted batch job 494
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_9
+======> Launching SuperLearner
+====================================
+Fri May 5 01:26:04 UTC 2023: Step 4: Monitor jobs on cluster
+Fri May 5 01:26:04 UTC 2023: Monitor waiting 10 seconds...
+Submitted batch job 495
+Fri May 5 01:26:15 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:26:15 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:26:27 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:26:27 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:26:38 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:26:38 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:26:50 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:26:50 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:27:01 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:27:01 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:27:13 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:27:13 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:27:24 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:27:24 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:27:36 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:27:36 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:27:47 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:27:47 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:27:58 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:27:58 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:28:10 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:28:10 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:28:21 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:28:21 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:28:33 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:28:33 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:28:44 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:28:44 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:28:55 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:28:55 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:29:07 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:29:07 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:29:18 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:29:18 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:29:30 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:29:30 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:29:41 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:29:41 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:29:52 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:29:52 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:30:03 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:30:03 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:30:15 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:30:15 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:30:26 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:30:26 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:30:37 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:30:37 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:30:49 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:30:49 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:31:00 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:31:00 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:31:11 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:31:11 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:31:22 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:31:22 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:31:34 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:31:34 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:31:45 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:31:45 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:31:56 UTC 2023: Found 11 lines in squeue.
+Fri May 5 01:31:56 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:32:08 UTC 2023: Found 10 lines in squeue.
+Fri May 5 01:32:08 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:32:19 UTC 2023: Found 10 lines in squeue.
+Fri May 5 01:32:19 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:32:30 UTC 2023: Found 8 lines in squeue.
+Fri May 5 01:32:30 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:32:42 UTC 2023: Found 8 lines in squeue.
+Fri May 5 01:32:42 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:32:53 UTC 2023: Found 7 lines in squeue.
+Fri May 5 01:32:53 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:33:04 UTC 2023: Found 5 lines in squeue.
+Fri May 5 01:33:04 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:33:16 UTC 2023: Found 4 lines in squeue.
+Fri May 5 01:33:16 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:33:27 UTC 2023: Found 4 lines in squeue.
+Fri May 5 01:33:27 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:33:39 UTC 2023: Found 4 lines in squeue.
+Fri May 5 01:33:39 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:33:50 UTC 2023: Found 3 lines in squeue.
+Fri May 5 01:33:50 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:34:01 UTC 2023: Found 2 lines in squeue.
+Fri May 5 01:34:01 UTC 2023: Monitor waiting 10 seconds...
+Fri May 5 01:34:12 UTC 2023: Found 1 lines in squeue.
+Fri May 5 01:34:12 UTC 2023: No more pending jobs in squeue. Stage SLURM logs back.
+====================================
+Fri May 5 01:34:14 UTC 2023: Step 5: Postprocessing/
+======> Stage PW logs to remote repo for committing
+sending incremental file list
