@@ -1,0 +1,47 @@
+1.1.1
+Parsing SuperLearner input arguments...
+--conda_sh
+--superlearner_conf
+--n_jobs
+--num_inputs
+--predict_var
+--cross_val_score
+--model_dir
+--hpo
+--smogn
+--data
+--backend
+NOTICE: Filling any NaN with mean values!
+NaN in training data will cause a crash.
+Loading SuperLearner configuration...
+Loading from: /home/sfgary/sl_core/sample_inputs/superlearner_conf.py
+Dirname:  /home/sfgary/sl_core/sample_inputs
+Basename: superlearner_conf
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-rbf
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-lin
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-poly
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-sig
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator knn-uni
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator knn-dist
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator pls
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator mlp
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator ridge
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator lasso
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator linear
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator enet
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator huber
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator xgb
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator etr
+Defining estimator for output: Respiration_Rate_mg_per_L_per_H
+Training estimator for output: Respiration_Rate_mg_per_L_per_H
+Evaluating estimator for output: Respiration_Rate_mg_per_L_per_H
+Hold out metrics:
+{
+    "Respiration_Rate_mg_per_L_per_H": 0.5802944856781831
+}
+Evaluating estimator for output: Respiration_Rate_mg_per_L_per_H
+Classical metrics:
+{
+    "Respiration_Rate_mg_per_L_per_H": 0.7356666588478177
+}
+Save train/test data
