@@ -1,0 +1,22 @@
+1.1.1
+Parsing SuperLearner input arguments...
+--conda_sh
+--superlearner_conf
+--n_jobs
+--num_inputs
+--predict_var
+--cross_val_score
+--model_dir
+--hpo
+--smogn
+--data
+--backend
+NOTICE: Filling any NaN with mean values!
+NaN in training data will cause a crash.
+Loading SuperLearner configuration...
+Loading from: /home/sfgary/sl_core/sample_inputs/superlearner_conf_TTR_PT.py
+Dirname:  /home/sfgary/sl_core/sample_inputs
+Basename: superlearner_conf_TTR_PT
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-rbf
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-lin
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-poly

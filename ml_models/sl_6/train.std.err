@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/sfgary/sl_core/train.py", line 311, in <module>
+    sl_conf_hpo['estimators'][oname][ename]['model'] = einfo['hpo'].fit(X_train, Y_train[:, oi]).best_estimator_
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/skopt/searchcv.py", line 466, in fit
+    super().fit(X=X, y=y, groups=groups, **fit_params)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/model_selection/_search.py", line 874, in fit
+    self._run_search(evaluate_candidates)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/skopt/searchcv.py", line 512, in _run_search
+    optim_result = self._step(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/skopt/searchcv.py", line 408, in _step
+    all_results = evaluate_candidates(params_dict)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/model_selection/_search.py", line 821, in evaluate_candidates
+    out = parallel(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/utils/parallel.py", line 63, in __call__
+    return super().__call__(iterable_with_config)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 1051, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 864, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 782, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 263, in __call__
+    return [func(*args, **kwargs)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 263, in <listcomp>
+    return [func(*args, **kwargs)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/utils/parallel.py", line 123, in __call__
+    return self.function(*args, **kwargs)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/model_selection/_validation.py", line 708, in _fit_and_score
+    test_scores = _score(estimator, X_test, y_test, scorer, error_score)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/model_selection/_validation.py", line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/metrics/_scorer.py", line 444, in _passthrough_scorer
+    return estimator.score(*args, **kwargs)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/base.py", line 723, in score
+    return r2_score(y, y_pred, sample_weight=sample_weight)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/metrics/_regression.py", line 911, in r2_score
+    y_type, y_true, y_pred, multioutput = _check_reg_targets(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/metrics/_regression.py", line 102, in _check_reg_targets
+    y_pred = check_array(y_pred, ensure_2d=False, dtype=dtype)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/utils/validation.py", line 921, in check_array
+    _assert_all_finite(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/utils/validation.py", line 161, in _assert_all_finite
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
