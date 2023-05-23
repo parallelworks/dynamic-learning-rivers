@@ -1,5 +1,5 @@
 # SuperLearner configuration for:
-# 14 stacked ensemble models
+# 13 stacked ensemble models
 # Each uses MinMaxScaler or StandardScaler on inputs
 # Each uses TransformedTargetRegressor with PowerTransformer on targets
 #
@@ -139,64 +139,6 @@ SuperLearnerConf = {
                 {
                     "regressor__svr__C": (10**-6, 10**2.5, 'log-uniform'),
                     "regressor__svr__nu": (10**-10, 0.99, 'uniform')
-                },
-                n_iter = n_iter,
-                cv = cv
-            )
-        },
-        "nusvr-poly": {
-            "model": TransformedTargetRegressor(
-                regressor = Pipeline(
-                    [
-                        ('scale', MinMaxScaler()),
-                        ('svr', NuSVR(kernel='poly'))
-                    ]
-                ),
-                transformer = PowerTransformer(method='yeo-johnson')
-            ),
-            "hpo": BayesSearchCV(
-                TransformedTargetRegressor(
-                    regressor = Pipeline(
-                        [
-                            ('scale', MinMaxScaler()),
-                            ('svr', NuSVR(kernel='poly'))
-                        ]
-                    ),
-                    transformer = PowerTransformer(method='yeo-johnson')
-                ),
-                {
-                    "regressor__svr__C": (10**-6, 10**2.5, 'log-uniform'),
-                    "regressor__svr__nu": (10**-10, 0.99, 'uniform'),
-                    "regressor__svr__degree": [1, 2, 3]
-                },
-                n_iter = n_iter,
-                cv = cv
-            )
-        },
-        "nusvr-sig": {
-            "model": TransformedTargetRegressor(
-                regressor = Pipeline(
-                    [
-                        ('scale', MinMaxScaler()),
-                        ('svr', NuSVR(kernel='sigmoid'))
-                    ]
-                ),
-                transformer = PowerTransformer(method='yeo-johnson')
-            ),
-            "hpo": BayesSearchCV(
-                TransformedTargetRegressor(
-                    regressor = Pipeline(
-                        [
-                            ('scale', MinMaxScaler()),
-                            ('svr', NuSVR(kernel='sigmoid'))
-                        ]
-                    ),
-                    transformer = PowerTransformer(method='yeo-johnson')
-                ),
-                {
-                    "regressor__svr__C": (10**-6, 10**2.5, 'log-uniform'),
-                    "regressor__svr__nu": (10**-10, 0.99, 'uniform'),
-                    "regressor__svr__coef0": [-0.99, 0.99, 'uniform']
                 },
                 n_iter = n_iter,
                 cv = cv

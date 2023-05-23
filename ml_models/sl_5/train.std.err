@@ -17,8 +17,8 @@ Traceback (most recent call last):
     out = parallel(
   File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/sklearn/utils/parallel.py", line 63, in __call__
     return super().__call__(iterable_with_config)
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 1048, in __call__
-    if self.dispatch_one_batch(iterator):
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 1051, in __call__
+    while self.dispatch_one_batch(iterator):
   File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 864, in dispatch_one_batch
     self._dispatch(tasks)
   File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/joblib/parallel.py", line 782, in _dispatch

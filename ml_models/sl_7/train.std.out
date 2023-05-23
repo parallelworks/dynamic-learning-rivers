@@ -19,4 +19,7 @@ Dirname:  /home/sfgary/sl_core/sample_inputs
 Basename: superlearner_conf_TTR_PT
 Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-rbf
 Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-lin
-Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator nusvr-poly
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator knn-uni
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator knn-dist
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator pls
+Running HPO for output Respiration_Rate_mg_per_L_per_H and estimator mlp
