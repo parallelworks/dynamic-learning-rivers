@@ -349,7 +349,7 @@ SuperLearnerConf = {
                     [
                         ('scale',  StandardScaler()),
                         ('poly', PolynomialFeatures(degree = 3)),
-                        ('linear', Ridge())
+                        ('linear', Lasso())
                     ]
                 ),
                 transformer = PowerTransformer(method='yeo-johnson')
