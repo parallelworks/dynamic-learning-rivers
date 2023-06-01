@@ -18,10 +18,13 @@ conda activate $my_env
 # created from fresh
 rm -f *.csv
 
+# Set the name of the target feature
+target_name="Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment"
+
 #=============================================
 # Steps 1 & 2: Intake training and predict data
 #=============================================
-python prep_01_intake_train.py
+python prep_01_intake_train.py --target_name $target_name
 python prep_02_intake_predict.py
 
 #=============================================
@@ -123,5 +126,5 @@ cp $large_predict_csv prep_05_output_large_predict.csv
 #=============================================
 # Merge/paste/cut columns
 #=============================================
-python prep_06_merge.py
+python prep_06_merge.py --target_name $target_name
 

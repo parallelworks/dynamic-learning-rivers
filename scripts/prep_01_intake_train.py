@@ -3,6 +3,20 @@
 import pandas as pd
 import numpy as np
 import o2sat
+import argparse
+
+#print("Parsing input arguments...")
+parser = argparse.ArgumentParser()
+parsed, unknown = parser.parse_known_args()
+for arg in unknown:
+    if arg.startswith(("-", "--")):
+        parser.add_argument(arg)
+        #print(arg)
+
+args = parser.parse_args()
+#print(args.__dict__)
+target_name = args.target_name
+
 
 data = pd.read_csv("../input_data/ICON-ModEx_Data.csv")
 
@@ -17,7 +31,7 @@ vars_to_use=[
     'pH',
     'Mean_DO_mg_per_L',
     'Mean_DO_percent_saturation',
-    'Respiration_Rate_mg_per_L_per_H'
+    target_name
 ]
 
 # Grab a view of just the subset we want
@@ -27,7 +41,7 @@ core_vars = data[vars_to_use]
 # (no target data)
 targets = core_vars.dropna(
     axis='index',
-    subset=['Respiration_Rate_mg_per_L_per_H'])
+    subset=[target_name])
 
 # Drop any data points with no oxygen (both missing)
 #targets.dropna(

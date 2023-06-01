@@ -8,6 +8,19 @@
 #==========================================
 
 import pandas as pd
+import argparse
+
+#print("Parsing input arguments...")
+parser = argparse.ArgumentParser()
+parsed, unknown = parser.parse_known_args()
+for arg in unknown:
+    if arg.startswith(("-", "--")):
+        parser.add_argument(arg)
+        #print(arg)
+
+args = parser.parse_args()
+#print(args.__dict__)
+target_name=args.target_name
 
 # Load input files
 # Phys (colocated) files are space separated
@@ -103,7 +116,10 @@ predict_merged.to_csv(
     mode='w',
     index=False)
 
-csv_cols.append('Respiration_Rate_mg_per_L_per_H')
+# Add target_name to list of columns to output
+# only for the training set (predict set does not
+# have the target column).
+csv_cols.append(target_name)
 train_merged.to_csv(
     'prep_06_output_final_train.csv',
     columns=csv_cols,
@@ -115,3 +131,4 @@ train_merged.to_csv(
     columns=ixy_cols,
     mode='w',
     index=False)
+
