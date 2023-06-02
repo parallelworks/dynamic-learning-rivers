@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/sfgary/sl_core/predict.py", line 61, in <module>
+    list_models = list(superlearner[predict_var].named_estimators_.keys())
+KeyError: 'Respiration_Rate_mg_per_L_per_H'
