@@ -37,11 +37,11 @@ Training estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sed
 Evaluating estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
 Hold out metrics:
 {
-    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.48557040878638946
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.5312970127289003
 }
 Evaluating estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
 Classical metrics:
 {
-    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.868667393720933
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.8060544707217356
 }
 Save train/test data

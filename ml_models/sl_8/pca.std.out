@@ -4,3 +4,8 @@ Parsing SuperLearner PCA arguments...
 --data
 --predict_var
 --predict_data
+Shapes at start:
+(10593, 25)
+(10593, 6)
+Shape after concat:
+(10593, 31)

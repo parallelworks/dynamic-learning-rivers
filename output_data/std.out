@@ -10,14 +10,14 @@ bash  workflow.sh --superlearner_conf 'sample_inputs/superlearner_conf.py' --n_j
  
 ====================================
 Step 1: Local setup on PW platform
-Execution is in workflow.sh at Fri Jun 2 23:16:18 UTC 2023
+Execution is in workflow.sh at Tue Jun 6 14:07:05 UTC 2023
  
 Workflow parameters from workflow.xml, apirun/main.py, or ./github/workflows/main.yaml:
 --superlearner_conf sample_inputs/superlearner_conf.py --n_jobs 8 --work_dir_base ml_models/sl_ --onnx False --num_inputs 25 --train_test_data scripts/prep_06_output_final_train.csv --smogn False --num_inst 10 --hpo True --cross_val_score False --predict_data scripts/prep_06_output_final_predict --backend loky --ml_code_repo https://github.com/parallelworks/sl_core --ml_data_repo https://github.com/parallelworks/global-river-databases --ml_arch_branch June-2023 --my_env superlearner --ml_arch_repo git@github.com:parallelworks/dynamic-learning-rivers --whost cloud.clusters.pw --miniconda_loc /home/__USER__/.miniconda3 --push_to_gh True
  
 =========================================================
 Starting sl_core
-Running in /home/sfgary/pw/jobs/58686 with job number: 58686
+Running in /home/sfgary/pw/jobs/58700 with job number: 58700
  
 List of inputs converted to environment variables:
 WFP_smogn=False
@@ -42,9 +42,9 @@ WFP_num_inputs=25
 WFP_cross_val_score=False
  
 =========================================================
-Fri Jun 2 23:16:19 UTC 2023: Testing echod. Currently on pw-user-sfgary.
-Fri Jun 2 23:16:19 UTC 2023: Will excute as sfgary@cloud.clusters.pw
-Fri Jun 2 23:16:19 UTC 2023: Running on the following computer: pw-user-sfgary
+Tue Jun 6 14:07:06 UTC 2023: Testing echod. Currently on pw-user-sfgary.
+Tue Jun 6 14:07:06 UTC 2023: Will excute as sfgary@cloud.clusters.pw
+Tue Jun 6 14:07:06 UTC 2023: Running on the following computer: pw-user-sfgary
  
 Checking inputs to test:
 user: sfgary
@@ -71,10 +71,10 @@ Working dir basename: ml_models/sl_
 Number of instances
 num_inst: 10
 ====================================
-Fri Jun 2 23:16:19 UTC 2023: Step 2: Cluster setup - staging files to head node
+Tue Jun 6 14:07:06 UTC 2023: Step 2: Cluster setup - staging files to head node
  
 ======> Clone repos to node...
-Fri Jun  2 23:18:47 UTC 2023
+Tue Jun  6 14:09:13 UTC 2023
 Cloning into 'dynamic-learning-rivers'...
 Cloning into 'sl_core'...
 Cloning into 'global-river-databases'...
@@ -84,19 +84,338 @@ Already up-to-date.
 ======> Checkout June-2023...
 ======> Set upstream branch in case branch exists already June-2023...
 Branch June-2023 set up to track remote branch June-2023 from origin.
-Updating 32b5f0b..81bc2e3
+Updating 32b5f0b..79383c1
 Fast-forward
- .github/workflows/main.yml                         |    2 +-
- ...odEx_Collaborator_Site_Water_Chemistry_Data.csv |    8 +
- input_data/ICON-ModEx_Data.csv                     | 1284 ++++++++++----------
- input_data/ICON-ModEx_Sites_To_Remove.csv          |   23 +
- 4 files changed, 699 insertions(+), 618 deletions(-)
+ .github/workflows/main.yml                         |     2 +-
+ ...odEx_Collaborator_Site_Water_Chemistry_Data.csv |     8 +
+ input_data/ICON-ModEx_Data.csv                     |  1284 +--
+ input_data/ICON-ModEx_Sites_To_Remove.csv          |    23 +
+ ml_models/sl_0/SuperLearners.pkl                   |   Bin 0 -> 21993995 bytes
+ ml_models/sl_0/classical-metrics.json              |     3 +
+ ml_models/sl_0/hold-out-metrics.json               |     3 +
+ ml_models/sl_0/original_input_data.csv             |   591 ++
+ ml_models/sl_0/pca.std.err                         |    22 +
+ ml_models/sl_0/pca.std.out                         |     6 +
+ ml_models/sl_0/predict.std.err                     |     8 +
+ ml_models/sl_0/predict.std.out                     |     6 +
+ ml_models/sl_0/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_0/sl_targets_hist.png                 |   Bin 0 -> 21473 bytes
+ ml_models/sl_0/superlearner_conf.py                |   630 ++
+ ml_models/sl_0/test.csv                            |   149 +
+ ml_models/sl_0/train.csv                           |   443 +
+ ml_models/sl_0/train.std.err                       |  2196 ++++
+ ml_models/sl_0/train.std.out                       |    47 +
+ ml_models/sl_1/SuperLearners.pkl                   |   Bin 0 -> 20159420 bytes
+ ml_models/sl_1/classical-metrics.json              |     3 +
+ ml_models/sl_1/hold-out-metrics.json               |     3 +
+ ml_models/sl_1/original_input_data.csv             |   591 ++
+ ml_models/sl_1/pca.std.err                         |    22 +
+ ml_models/sl_1/pca.std.out                         |     6 +
+ ml_models/sl_1/predict.std.err                     |     8 +
+ ml_models/sl_1/predict.std.out                     |     6 +
+ ml_models/sl_1/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_1/sl_targets_hist.png                 |   Bin 0 -> 21444 bytes
+ ml_models/sl_1/superlearner_conf.py                |   630 ++
+ ml_models/sl_1/test.csv                            |   149 +
+ ml_models/sl_1/train.csv                           |   443 +
+ ml_models/sl_1/train.std.err                       |  2296 ++++
+ ml_models/sl_1/train.std.out                       |    47 +
+ ml_models/sl_2/SuperLearners.pkl                   |   Bin 0 -> 8855312 bytes
+ ml_models/sl_2/classical-metrics.json              |     3 +
+ ml_models/sl_2/hold-out-metrics.json               |     3 +
+ ml_models/sl_2/original_input_data.csv             |   591 ++
+ ml_models/sl_2/pca.std.err                         |    22 +
+ ml_models/sl_2/pca.std.out                         |     6 +
+ ml_models/sl_2/predict.std.err                     |     8 +
+ ml_models/sl_2/predict.std.out                     |     6 +
+ ml_models/sl_2/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_2/sl_targets_hist.png                 |   Bin 0 -> 21423 bytes
+ ml_models/sl_2/superlearner_conf.py                |   630 ++
+ ml_models/sl_2/test.csv                            |   149 +
+ ml_models/sl_2/train.csv                           |   443 +
+ ml_models/sl_2/train.std.err                       |  2386 +++++
+ ml_models/sl_2/train.std.out                       |    47 +
+ ml_models/sl_3/SuperLearners.pkl                   |   Bin 0 -> 15346726 bytes
+ ml_models/sl_3/classical-metrics.json              |     3 +
+ ml_models/sl_3/hold-out-metrics.json               |     3 +
+ ml_models/sl_3/original_input_data.csv             |   591 ++
+ ml_models/sl_3/pca.std.err                         |    22 +
+ ml_models/sl_3/pca.std.out                         |     6 +
+ ml_models/sl_3/predict.std.err                     |     8 +
+ ml_models/sl_3/predict.std.out                     |     6 +
+ ml_models/sl_3/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_3/sl_targets_hist.png                 |   Bin 0 -> 22205 bytes
+ ml_models/sl_3/superlearner_conf.py                |   630 ++
+ ml_models/sl_3/test.csv                            |   149 +
+ ml_models/sl_3/train.csv                           |   443 +
+ ml_models/sl_3/train.std.err                       |  2284 ++++
+ ml_models/sl_3/train.std.out                       |    47 +
+ ml_models/sl_4/SuperLearners.pkl                   |   Bin 0 -> 7879837 bytes
+ ml_models/sl_4/classical-metrics.json              |     3 +
+ ml_models/sl_4/hold-out-metrics.json               |     3 +
+ ml_models/sl_4/original_input_data.csv             |   591 ++
+ ml_models/sl_4/pca.std.err                         |    22 +
+ ml_models/sl_4/pca.std.out                         |     6 +
+ ml_models/sl_4/predict.std.err                     |     8 +
+ ml_models/sl_4/predict.std.out                     |     6 +
+ ml_models/sl_4/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_4/sl_targets_hist.png                 |   Bin 0 -> 21387 bytes
+ ml_models/sl_4/superlearner_conf.py                |   630 ++
+ ml_models/sl_4/test.csv                            |   149 +
+ ml_models/sl_4/train.csv                           |   443 +
+ ml_models/sl_4/train.std.err                       |  1564 +++
+ ml_models/sl_4/train.std.out                       |    47 +
+ ml_models/sl_5/SuperLearners.pkl                   |   Bin 0 -> 8272396 bytes
+ ml_models/sl_5/classical-metrics.json              |     3 +
+ ml_models/sl_5/hold-out-metrics.json               |     3 +
+ ml_models/sl_5/original_input_data.csv             |   591 ++
+ ml_models/sl_5/pca.std.err                         |    22 +
+ ml_models/sl_5/pca.std.out                         |     6 +
+ ml_models/sl_5/predict.std.err                     |     8 +
+ ml_models/sl_5/predict.std.out                     |     6 +
+ ml_models/sl_5/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_5/sl_targets_hist.png                 |   Bin 0 -> 22152 bytes
+ ml_models/sl_5/superlearner_conf.py                |   630 ++
+ ml_models/sl_5/test.csv                            |   149 +
+ ml_models/sl_5/train.csv                           |   443 +
+ ml_models/sl_5/train.std.err                       |  2292 ++++
+ ml_models/sl_5/train.std.out                       |    47 +
+ ml_models/sl_6/SuperLearners.pkl                   |   Bin 0 -> 16575435 bytes
+ ml_models/sl_6/classical-metrics.json              |     3 +
+ ml_models/sl_6/hold-out-metrics.json               |     3 +
+ ml_models/sl_6/original_input_data.csv             |   591 ++
+ ml_models/sl_6/pca.std.err                         |    22 +
+ ml_models/sl_6/pca.std.out                         |     6 +
+ ml_models/sl_6/predict.std.err                     |     8 +
+ ml_models/sl_6/predict.std.out                     |     6 +
+ ml_models/sl_6/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_6/sl_targets_hist.png                 |   Bin 0 -> 22166 bytes
+ ml_models/sl_6/superlearner_conf.py                |   630 ++
+ ml_models/sl_6/test.csv                            |   149 +
+ ml_models/sl_6/train.csv                           |   443 +
+ ml_models/sl_6/train.std.err                       |  2282 ++++
+ ml_models/sl_6/train.std.out                       |    47 +
+ ml_models/sl_7/SuperLearners.pkl                   |   Bin 0 -> 16367401 bytes
+ ml_models/sl_7/classical-metrics.json              |     3 +
+ ml_models/sl_7/hold-out-metrics.json               |     3 +
+ ml_models/sl_7/original_input_data.csv             |   591 ++
+ ml_models/sl_7/pca.std.err                         |    22 +
+ ml_models/sl_7/pca.std.out                         |     6 +
+ ml_models/sl_7/predict.std.err                     |     8 +
+ ml_models/sl_7/predict.std.out                     |     6 +
+ ml_models/sl_7/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_7/sl_targets_hist.png                 |   Bin 0 -> 22228 bytes
+ ml_models/sl_7/superlearner_conf.py                |   630 ++
+ ml_models/sl_7/test.csv                            |   149 +
+ ml_models/sl_7/train.csv                           |   443 +
+ ml_models/sl_7/train.std.err                       |  2200 ++++
+ ml_models/sl_7/train.std.out                       |    47 +
+ ml_models/sl_8/SuperLearners.pkl                   |   Bin 0 -> 14063953 bytes
+ ml_models/sl_8/classical-metrics.json              |     3 +
+ ml_models/sl_8/hold-out-metrics.json               |     3 +
+ ml_models/sl_8/original_input_data.csv             |   591 ++
+ ml_models/sl_8/pca.std.err                         |    22 +
+ ml_models/sl_8/pca.std.out                         |     6 +
+ ml_models/sl_8/predict.std.err                     |     8 +
+ ml_models/sl_8/predict.std.out                     |     6 +
+ ml_models/sl_8/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_8/sl_targets_hist.png                 |   Bin 0 -> 22183 bytes
+ ml_models/sl_8/superlearner_conf.py                |   630 ++
+ ml_models/sl_8/test.csv                            |   149 +
+ ml_models/sl_8/train.csv                           |   443 +
+ ml_models/sl_8/train.std.err                       |  2350 +++++
+ ml_models/sl_8/train.std.out                       |    47 +
+ ml_models/sl_9/SuperLearners.pkl                   |   Bin 0 -> 24179189 bytes
+ ml_models/sl_9/classical-metrics.json              |     3 +
+ ml_models/sl_9/hold-out-metrics.json               |     3 +
+ ml_models/sl_9/original_input_data.csv             |   591 ++
+ ml_models/sl_9/pca.std.err                         |    22 +
+ ml_models/sl_9/pca.std.out                         |     6 +
+ ml_models/sl_9/predict.std.err                     |     8 +
+ ml_models/sl_9/predict.std.out                     |     6 +
+ ml_models/sl_9/requirements.txt.gz                 |   Bin 0 -> 1804 bytes
+ ml_models/sl_9/sl_targets_hist.png                 |   Bin 0 -> 22163 bytes
+ ml_models/sl_9/superlearner_conf.py                |   630 ++
+ ml_models/sl_9/test.csv                            |   149 +
+ ml_models/sl_9/train.csv                           |   443 +
+ ml_models/sl_9/train.std.err                       |  2034 ++++
+ ml_models/sl_9/train.std.out                       |    47 +
+ output_data/filtered_predict_output.csv            |     0
+ output_data/std.err                                |    73 +
+ output_data/std.out                                |   949 ++
+ scripts/post_01_output_ml_predict_avg.csv          | 10482 -------------------
+ scripts/post_01_output_ml_predict_std.csv          | 10482 -------------------
+ scripts/post_02_output_ml_pred_avg_filtered.csv    |  3349 ------
+ scripts/prep_01_output_train.csv                   |  1093 +-
+ scripts/prep_02_output_predict.csv                 |     8 +
+ scripts/prep_03_output_colocated_train.csv         |  1027 +-
+ scripts/prep_04_output_colocated_predict.csv       |   106 +-
+ scripts/prep_06_output_final_predict.csv           |     8 +
+ scripts/prep_06_output_final_predict.ixy           |     8 +
+ scripts/prep_06_output_final_train.csv             |  1093 +-
+ scripts/prep_06_output_final_train.ixy             |   489 +-
+ 168 files changed, 44795 insertions(+), 26653 deletions(-)
+ create mode 100644 ml_models/sl_0/SuperLearners.pkl
+ create mode 100644 ml_models/sl_0/classical-metrics.json
+ create mode 100644 ml_models/sl_0/hold-out-metrics.json
+ create mode 100644 ml_models/sl_0/original_input_data.csv
+ create mode 100644 ml_models/sl_0/pca.std.err
+ create mode 100644 ml_models/sl_0/pca.std.out
+ create mode 100644 ml_models/sl_0/predict.std.err
+ create mode 100644 ml_models/sl_0/predict.std.out
+ create mode 100644 ml_models/sl_0/requirements.txt.gz
+ create mode 100644 ml_models/sl_0/sl_targets_hist.png
+ create mode 100644 ml_models/sl_0/superlearner_conf.py
+ create mode 100644 ml_models/sl_0/test.csv
+ create mode 100644 ml_models/sl_0/train.csv
+ create mode 100644 ml_models/sl_0/train.std.err
+ create mode 100644 ml_models/sl_0/train.std.out
+ create mode 100644 ml_models/sl_1/SuperLearners.pkl
+ create mode 100644 ml_models/sl_1/classical-metrics.json
+ create mode 100644 ml_models/sl_1/hold-out-metrics.json
+ create mode 100644 ml_models/sl_1/original_input_data.csv
+ create mode 100644 ml_models/sl_1/pca.std.err
+ create mode 100644 ml_models/sl_1/pca.std.out
+ create mode 100644 ml_models/sl_1/predict.std.err
+ create mode 100644 ml_models/sl_1/predict.std.out
+ create mode 100644 ml_models/sl_1/requirements.txt.gz
+ create mode 100644 ml_models/sl_1/sl_targets_hist.png
+ create mode 100644 ml_models/sl_1/superlearner_conf.py
+ create mode 100644 ml_models/sl_1/test.csv
+ create mode 100644 ml_models/sl_1/train.csv
+ create mode 100644 ml_models/sl_1/train.std.err
+ create mode 100644 ml_models/sl_1/train.std.out
+ create mode 100644 ml_models/sl_2/SuperLearners.pkl
+ create mode 100644 ml_models/sl_2/classical-metrics.json
+ create mode 100644 ml_models/sl_2/hold-out-metrics.json
+ create mode 100644 ml_models/sl_2/original_input_data.csv
+ create mode 100644 ml_models/sl_2/pca.std.err
+ create mode 100644 ml_models/sl_2/pca.std.out
+ create mode 100644 ml_models/sl_2/predict.std.err
+ create mode 100644 ml_models/sl_2/predict.std.out
+ create mode 100644 ml_models/sl_2/requirements.txt.gz
+ create mode 100644 ml_models/sl_2/sl_targets_hist.png
+ create mode 100644 ml_models/sl_2/superlearner_conf.py
+ create mode 100644 ml_models/sl_2/test.csv
+ create mode 100644 ml_models/sl_2/train.csv
+ create mode 100644 ml_models/sl_2/train.std.err
+ create mode 100644 ml_models/sl_2/train.std.out
+ create mode 100644 ml_models/sl_3/SuperLearners.pkl
+ create mode 100644 ml_models/sl_3/classical-metrics.json
+ create mode 100644 ml_models/sl_3/hold-out-metrics.json
+ create mode 100644 ml_models/sl_3/original_input_data.csv
+ create mode 100644 ml_models/sl_3/pca.std.err
+ create mode 100644 ml_models/sl_3/pca.std.out
+ create mode 100644 ml_models/sl_3/predict.std.err
+ create mode 100644 ml_models/sl_3/predict.std.out
+ create mode 100644 ml_models/sl_3/requirements.txt.gz
+ create mode 100644 ml_models/sl_3/sl_targets_hist.png
+ create mode 100644 ml_models/sl_3/superlearner_conf.py
+ create mode 100644 ml_models/sl_3/test.csv
+ create mode 100644 ml_models/sl_3/train.csv
+ create mode 100644 ml_models/sl_3/train.std.err
+ create mode 100644 ml_models/sl_3/train.std.out
+ create mode 100644 ml_models/sl_4/SuperLearners.pkl
+ create mode 100644 ml_models/sl_4/classical-metrics.json
+ create mode 100644 ml_models/sl_4/hold-out-metrics.json
+ create mode 100644 ml_models/sl_4/original_input_data.csv
+ create mode 100644 ml_models/sl_4/pca.std.err
+ create mode 100644 ml_models/sl_4/pca.std.out
+ create mode 100644 ml_models/sl_4/predict.std.err
+ create mode 100644 ml_models/sl_4/predict.std.out
+ create mode 100644 ml_models/sl_4/requirements.txt.gz
+ create mode 100644 ml_models/sl_4/sl_targets_hist.png
+ create mode 100644 ml_models/sl_4/superlearner_conf.py
+ create mode 100644 ml_models/sl_4/test.csv
+ create mode 100644 ml_models/sl_4/train.csv
+ create mode 100644 ml_models/sl_4/train.std.err
+ create mode 100644 ml_models/sl_4/train.std.out
+ create mode 100644 ml_models/sl_5/SuperLearners.pkl
+ create mode 100644 ml_models/sl_5/classical-metrics.json
+ create mode 100644 ml_models/sl_5/hold-out-metrics.json
+ create mode 100644 ml_models/sl_5/original_input_data.csv
+ create mode 100644 ml_models/sl_5/pca.std.err
+ create mode 100644 ml_models/sl_5/pca.std.out
+ create mode 100644 ml_models/sl_5/predict.std.err
+ create mode 100644 ml_models/sl_5/predict.std.out
+ create mode 100644 ml_models/sl_5/requirements.txt.gz
+ create mode 100644 ml_models/sl_5/sl_targets_hist.png
+ create mode 100644 ml_models/sl_5/superlearner_conf.py
+ create mode 100644 ml_models/sl_5/test.csv
+ create mode 100644 ml_models/sl_5/train.csv
+ create mode 100644 ml_models/sl_5/train.std.err
+ create mode 100644 ml_models/sl_5/train.std.out
+ create mode 100644 ml_models/sl_6/SuperLearners.pkl
+ create mode 100644 ml_models/sl_6/classical-metrics.json
+ create mode 100644 ml_models/sl_6/hold-out-metrics.json
+ create mode 100644 ml_models/sl_6/original_input_data.csv
+ create mode 100644 ml_models/sl_6/pca.std.err
+ create mode 100644 ml_models/sl_6/pca.std.out
+ create mode 100644 ml_models/sl_6/predict.std.err
+ create mode 100644 ml_models/sl_6/predict.std.out
+ create mode 100644 ml_models/sl_6/requirements.txt.gz
+ create mode 100644 ml_models/sl_6/sl_targets_hist.png
+ create mode 100644 ml_models/sl_6/superlearner_conf.py
+ create mode 100644 ml_models/sl_6/test.csv
+ create mode 100644 ml_models/sl_6/train.csv
+ create mode 100644 ml_models/sl_6/train.std.err
+ create mode 100644 ml_models/sl_6/train.std.out
+ create mode 100644 ml_models/sl_7/SuperLearners.pkl
+ create mode 100644 ml_models/sl_7/classical-metrics.json
+ create mode 100644 ml_models/sl_7/hold-out-metrics.json
+ create mode 100644 ml_models/sl_7/original_input_data.csv
+ create mode 100644 ml_models/sl_7/pca.std.err
+ create mode 100644 ml_models/sl_7/pca.std.out
+ create mode 100644 ml_models/sl_7/predict.std.err
+ create mode 100644 ml_models/sl_7/predict.std.out
+ create mode 100644 ml_models/sl_7/requirements.txt.gz
+ create mode 100644 ml_models/sl_7/sl_targets_hist.png
+ create mode 100644 ml_models/sl_7/superlearner_conf.py
+ create mode 100644 ml_models/sl_7/test.csv
+ create mode 100644 ml_models/sl_7/train.csv
+ create mode 100644 ml_models/sl_7/train.std.err
+ create mode 100644 ml_models/sl_7/train.std.out
+ create mode 100644 ml_models/sl_8/SuperLearners.pkl
+ create mode 100644 ml_models/sl_8/classical-metrics.json
+ create mode 100644 ml_models/sl_8/hold-out-metrics.json
+ create mode 100644 ml_models/sl_8/original_input_data.csv
+ create mode 100644 ml_models/sl_8/pca.std.err
+ create mode 100644 ml_models/sl_8/pca.std.out
+ create mode 100644 ml_models/sl_8/predict.std.err
+ create mode 100644 ml_models/sl_8/predict.std.out
+ create mode 100644 ml_models/sl_8/requirements.txt.gz
+ create mode 100644 ml_models/sl_8/sl_targets_hist.png
+ create mode 100644 ml_models/sl_8/superlearner_conf.py
+ create mode 100644 ml_models/sl_8/test.csv
+ create mode 100644 ml_models/sl_8/train.csv
+ create mode 100644 ml_models/sl_8/train.std.err
+ create mode 100644 ml_models/sl_8/train.std.out
+ create mode 100644 ml_models/sl_9/SuperLearners.pkl
+ create mode 100644 ml_models/sl_9/classical-metrics.json
+ create mode 100644 ml_models/sl_9/hold-out-metrics.json
+ create mode 100644 ml_models/sl_9/original_input_data.csv
+ create mode 100644 ml_models/sl_9/pca.std.err
+ create mode 100644 ml_models/sl_9/pca.std.out
+ create mode 100644 ml_models/sl_9/predict.std.err
+ create mode 100644 ml_models/sl_9/predict.std.out
+ create mode 100644 ml_models/sl_9/requirements.txt.gz
+ create mode 100644 ml_models/sl_9/sl_targets_hist.png
+ create mode 100644 ml_models/sl_9/superlearner_conf.py
+ create mode 100644 ml_models/sl_9/test.csv
+ create mode 100644 ml_models/sl_9/train.csv
+ create mode 100644 ml_models/sl_9/train.std.err
+ create mode 100644 ml_models/sl_9/train.std.out
+ create mode 100644 output_data/filtered_predict_output.csv
+ create mode 100644 output_data/std.err
+ create mode 100755 output_data/std.out
+ delete mode 100644 scripts/post_01_output_ml_predict_avg.csv
+ delete mode 100644 scripts/post_01_output_ml_predict_std.csv
 ======> Test for presence of Conda environment
 ======> No Conda found; install Conda environment for SuperLearner.
-Fri Jun 2 23:19:55 UTC 2023: This process can take several minutes.
-Fri Jun 2 23:19:55 UTC 2023: See miniconda_install.log for progress.
+Tue Jun 6 14:10:24 UTC 2023: This process can take several minutes.
+Tue Jun 6 14:10:24 UTC 2023: See miniconda_install.log for progress.
 ====================================
-Fri Jun 2 23:23:47 UTC 2023: Step 2a: Preprocessing/Data Intake
+Tue Jun 6 14:14:16 UTC 2023: Step 2a: Preprocessing/Data Intake
 Submitted batch job 2
 Submitted batch job 3
 Submitted batch job 4
@@ -761,189 +1080,207 @@ Submitted batch job 661
 Submitted batch job 662
 Submitted batch job 663
 ====================================
-Fri Jun 2 23:27:41 UTC 2023: Step 3: Launch jobs on cluster
+Tue Jun 6 14:18:19 UTC 2023: Step 3: Launch jobs on cluster
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 664
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_1
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 665
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_2
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 666
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_3
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 667
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_4
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 668
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_5
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 669
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_6
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 670
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_7
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 671
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_8
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 672
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_9
 ======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
 Submitted batch job 673
 ====================================
-Fri Jun 2 23:27:43 UTC 2023: Step 4: Monitor jobs on cluster
-Fri Jun 2 23:27:43 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:27:53 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:27:53 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:28:03 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:28:03 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:28:14 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:28:14 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:28:24 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:28:24 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:28:34 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:28:34 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:28:44 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:28:44 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:28:54 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:28:54 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:29:04 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:29:04 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:29:14 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:29:14 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:29:24 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:29:24 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:29:34 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:29:34 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:29:44 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:29:44 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:29:54 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:29:54 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:30:05 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:30:05 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:30:15 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:30:15 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:30:25 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:30:25 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:30:35 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:30:35 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:30:45 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:30:45 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:30:55 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:30:55 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:31:05 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:31:05 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:31:15 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:31:15 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:31:25 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:31:25 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:31:35 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:31:35 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:31:45 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:31:45 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:31:55 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:31:55 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:32:05 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:32:05 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:32:15 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:32:15 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:32:25 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:32:25 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:32:35 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:32:35 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:32:45 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:32:45 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:32:56 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:32:56 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:33:06 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:33:06 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:33:16 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:33:16 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:33:26 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:33:26 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:33:36 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:33:36 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:33:46 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:33:46 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:33:56 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:33:56 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:34:06 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:34:06 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:34:16 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:34:16 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:34:26 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:34:26 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:34:36 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:34:36 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:34:46 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:34:46 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:34:56 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:34:56 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:35:06 UTC 2023: Found 11 lines in squeue.
-Fri Jun 2 23:35:06 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:35:16 UTC 2023: Found 10 lines in squeue.
-Fri Jun 2 23:35:16 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:35:26 UTC 2023: Found 10 lines in squeue.
-Fri Jun 2 23:35:26 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:35:37 UTC 2023: Found 10 lines in squeue.
-Fri Jun 2 23:35:37 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:35:47 UTC 2023: Found 9 lines in squeue.
-Fri Jun 2 23:35:47 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:35:57 UTC 2023: Found 8 lines in squeue.
-Fri Jun 2 23:35:57 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:36:07 UTC 2023: Found 8 lines in squeue.
-Fri Jun 2 23:36:07 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:36:17 UTC 2023: Found 7 lines in squeue.
-Fri Jun 2 23:36:17 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:36:27 UTC 2023: Found 6 lines in squeue.
-Fri Jun 2 23:36:27 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:36:37 UTC 2023: Found 5 lines in squeue.
-Fri Jun 2 23:36:37 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:36:47 UTC 2023: Found 5 lines in squeue.
-Fri Jun 2 23:36:47 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:36:57 UTC 2023: Found 4 lines in squeue.
-Fri Jun 2 23:36:57 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:37:07 UTC 2023: Found 4 lines in squeue.
-Fri Jun 2 23:37:07 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:37:17 UTC 2023: Found 3 lines in squeue.
-Fri Jun 2 23:37:17 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:37:27 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:37:27 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:37:37 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:37:37 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:37:47 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:37:47 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:37:57 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:37:57 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:38:07 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:38:07 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:38:17 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:38:17 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:38:28 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:38:28 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:38:38 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:38:38 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:38:48 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:38:48 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:38:58 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:38:58 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:39:08 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:39:08 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:39:18 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:39:18 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:39:28 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:39:28 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:39:38 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:39:38 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:39:48 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:39:48 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:39:58 UTC 2023: Found 2 lines in squeue.
-Fri Jun 2 23:39:58 UTC 2023: Monitor waiting 10 seconds...
-Fri Jun 2 23:40:08 UTC 2023: Found 1 lines in squeue.
-Fri Jun 2 23:40:08 UTC 2023: No more pending jobs in squeue. Stage SLURM logs back.
+Tue Jun 6 14:18:22 UTC 2023: Step 4: Monitor jobs on cluster
+Tue Jun 6 14:18:22 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:18:32 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:18:32 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:18:42 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:18:42 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:18:52 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:18:52 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:19:02 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:19:02 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:19:12 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:19:12 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:19:22 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:19:22 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:19:32 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:19:32 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:19:42 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:19:42 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:19:52 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:19:52 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:20:03 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:20:03 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:20:13 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:20:13 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:20:23 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:20:23 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:20:33 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:20:33 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:20:43 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:20:43 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:20:53 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:20:53 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:21:03 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:21:03 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:21:13 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:21:13 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:21:23 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:21:23 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:21:33 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:21:33 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:21:43 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:21:43 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:21:53 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:21:53 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:22:03 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:22:03 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:22:13 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:22:13 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:22:23 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:22:23 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:22:33 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:22:33 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:22:43 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:22:43 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:22:53 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:22:53 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:23:03 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:23:03 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:23:13 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:23:13 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:23:23 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:23:23 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:23:34 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:23:34 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:23:44 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:23:44 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:23:54 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:23:54 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:24:04 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:24:04 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:24:14 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:24:14 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:24:24 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:24:24 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:24:34 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:24:34 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:24:44 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:24:44 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:24:54 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:24:54 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:25:04 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:25:04 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:25:14 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:25:14 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:25:24 UTC 2023: Found 11 lines in squeue.
+Tue Jun 6 14:25:24 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:25:34 UTC 2023: Found 9 lines in squeue.
+Tue Jun 6 14:25:34 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:25:44 UTC 2023: Found 9 lines in squeue.
+Tue Jun 6 14:25:44 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:25:54 UTC 2023: Found 9 lines in squeue.
+Tue Jun 6 14:25:54 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:26:04 UTC 2023: Found 9 lines in squeue.
+Tue Jun 6 14:26:04 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:26:14 UTC 2023: Found 9 lines in squeue.
+Tue Jun 6 14:26:14 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:26:24 UTC 2023: Found 8 lines in squeue.
+Tue Jun 6 14:26:24 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:26:34 UTC 2023: Found 7 lines in squeue.
+Tue Jun 6 14:26:34 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:26:44 UTC 2023: Found 7 lines in squeue.
+Tue Jun 6 14:26:44 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:26:54 UTC 2023: Found 7 lines in squeue.
+Tue Jun 6 14:26:54 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:27:05 UTC 2023: Found 6 lines in squeue.
+Tue Jun 6 14:27:05 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:27:15 UTC 2023: Found 6 lines in squeue.
+Tue Jun 6 14:27:15 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:27:25 UTC 2023: Found 6 lines in squeue.
+Tue Jun 6 14:27:25 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:27:35 UTC 2023: Found 6 lines in squeue.
+Tue Jun 6 14:27:35 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:27:45 UTC 2023: Found 6 lines in squeue.
+Tue Jun 6 14:27:45 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:27:55 UTC 2023: Found 6 lines in squeue.
+Tue Jun 6 14:27:55 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:28:05 UTC 2023: Found 3 lines in squeue.
+Tue Jun 6 14:28:05 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:28:15 UTC 2023: Found 3 lines in squeue.
+Tue Jun 6 14:28:15 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:28:25 UTC 2023: Found 3 lines in squeue.
+Tue Jun 6 14:28:25 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:28:35 UTC 2023: Found 3 lines in squeue.
+Tue Jun 6 14:28:35 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:28:45 UTC 2023: Found 3 lines in squeue.
+Tue Jun 6 14:28:45 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:28:55 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:28:55 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:29:05 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:29:05 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:29:15 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:29:15 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:29:25 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:29:25 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:29:35 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:29:35 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:29:45 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:29:45 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:29:55 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:29:55 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:30:05 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:30:05 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:30:15 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:30:15 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:30:25 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:30:25 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:30:35 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:30:35 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:30:46 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:30:46 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:30:56 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:30:56 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:31:06 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:31:06 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:31:16 UTC 2023: Found 2 lines in squeue.
+Tue Jun 6 14:31:16 UTC 2023: Monitor waiting 10 seconds...
+Tue Jun 6 14:31:26 UTC 2023: Found 1 lines in squeue.
+Tue Jun 6 14:31:26 UTC 2023: No more pending jobs in squeue. Stage SLURM logs back.
 ====================================
-Fri Jun 2 23:40:08 UTC 2023: Step 5: Postprocessing/
+Tue Jun 6 14:31:26 UTC 2023: Step 5: Postprocessing/
 ======> Stage PW logs to remote repo for committing
 sending incremental file list

@@ -2,12 +2,12 @@ Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known host
 Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'github.com,140.82.113.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'github.com,140.82.113.3' (ECDSA) to the list of known hosts.
 Switched to branch 'June-2023'
 Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'github.com,140.82.113.3' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'github.com,140.82.112.4' (ECDSA) to the list of known hosts.
 ls: cannot access /home/sfgary/.miniconda*: No such file or directory
 /home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
@@ -27,24 +27,24 @@ be071655d959: Pulling fs layer
 0014b75e7078: Waiting
 be071655d959: Waiting
 2276fdfeb463: Waiting
-02932b6ffd48: Verifying Checksum
-02932b6ffd48: Download complete
-44f803d09bef: Verifying Checksum
-44f803d09bef: Download complete
 06d39c85623a: Verifying Checksum
 06d39c85623a: Download complete
+44f803d09bef: Verifying Checksum
+44f803d09bef: Download complete
+02932b6ffd48: Verifying Checksum
+02932b6ffd48: Download complete
 8ed4e8630103: Verifying Checksum
 8ed4e8630103: Download complete
 be071655d959: Verifying Checksum
 be071655d959: Download complete
 2276fdfeb463: Verifying Checksum
 2276fdfeb463: Download complete
-0014b75e7078: Verifying Checksum
-0014b75e7078: Download complete
 06d39c85623a: Pull complete
 44f803d09bef: Pull complete
 02932b6ffd48: Pull complete
 8ed4e8630103: Pull complete
+0014b75e7078: Verifying Checksum
+0014b75e7078: Download complete
 0014b75e7078: Pull complete
 be071655d959: Pull complete
 2276fdfeb463: Pull complete
