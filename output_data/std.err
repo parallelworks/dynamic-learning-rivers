@@ -2,12 +2,13 @@ Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known host
 Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'github.com,140.82.113.3' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'github.com,140.82.114.4' (ECDSA) to the list of known hosts.
 Switched to branch 'June-2023'
 Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
 Warning: Permanently added 'cloud.clusters.pw' (ECDSA) to the list of known hosts.
-Warning: Permanently added 'github.com,140.82.112.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'github.com,140.82.112.3' (ECDSA) to the list of known hosts.
+Checking out files:  31% (62/198)   Checking out files:  32% (64/198)   Checking out files:  33% (66/198)   Checking out files:  34% (68/198)   Checking out files:  35% (70/198)   Checking out files:  36% (72/198)   Checking out files:  37% (74/198)   Checking out files:  38% (76/198)   Checking out files:  39% (78/198)   Checking out files:  40% (80/198)   Checking out files:  41% (82/198)   Checking out files:  42% (84/198)   Checking out files:  43% (86/198)   Checking out files:  44% (88/198)   Checking out files:  45% (90/198)   Checking out files:  46% (92/198)   Checking out files:  47% (94/198)   Checking out files:  48% (96/198)   Checking out files:  49% (98/198)   Checking out files:  50% (99/198)   Checking out files:  51% (101/198)   Checking out files:  52% (103/198)   Checking out files:  53% (105/198)   Checking out files:  54% (107/198)   Checking out files:  55% (109/198)   Checking out files:  56% (111/198)   Checking out files:  57% (113/198)   Checking out files:  58% (115/198)   Checking out files:  58% (116/198)   Checking out files:  59% (117/198)   Checking out files:  60% (119/198)   Checking out files:  61% (121/198)   Checking out files:  62% (123/198)   Checking out files:  63% (125/198)   Checking out files:  64% (127/198)   Checking out files:  65% (129/198)   Checking out files:  66% (131/198)   Checking out files:  67% (133/198)   Checking out files:  68% (135/198)   Checking out files:  69% (137/198)   Checking out files:  70% (139/198)   Checking out files:  71% (141/198)   Checking out files:  72% (143/198)   Checking out files:  73% (145/198)   Checking out files:  74% (147/198)   Checking out files:  75% (149/198)   Checking out files:  76% (151/198)   Checking out files:  77% (153/198)   Checking out files:  78% (155/198)   Checking out files:  79% (157/198)   Checking out files:  80% (159/198)   Checking out files:  81% (161/198)   Checking out files:  82% (163/198)   Checking out files:  83% (165/198)   Checking out files:  84% (167/198)   Checking out files:  85% (169/198)   Checking out files:  85% (170/198)   Checking out files:  86% (171/198)   Checking out files:  87% (173/198)   Checking out files:  88% (175/198)   Checking out files:  89% (177/198)   Checking out files:  90% (179/198)   Checking out files:  91% (181/198)   Checking out files:  92% (183/198)   Checking out files:  93% (185/198)   Checking out files:  94% (187/198)   Checking out files:  95% (189/198)   Checking out files:  96% (191/198)   Checking out files:  97% (193/198)   Checking out files:  98% (195/198)   Checking out files:  99% (197/198)   Checking out files: 100% (198/198)   Checking out files: 100% (198/198), done.
 ls: cannot access /home/sfgary/.miniconda*: No such file or directory
 /home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
@@ -23,51 +24,30 @@ latest: Pulling from parallelworks/gmt
 0014b75e7078: Pulling fs layer
 be071655d959: Pulling fs layer
 2276fdfeb463: Pulling fs layer
-8ed4e8630103: Waiting
 0014b75e7078: Waiting
 be071655d959: Waiting
 2276fdfeb463: Waiting
-06d39c85623a: Verifying Checksum
-06d39c85623a: Download complete
+8ed4e8630103: Waiting
 44f803d09bef: Verifying Checksum
 44f803d09bef: Download complete
 02932b6ffd48: Verifying Checksum
 02932b6ffd48: Download complete
 8ed4e8630103: Verifying Checksum
 8ed4e8630103: Download complete
+06d39c85623a: Verifying Checksum
+06d39c85623a: Download complete
 be071655d959: Verifying Checksum
 be071655d959: Download complete
 2276fdfeb463: Verifying Checksum
 2276fdfeb463: Download complete
+0014b75e7078: Verifying Checksum
+0014b75e7078: Download complete
 06d39c85623a: Pull complete
 44f803d09bef: Pull complete
 02932b6ffd48: Pull complete
 8ed4e8630103: Pull complete
-0014b75e7078: Verifying Checksum
-0014b75e7078: Download complete
 0014b75e7078: Pull complete
 be071655d959: Pull complete
 2276fdfeb463: Pull complete
 Digest: sha256:9b4274e2b29d9678583fd5ad1d64cc5cb7c6b830de542d418fd2a3a76399c871
 Status: Downloaded newer image for parallelworks/gmt:latest
-Traceback (most recent call last):
-  File "/home/sfgary/dynamic-learning-rivers/scripts/post_01_flatten.py", line 38, in <module>
-    ml_output_df_list.append(pd.read_csv(dir+"/sl_pca.csv"))
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
-    return func(*args, **kwargs)
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
-    return func(*args, **kwargs)
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
-    return _read(filepath_or_buffer, kwds)
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
-    self._engine = self._make_engine(f, self.engine)
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
-    self.handles = get_handle(
-  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/common.py", line 856, in get_handle
-    handle = open(
-FileNotFoundError: [Errno 2] No such file or directory: '../ml_models/sl_0/sl_pca.csv'
-grep: post_01_output_ml_predict_avg.csv: No such file or directory
-awk: fatal: cannot open file `post_01_output_ml_predict_avg.csv' for reading (No such file or directory)
-cp: cannot stat ‘post_01_output_holdout_score.txt’: No such file or directory
