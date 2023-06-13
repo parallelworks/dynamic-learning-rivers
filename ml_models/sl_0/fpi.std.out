@@ -1,0 +1,604 @@
+Parsing SuperLearner FPI arguments...
+--model_dir
+--predict_var
+--num_inputs
+--predict_data
+Submodels within SuperLearner and their weights:
+['nusvr-rbf', 'nusvr-lin', 'nusvr-poly', 'nusvr-sig', 'knn-uni', 'knn-dist', 'pls', 'mlp', 'ridge', 'lasso', 'linear', 'enet', 'huber', 'xgb', 'etr']
+[0.         0.         0.         0.         0.13865864 0.68741839
+ 0.02551449 0.02478809 0.07335651 0.         0.         0.
+ 0.         0.00201656 0.05586205]
+Started with 25 features.
+Finishing with 20 features in 4 groups.
+Started with 25 features.
+Finishing with 20 features in 4 groups.
+Loading model for job: 0
+FPI on stacked ensemble...
+For block run_mm_cyr iteration 0
+For block run_mm_cyr iteration 1
+For block run_mm_cyr iteration 2
+For block run_mm_cyr iteration 3
+For block run_mm_cyr iteration 4
+For block run_mm_cyr iteration 5
+For block run_mm_cyr iteration 6
+For block run_mm_cyr iteration 7
+For block run_mm_cyr iteration 8
+For block run_mm_cyr iteration 9
+For block run_mm_cyr iteration 10
+For block run_mm_cyr iteration 11
+For block run_mm_cyr iteration 12
+For block run_mm_cyr iteration 13
+For block run_mm_cyr iteration 14
+For block run_mm_cyr iteration 15
+For block run_mm_cyr iteration 16
+For block run_mm_cyr iteration 17
+For block run_mm_cyr iteration 18
+For block run_mm_cyr iteration 19
+For block RA_dm iteration 0
+For block RA_dm iteration 1
+For block RA_dm iteration 2
+For block RA_dm iteration 3
+For block RA_dm iteration 4
+For block RA_dm iteration 5
+For block RA_dm iteration 6
+For block RA_dm iteration 7
+For block RA_dm iteration 8
+For block RA_dm iteration 9
+For block RA_dm iteration 10
+For block RA_dm iteration 11
+For block RA_dm iteration 12
+For block RA_dm iteration 13
+For block RA_dm iteration 14
+For block RA_dm iteration 15
+For block RA_dm iteration 16
+For block RA_dm iteration 17
+For block RA_dm iteration 18
+For block RA_dm iteration 19
+For block Mean_DO_percent_saturation iteration 0
+For block Mean_DO_percent_saturation iteration 1
+For block Mean_DO_percent_saturation iteration 2
+For block Mean_DO_percent_saturation iteration 3
+For block Mean_DO_percent_saturation iteration 4
+For block Mean_DO_percent_saturation iteration 5
+For block Mean_DO_percent_saturation iteration 6
+For block Mean_DO_percent_saturation iteration 7
+For block Mean_DO_percent_saturation iteration 8
+For block Mean_DO_percent_saturation iteration 9
+For block Mean_DO_percent_saturation iteration 10
+For block Mean_DO_percent_saturation iteration 11
+For block Mean_DO_percent_saturation iteration 12
+For block Mean_DO_percent_saturation iteration 13
+For block Mean_DO_percent_saturation iteration 14
+For block Mean_DO_percent_saturation iteration 15
+For block Mean_DO_percent_saturation iteration 16
+For block Mean_DO_percent_saturation iteration 17
+For block Mean_DO_percent_saturation iteration 18
+For block Mean_DO_percent_saturation iteration 19
+For block gwt_cm_cav iteration 0
+For block gwt_cm_cav iteration 1
+For block gwt_cm_cav iteration 2
+For block gwt_cm_cav iteration 3
+For block gwt_cm_cav iteration 4
+For block gwt_cm_cav iteration 5
+For block gwt_cm_cav iteration 6
+For block gwt_cm_cav iteration 7
+For block gwt_cm_cav iteration 8
+For block gwt_cm_cav iteration 9
+For block gwt_cm_cav iteration 10
+For block gwt_cm_cav iteration 11
+For block gwt_cm_cav iteration 12
+For block gwt_cm_cav iteration 13
+For block gwt_cm_cav iteration 14
+For block gwt_cm_cav iteration 15
+For block gwt_cm_cav iteration 16
+For block gwt_cm_cav iteration 17
+For block gwt_cm_cav iteration 18
+For block gwt_cm_cav iteration 19
+For block sgr_dk_rav iteration 0
+For block sgr_dk_rav iteration 1
+For block sgr_dk_rav iteration 2
+For block sgr_dk_rav iteration 3
+For block sgr_dk_rav iteration 4
+For block sgr_dk_rav iteration 5
+For block sgr_dk_rav iteration 6
+For block sgr_dk_rav iteration 7
+For block sgr_dk_rav iteration 8
+For block sgr_dk_rav iteration 9
+For block sgr_dk_rav iteration 10
+For block sgr_dk_rav iteration 11
+For block sgr_dk_rav iteration 12
+For block sgr_dk_rav iteration 13
+For block sgr_dk_rav iteration 14
+For block sgr_dk_rav iteration 15
+For block sgr_dk_rav iteration 16
+For block sgr_dk_rav iteration 17
+For block sgr_dk_rav iteration 18
+For block sgr_dk_rav iteration 19
+For block pH iteration 0
+For block pH iteration 1
+For block pH iteration 2
+For block pH iteration 3
+For block pH iteration 4
+For block pH iteration 5
+For block pH iteration 6
+For block pH iteration 7
+For block pH iteration 8
+For block pH iteration 9
+For block pH iteration 10
+For block pH iteration 11
+For block pH iteration 12
+For block pH iteration 13
+For block pH iteration 14
+For block pH iteration 15
+For block pH iteration 16
+For block pH iteration 17
+For block pH iteration 18
+For block pH iteration 19
+For block prm_pc_cse iteration 0
+For block prm_pc_cse iteration 1
+For block prm_pc_cse iteration 2
+For block prm_pc_cse iteration 3
+For block prm_pc_cse iteration 4
+For block prm_pc_cse iteration 5
+For block prm_pc_cse iteration 6
+For block prm_pc_cse iteration 7
+For block prm_pc_cse iteration 8
+For block prm_pc_cse iteration 9
+For block prm_pc_cse iteration 10
+For block prm_pc_cse iteration 11
+For block prm_pc_cse iteration 12
+For block prm_pc_cse iteration 13
+For block prm_pc_cse iteration 14
+For block prm_pc_cse iteration 15
+For block prm_pc_cse iteration 16
+For block prm_pc_cse iteration 17
+For block prm_pc_cse iteration 18
+For block prm_pc_cse iteration 19
+For block ppd_pk_cav iteration 0
+For block ppd_pk_cav iteration 1
+For block ppd_pk_cav iteration 2
+For block ppd_pk_cav iteration 3
+For block ppd_pk_cav iteration 4
+For block ppd_pk_cav iteration 5
+For block ppd_pk_cav iteration 6
+For block ppd_pk_cav iteration 7
+For block ppd_pk_cav iteration 8
+For block ppd_pk_cav iteration 9
+For block ppd_pk_cav iteration 10
+For block ppd_pk_cav iteration 11
+For block ppd_pk_cav iteration 12
+For block ppd_pk_cav iteration 13
+For block ppd_pk_cav iteration 14
+For block ppd_pk_cav iteration 15
+For block ppd_pk_cav iteration 16
+For block ppd_pk_cav iteration 17
+For block ppd_pk_cav iteration 18
+For block ppd_pk_cav iteration 19
+For block gla_pc_cse iteration 0
+For block gla_pc_cse iteration 1
+For block gla_pc_cse iteration 2
+For block gla_pc_cse iteration 3
+For block gla_pc_cse iteration 4
+For block gla_pc_cse iteration 5
+For block gla_pc_cse iteration 6
+For block gla_pc_cse iteration 7
+For block gla_pc_cse iteration 8
+For block gla_pc_cse iteration 9
+For block gla_pc_cse iteration 10
+For block gla_pc_cse iteration 11
+For block gla_pc_cse iteration 12
+For block gla_pc_cse iteration 13
+For block gla_pc_cse iteration 14
+For block gla_pc_cse iteration 15
+For block gla_pc_cse iteration 16
+For block gla_pc_cse iteration 17
+For block gla_pc_cse iteration 18
+For block gla_pc_cse iteration 19
+FPI on ML model: knn-uni...
+For block run_mm_cyr iteration 0
+For block run_mm_cyr iteration 1
+For block run_mm_cyr iteration 2
+For block run_mm_cyr iteration 3
+For block run_mm_cyr iteration 4
+For block run_mm_cyr iteration 5
+For block run_mm_cyr iteration 6
+For block run_mm_cyr iteration 7
+For block run_mm_cyr iteration 8
+For block run_mm_cyr iteration 9
+For block run_mm_cyr iteration 10
+For block run_mm_cyr iteration 11
+For block run_mm_cyr iteration 12
+For block run_mm_cyr iteration 13
+For block run_mm_cyr iteration 14
+For block run_mm_cyr iteration 15
+For block run_mm_cyr iteration 16
+For block run_mm_cyr iteration 17
+For block run_mm_cyr iteration 18
+For block run_mm_cyr iteration 19
+For block RA_dm iteration 0
+For block RA_dm iteration 1
+For block RA_dm iteration 2
+For block RA_dm iteration 3
+For block RA_dm iteration 4
+For block RA_dm iteration 5
+For block RA_dm iteration 6
+For block RA_dm iteration 7
+For block RA_dm iteration 8
+For block RA_dm iteration 9
+For block RA_dm iteration 10
+For block RA_dm iteration 11
+For block RA_dm iteration 12
+For block RA_dm iteration 13
+For block RA_dm iteration 14
+For block RA_dm iteration 15
+For block RA_dm iteration 16
+For block RA_dm iteration 17
+For block RA_dm iteration 18
+For block RA_dm iteration 19
+For block Mean_DO_percent_saturation iteration 0
+For block Mean_DO_percent_saturation iteration 1
+For block Mean_DO_percent_saturation iteration 2
+For block Mean_DO_percent_saturation iteration 3
+For block Mean_DO_percent_saturation iteration 4
+For block Mean_DO_percent_saturation iteration 5
+For block Mean_DO_percent_saturation iteration 6
+For block Mean_DO_percent_saturation iteration 7
+For block Mean_DO_percent_saturation iteration 8
+For block Mean_DO_percent_saturation iteration 9
+For block Mean_DO_percent_saturation iteration 10
+For block Mean_DO_percent_saturation iteration 11
+For block Mean_DO_percent_saturation iteration 12
+For block Mean_DO_percent_saturation iteration 13
+For block Mean_DO_percent_saturation iteration 14
+For block Mean_DO_percent_saturation iteration 15
+For block Mean_DO_percent_saturation iteration 16
+For block Mean_DO_percent_saturation iteration 17
+For block Mean_DO_percent_saturation iteration 18
+For block Mean_DO_percent_saturation iteration 19
+For block gwt_cm_cav iteration 0
+For block gwt_cm_cav iteration 1
+For block gwt_cm_cav iteration 2
+For block gwt_cm_cav iteration 3
+For block gwt_cm_cav iteration 4
+For block gwt_cm_cav iteration 5
+For block gwt_cm_cav iteration 6
+For block gwt_cm_cav iteration 7
+For block gwt_cm_cav iteration 8
+For block gwt_cm_cav iteration 9
+For block gwt_cm_cav iteration 10
+For block gwt_cm_cav iteration 11
+For block gwt_cm_cav iteration 12
+For block gwt_cm_cav iteration 13
+For block gwt_cm_cav iteration 14
+For block gwt_cm_cav iteration 15
+For block gwt_cm_cav iteration 16
+For block gwt_cm_cav iteration 17
+For block gwt_cm_cav iteration 18
+For block gwt_cm_cav iteration 19
+For block sgr_dk_rav iteration 0
+For block sgr_dk_rav iteration 1
+For block sgr_dk_rav iteration 2
+For block sgr_dk_rav iteration 3
+For block sgr_dk_rav iteration 4
+For block sgr_dk_rav iteration 5
+For block sgr_dk_rav iteration 6
+For block sgr_dk_rav iteration 7
+For block sgr_dk_rav iteration 8
+For block sgr_dk_rav iteration 9
+For block sgr_dk_rav iteration 10
+For block sgr_dk_rav iteration 11
+For block sgr_dk_rav iteration 12
+For block sgr_dk_rav iteration 13
+For block sgr_dk_rav iteration 14
+For block sgr_dk_rav iteration 15
+For block sgr_dk_rav iteration 16
+For block sgr_dk_rav iteration 17
+For block sgr_dk_rav iteration 18
+For block sgr_dk_rav iteration 19
+For block pH iteration 0
+For block pH iteration 1
+For block pH iteration 2
+For block pH iteration 3
+For block pH iteration 4
+For block pH iteration 5
+For block pH iteration 6
+For block pH iteration 7
+For block pH iteration 8
+For block pH iteration 9
+For block pH iteration 10
+For block pH iteration 11
+For block pH iteration 12
+For block pH iteration 13
+For block pH iteration 14
+For block pH iteration 15
+For block pH iteration 16
+For block pH iteration 17
+For block pH iteration 18
+For block pH iteration 19
+For block prm_pc_cse iteration 0
+For block prm_pc_cse iteration 1
+For block prm_pc_cse iteration 2
+For block prm_pc_cse iteration 3
+For block prm_pc_cse iteration 4
+For block prm_pc_cse iteration 5
+For block prm_pc_cse iteration 6
+For block prm_pc_cse iteration 7
+For block prm_pc_cse iteration 8
+For block prm_pc_cse iteration 9
+For block prm_pc_cse iteration 10
+For block prm_pc_cse iteration 11
+For block prm_pc_cse iteration 12
+For block prm_pc_cse iteration 13
+For block prm_pc_cse iteration 14
+For block prm_pc_cse iteration 15
+For block prm_pc_cse iteration 16
+For block prm_pc_cse iteration 17
+For block prm_pc_cse iteration 18
+For block prm_pc_cse iteration 19
+For block ppd_pk_cav iteration 0
+For block ppd_pk_cav iteration 1
+For block ppd_pk_cav iteration 2
+For block ppd_pk_cav iteration 3
+For block ppd_pk_cav iteration 4
+For block ppd_pk_cav iteration 5
+For block ppd_pk_cav iteration 6
+For block ppd_pk_cav iteration 7
+For block ppd_pk_cav iteration 8
+For block ppd_pk_cav iteration 9
+For block ppd_pk_cav iteration 10
+For block ppd_pk_cav iteration 11
+For block ppd_pk_cav iteration 12
+For block ppd_pk_cav iteration 13
+For block ppd_pk_cav iteration 14
+For block ppd_pk_cav iteration 15
+For block ppd_pk_cav iteration 16
+For block ppd_pk_cav iteration 17
+For block ppd_pk_cav iteration 18
+For block ppd_pk_cav iteration 19
+For block gla_pc_cse iteration 0
+For block gla_pc_cse iteration 1
+For block gla_pc_cse iteration 2
+For block gla_pc_cse iteration 3
+For block gla_pc_cse iteration 4
+For block gla_pc_cse iteration 5
+For block gla_pc_cse iteration 6
+For block gla_pc_cse iteration 7
+For block gla_pc_cse iteration 8
+For block gla_pc_cse iteration 9
+For block gla_pc_cse iteration 10
+For block gla_pc_cse iteration 11
+For block gla_pc_cse iteration 12
+For block gla_pc_cse iteration 13
+For block gla_pc_cse iteration 14
+For block gla_pc_cse iteration 15
+For block gla_pc_cse iteration 16
+For block gla_pc_cse iteration 17
+For block gla_pc_cse iteration 18
+For block gla_pc_cse iteration 19
+FPI on ML model: knn-dist...
+For block run_mm_cyr iteration 0
+For block run_mm_cyr iteration 1
+For block run_mm_cyr iteration 2
+For block run_mm_cyr iteration 3
+For block run_mm_cyr iteration 4
+For block run_mm_cyr iteration 5
+For block run_mm_cyr iteration 6
+For block run_mm_cyr iteration 7
+For block run_mm_cyr iteration 8
+For block run_mm_cyr iteration 9
+For block run_mm_cyr iteration 10
+For block run_mm_cyr iteration 11
+For block run_mm_cyr iteration 12
+For block run_mm_cyr iteration 13
+For block run_mm_cyr iteration 14
+For block run_mm_cyr iteration 15
+For block run_mm_cyr iteration 16
+For block run_mm_cyr iteration 17
+For block run_mm_cyr iteration 18
+For block run_mm_cyr iteration 19
+For block RA_dm iteration 0
+For block RA_dm iteration 1
+For block RA_dm iteration 2
+For block RA_dm iteration 3
+For block RA_dm iteration 4
+For block RA_dm iteration 5
+For block RA_dm iteration 6
+For block RA_dm iteration 7
+For block RA_dm iteration 8
+For block RA_dm iteration 9
+For block RA_dm iteration 10
+For block RA_dm iteration 11
+For block RA_dm iteration 12
+For block RA_dm iteration 13
+For block RA_dm iteration 14
+For block RA_dm iteration 15
+For block RA_dm iteration 16
+For block RA_dm iteration 17
+For block RA_dm iteration 18
+For block RA_dm iteration 19
+For block Mean_DO_percent_saturation iteration 0
+For block Mean_DO_percent_saturation iteration 1
+For block Mean_DO_percent_saturation iteration 2
+For block Mean_DO_percent_saturation iteration 3
+For block Mean_DO_percent_saturation iteration 4
+For block Mean_DO_percent_saturation iteration 5
+For block Mean_DO_percent_saturation iteration 6
+For block Mean_DO_percent_saturation iteration 7
+For block Mean_DO_percent_saturation iteration 8
+For block Mean_DO_percent_saturation iteration 9
+For block Mean_DO_percent_saturation iteration 10
+For block Mean_DO_percent_saturation iteration 11
+For block Mean_DO_percent_saturation iteration 12
+For block Mean_DO_percent_saturation iteration 13
+For block Mean_DO_percent_saturation iteration 14
+For block Mean_DO_percent_saturation iteration 15
+For block Mean_DO_percent_saturation iteration 16
+For block Mean_DO_percent_saturation iteration 17
+For block Mean_DO_percent_saturation iteration 18
+For block Mean_DO_percent_saturation iteration 19
+For block gwt_cm_cav iteration 0
+For block gwt_cm_cav iteration 1
+For block gwt_cm_cav iteration 2
+For block gwt_cm_cav iteration 3
+For block gwt_cm_cav iteration 4
+For block gwt_cm_cav iteration 5
+For block gwt_cm_cav iteration 6
+For block gwt_cm_cav iteration 7
+For block gwt_cm_cav iteration 8
+For block gwt_cm_cav iteration 9
+For block gwt_cm_cav iteration 10
+For block gwt_cm_cav iteration 11
+For block gwt_cm_cav iteration 12
+For block gwt_cm_cav iteration 13
+For block gwt_cm_cav iteration 14
+For block gwt_cm_cav iteration 15
+For block gwt_cm_cav iteration 16
+For block gwt_cm_cav iteration 17
+For block gwt_cm_cav iteration 18
+For block gwt_cm_cav iteration 19
+For block sgr_dk_rav iteration 0
+For block sgr_dk_rav iteration 1
+For block sgr_dk_rav iteration 2
+For block sgr_dk_rav iteration 3
+For block sgr_dk_rav iteration 4
+For block sgr_dk_rav iteration 5
+For block sgr_dk_rav iteration 6
+For block sgr_dk_rav iteration 7
+For block sgr_dk_rav iteration 8
+For block sgr_dk_rav iteration 9
+For block sgr_dk_rav iteration 10
+For block sgr_dk_rav iteration 11
+For block sgr_dk_rav iteration 12
+For block sgr_dk_rav iteration 13
+For block sgr_dk_rav iteration 14
+For block sgr_dk_rav iteration 15
+For block sgr_dk_rav iteration 16
+For block sgr_dk_rav iteration 17
+For block sgr_dk_rav iteration 18
+For block sgr_dk_rav iteration 19
+For block pH iteration 0
+For block pH iteration 1
+For block pH iteration 2
+For block pH iteration 3
+For block pH iteration 4
+For block pH iteration 5
+For block pH iteration 6
+For block pH iteration 7
+For block pH iteration 8
+For block pH iteration 9
+For block pH iteration 10
+For block pH iteration 11
+For block pH iteration 12
+For block pH iteration 13
+For block pH iteration 14
+For block pH iteration 15
+For block pH iteration 16
+For block pH iteration 17
+For block pH iteration 18
+For block pH iteration 19
+For block prm_pc_cse iteration 0
+For block prm_pc_cse iteration 1
+For block prm_pc_cse iteration 2
+For block prm_pc_cse iteration 3
+For block prm_pc_cse iteration 4
+For block prm_pc_cse iteration 5
+For block prm_pc_cse iteration 6
+For block prm_pc_cse iteration 7
+For block prm_pc_cse iteration 8
+For block prm_pc_cse iteration 9
+For block prm_pc_cse iteration 10
+For block prm_pc_cse iteration 11
+For block prm_pc_cse iteration 12
+For block prm_pc_cse iteration 13
+For block prm_pc_cse iteration 14
+For block prm_pc_cse iteration 15
+For block prm_pc_cse iteration 16
+For block prm_pc_cse iteration 17
+For block prm_pc_cse iteration 18
+For block prm_pc_cse iteration 19
+For block ppd_pk_cav iteration 0
+For block ppd_pk_cav iteration 1
+For block ppd_pk_cav iteration 2
+For block ppd_pk_cav iteration 3
+For block ppd_pk_cav iteration 4
+For block ppd_pk_cav iteration 5
+For block ppd_pk_cav iteration 6
+For block ppd_pk_cav iteration 7
+For block ppd_pk_cav iteration 8
+For block ppd_pk_cav iteration 9
+For block ppd_pk_cav iteration 10
+For block ppd_pk_cav iteration 11
+For block ppd_pk_cav iteration 12
+For block ppd_pk_cav iteration 13
+For block ppd_pk_cav iteration 14
+For block ppd_pk_cav iteration 15
+For block ppd_pk_cav iteration 16
+For block ppd_pk_cav iteration 17
+For block ppd_pk_cav iteration 18
+For block ppd_pk_cav iteration 19
+For block gla_pc_cse iteration 0
+For block gla_pc_cse iteration 1
+For block gla_pc_cse iteration 2
+For block gla_pc_cse iteration 3
+For block gla_pc_cse iteration 4
+For block gla_pc_cse iteration 5
+For block gla_pc_cse iteration 6
+For block gla_pc_cse iteration 7
+For block gla_pc_cse iteration 8
+For block gla_pc_cse iteration 9
+For block gla_pc_cse iteration 10
+For block gla_pc_cse iteration 11
+For block gla_pc_cse iteration 12
+For block gla_pc_cse iteration 13
+For block gla_pc_cse iteration 14
+For block gla_pc_cse iteration 15
+For block gla_pc_cse iteration 16
+For block gla_pc_cse iteration 17
+For block gla_pc_cse iteration 18
+For block gla_pc_cse iteration 19
+                                                    Avg_Ratiostack0  Std_Ratiostack0
+Feature                                                                             
+gwt_cm_cav,slp_dg_cav,ele_mt_cav,tmp_dc_cyr,Mea...         5.249800         0.252443
+RA_dm,RA_SO,RA_ms_di,RA_ms_av,dor_pc_pva                   3.706632         0.158890
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst...         3.268708         0.140793
+pH                                                         1.788033         0.066150
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                1.614360         0.038440
+ppd_pk_cav                                                 1.204415         0.023560
+sgr_dk_rav                                                 1.201455         0.015931
+prm_pc_cse                                                 1.076163         0.012526
+gla_pc_cse                                                 1.010652         0.009277
+--------knn-uni---------
+Feature
+gwt_cm_cav,slp_dg_cav,ele_mt_cav,tmp_dc_cyr,Mean_Temp_Deg_C,for_pc_cse,crp_pc_cse,ire_pc_cse    5.754525
+RA_dm,RA_SO,RA_ms_di,RA_ms_av,dor_pc_pva                                                        3.733581
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                                          2.949169
+pH                                                                                              1.436761
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                                                     1.392890
+ppd_pk_cav                                                                                      1.027503
+prm_pc_cse                                                                                      1.007736
+gla_pc_cse                                                                                      0.999933
+sgr_dk_rav                                                                                      0.971386
+Name: Avg_Ratioknn-uni0, dtype: float32
+--------knn-dist---------
+Feature
+gwt_cm_cav,slp_dg_cav,ele_mt_cav,tmp_dc_cyr,Mean_Temp_Deg_C,for_pc_cse,crp_pc_cse,ire_pc_cse    5.645963
+RA_dm,RA_SO,RA_ms_di,RA_ms_av,dor_pc_pva                                                        3.857061
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                                          3.495507
+pH                                                                                              1.852628
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                                                     1.593992
+ppd_pk_cav                                                                                      1.200285
+sgr_dk_rav                                                                                      1.185859
+prm_pc_cse                                                                                      1.090957
+gla_pc_cse                                                                                      1.007152
+Name: Avg_Ratioknn-dist0, dtype: float64
+                                                     0
+Feature                                               
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst... NaN
+RA_dm,RA_SO,RA_ms_di,RA_ms_av,dor_pc_pva           NaN
+Mean_DO_percent_saturation,Mean_DO_mg_per_L        NaN
+gwt_cm_cav,slp_dg_cav,ele_mt_cav,tmp_dc_cyr,Mea... NaN
+sgr_dk_rav                                         NaN
+pH                                                 NaN
+prm_pc_cse                                         NaN
+ppd_pk_cav                                         NaN
+gla_pc_cse                                         NaN
