@@ -1,0 +1,18 @@
+Parsing SuperLearner predict arguments...
+--model_dir
+--predict_var
+--num_inputs
+--predict_data
+Submodels within SuperLearner and their weights:
+['nusvr-rbf', 'nusvr-lin', 'nusvr-poly', 'nusvr-sig', 'knn-uni', 'knn-dist', 'pls', 'mlp', 'ridge', 'lasso', 'linear', 'enet', 'huber', 'xgb', 'etr']
+[0.12895259 1.29255168 0.09951669 0.         0.17613497 0.11305136
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.3872364  0.        ]
+RSE: 186.85790246340525 +/- 313.93422519942334
+mean.error: 80.74878 +/- 51.407246
+predict.error: 739.1626 +/- 11.540473
+RSE vs mean.error: [[1.         0.51312438]
+ [0.51312438 1.        ]]
+RSE vs predict.error: [[1.         0.46509393]
+ [0.46509393 1.        ]]
+Done!
