@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: run-workflow
         id: run-cloud-pw
-        uses: parallelworks/test-workflow-action@v5
+        uses: jlinpw/test-workflow-action@v4
         with:
           pw-user-host: 'cloud.parallel.works'
           pw-api-key: ${{ secrets.PW_API_KEY }}
