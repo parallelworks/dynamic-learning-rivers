@@ -24,6 +24,9 @@ ml_output_df_list = []
 fpi_results = pd.DataFrame()
 fpi_results_std = pd.DataFrame()
 
+# Counter for SuperLearners
+ii = 0
+
 for dir in sl_dirs:
     #====================================================
     # Work on the hold-out metrics - SuperLearner score
@@ -67,7 +70,7 @@ for dir in sl_dirs:
             uncertainty_list.append(fpi_results_csv.loc[row,"Std_Ratiostack0"])
     
     fpi_results_one_sl = pd.DataFrame(feature_list,columns=pd.Index(['Feature']))
-    fpi_results_one_sl.insert(1,"FPI_Ratio_"+str(i),importance_list,allow_duplicates=False)
+    fpi_results_one_sl.insert(1,"FPI_Ratio_"+str(ii),importance_list,allow_duplicates=False)
     
     # Update the feature-by-feature dataframe with the feature_list as an Index
     # Now data can be accessed directly by feature name. Drop the Feature column
@@ -80,12 +83,12 @@ for dir in sl_dirs:
     
     # Do exactly the same thing for the standard deviations associated with each FPI ratio
     fpi_results_one_sl_std = pd.DataFrame(feature_list,columns=pd.Index(['Feature']))
-    fpi_results_one_sl_std.insert(1,"FPI_Ratio_"+str(i),uncertainty_list,allow_duplicates=False)
+    fpi_results_one_sl_std.insert(1,"FPI_Ratio_"+str(ii),uncertainty_list,allow_duplicates=False)
     fpi_results_one_sl_std.index = list(fpi_results_one_sl_std["Feature"])
     fpi_results_one_sl_std.pop("Feature")
     
     # Append the results to overall
-    if i == 0:
+    if ii == 0:
         fpi_results = fpi_results_one_sl
         fpi_results_std = fpi_results_one_sl_std
     else:
@@ -154,5 +157,9 @@ ax.plot(fpi_results.mean(axis=1)-fpi_results.std(axis=1),'k--',linewidth=3)
 ax.grid()
 plt.ylabel('FPI improvement ratio', fontsize=20)
 plt.xlabel('Feature name')
-plt.savefig('FPI.png')
+plt.savefig('post_01_output_FPI.png')
+
+# Write summary of FPI results
+fpi_results.to_csv('post_01_output_fpi_avg.csv',mode='w')
+fpi_results.to_csv('post_01_output_fpi_std.csv',mode='w')
 

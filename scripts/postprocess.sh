@@ -24,3 +24,7 @@ python post_01_flatten.py
 cp post_01_output_holdout_score.txt ../output_data/holdout_score.txt
 cp post_02_output_ml_pred_avg_filtered.csv ../output_data/filtered_predict_output.csv
 
+mv post_01_output_fpi_avg.csv ../output_data/fpi_avg.csv
+mv post_01_output_fpi_std.csv ../output_data/fpi_std.csv
+mv post_01_output_FPI.png ../output_data/FPI.png
+
