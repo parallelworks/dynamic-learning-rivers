@@ -1,0 +1,6 @@
+There are some changes necessary for the ICON-ModEx workflow to 
+work with the full S19S data. In particular, we need:
+1. to remove the subset of the data view in scripts/prep_01_intake_train.py
+2. ensure that Sample_ID, Sample_Longitude, Sample_Latitude are included in the input file. Also, they may need to be first three columns!!!  Double check this.
+3. modify number of inputs for the superlearner to correspond to the whole data set (.github/workflows/main.yaml)
+4. things are getting complicated with the predictions - maybe use duplicate of the training data so we have a simple placeholder. OR, we run local_test manually, but this will not engage the global river databases. So the last option is to either run global river data bases manually and save the result in the file, OR, run the sl_core workflow with a blank new ML_archive repo (i.e. a new version of dynamic-learning-rivers) which has very simple preprocessing/postprocessing scripts to allow workflow to continue. I think the best option is to create a new ML archive repo for the S19S and SSSS runs. This becomes a nice, separate example for how to setup a simple ML archive repo for use with the ICON-ModEx workflow. Lessons learned there help ID the standardized parts of ML workflow - there are just so many moving parts.

@@ -33,7 +33,7 @@ for dir in sl_dirs:
     # which is overall results (mean and std of
     # overall model scores)
     #====================================================
-    #print(dir)
+    print(dir)
     with open(dir+"/hold-out-metrics.json", 'r') as in_file:
         # Load hold out metric from JSON file
         raw_hold_out = list(json.load(in_file).values())[0]
@@ -94,6 +94,8 @@ for dir in sl_dirs:
     else:
         fpi_results = fpi_results.join(fpi_results_one_sl, validate="1:1")
         fpi_results_std = fpi_results_std.join(fpi_results_one_sl_std, validate="1:1")
+    # Move to next SuperLearner
+    ii = ii + 1
 
 # Done with looping over SuperLearners, consolidate results
 
