@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/sfgary/sl_core/pca.py", line 82, in <module>
+    predict_targets = pd.read_csv(predict_output)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/common.py", line 863, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sfgary/dynamic-learning-rivers/ml_models/sl_3/sl_predictions.csv'
