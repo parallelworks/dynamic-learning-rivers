@@ -1,7 +1,7 @@
  
 ====================================
 Step 1: Local setup on PW platform
-Execution is in /home/sfgary/pw/jobs/sl_core/00080/workflow.sh at Mon Oct 30 17:01:34 UTC 2023
+Execution is in /home/sfgary/pw/jobs/sl_core/00081/workflow.sh at Mon Oct 30 19:19:37 UTC 2023
  
 Workflow parameters from workflow.xml, apirun/main.py, or ./github/workflows/main.yaml:
 These parameters are command line arguments when invoking this script and
@@ -10,16 +10,16 @@ are likely to be blank due to the usage of inputs.sh replacing command line argu
  
 =========================================================
 Starting sl_core
-Running in /home/sfgary/pw/jobs/sl_core/00080 with job number: 00080
+Running in /home/sfgary/pw/jobs/sl_core/00081 with job number: 00081
  
 =========================================================
-Mon Oct 30 17:01:34 UTC 2023: Testing echod. Currently on pw-user-sfgary.
-Mon Oct 30 17:01:34 UTC 2023: Will excute on remote resource as sfgary@35.224.150.119
+Mon Oct 30 19:19:37 UTC 2023: Testing echod. Currently on pw-user-sfgary.
+Mon Oct 30 19:19:37 UTC 2023: Will excute on remote resource as sfgary@34.31.206.15
  
 Checking inputs to test:
 local user: sfgary
 remote user: sfgary
-remote_node: 35.224.150.119
+remote_node: 34.31.206.15
 cluster name: cloud
 private_key: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers
 Checking for private_key: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers
@@ -43,15 +43,16 @@ Working dir basename: ml_models/sl_
 Number of instances
 num_inst: 10
 ====================================
-Mon Oct 30 17:01:34 UTC 2023: Step 2: Cluster setup - staging files to head node
+Mon Oct 30 19:19:37 UTC 2023: Step 2: Cluster setup - staging files to head node
  
 ======> Clone repos to node...
 PARSL_CLIENT_HOST is
 PARSL_CLIENT_HOST=cloud.parallel.works
 Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
-Mon Oct 30 17:01:35 UTC 2023
-fatal: destination path 'dynamic-learning-rivers' already exists and is not an empty directory.
+Mon Oct 30 19:19:38 UTC 2023
+Cloning into 'dynamic-learning-rivers'...
+Warning: Permanently added 'github.com,140.82.112.3' (ECDSA) to the list of known hosts.
 Cloning into 'sl_core'...
 Cloning into 'global-river-databases'...
 Already up-to-date.
@@ -60,35 +61,277 @@ Already up-to-date.
 ======> Checkout Oct-2023-QT...
 Switched to branch 'Oct-2023-QT'
 ======> Set upstream branch in case branch exists already Oct-2023-QT...
-error: the requested upstream branch 'origin/Oct-2023-QT' does not exist
-hint: 
-hint: If you are planning on basing your work on an upstream
-hint: branch that already exists at the remote, you may need to
-hint: run "git fetch" to retrieve it.
-hint: 
-hint: If you are planning to push out a new local branch that
-hint: will track its remote counterpart, you may want to use
-hint: "git push -u" to set the upstream config as you push.
+Branch Oct-2023-QT set up to track remote branch Oct-2023-QT from origin.
 Exit request sent.
 Identity added: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
-Warning: Permanently added 'github.com,140.82.114.4' (ECDSA) to the list of known hosts.
-There is no tracking information for the current branch.
-Please specify which branch you want to merge with.
-See git-pull(1) for details
-
-    git pull <remote> <branch>
-
-If you wish to set tracking information for this branch you can do so with:
-
-    git branch --set-upstream-to=origin/<branch> Oct-2023-QT
-
+Warning: Permanently added 'github.com,140.82.113.3' (ECDSA) to the list of known hosts.
+Updating 491f090..0177a5c
+Fast-forward
+ ml_models/sl_0/fpi.std.err                      |     8 +
+ ml_models/sl_0/fpi.std.out                      |     5 +
+ ml_models/sl_0/original_input_data.csv          |   679 ++
+ ml_models/sl_0/pca.std.err                      |    18 +
+ ml_models/sl_0/pca.std.out                      |     6 +
+ ml_models/sl_0/predict.std.err                  |     8 +
+ ml_models/sl_0/predict.std.out                  |     5 +
+ ml_models/sl_0/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_0/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_0/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_0/train.std.err                    |  2943 ++++++
+ ml_models/sl_0/train.std.out                    |    34 +
+ ml_models/sl_1/fpi.std.err                      |     8 +
+ ml_models/sl_1/fpi.std.out                      |     5 +
+ ml_models/sl_1/original_input_data.csv          |   679 ++
+ ml_models/sl_1/pca.std.err                      |    18 +
+ ml_models/sl_1/pca.std.out                      |     6 +
+ ml_models/sl_1/predict.std.err                  |     8 +
+ ml_models/sl_1/predict.std.out                  |     5 +
+ ml_models/sl_1/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_1/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_1/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_1/train.std.err                    |  2063 +++++
+ ml_models/sl_1/train.std.out                    |    34 +
+ ml_models/sl_2/fpi.std.err                      |     8 +
+ ml_models/sl_2/fpi.std.out                      |     5 +
+ ml_models/sl_2/original_input_data.csv          |   679 ++
+ ml_models/sl_2/pca.std.err                      |    18 +
+ ml_models/sl_2/pca.std.out                      |     6 +
+ ml_models/sl_2/predict.std.err                  |     8 +
+ ml_models/sl_2/predict.std.out                  |     5 +
+ ml_models/sl_2/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_2/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_2/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_2/train.std.err                    |  2073 +++++
+ ml_models/sl_2/train.std.out                    |    34 +
+ ml_models/sl_3/fpi.std.err                      |     8 +
+ ml_models/sl_3/fpi.std.out                      |     5 +
+ ml_models/sl_3/original_input_data.csv          |   679 ++
+ ml_models/sl_3/pca.std.err                      |    18 +
+ ml_models/sl_3/pca.std.out                      |     6 +
+ ml_models/sl_3/predict.std.err                  |     8 +
+ ml_models/sl_3/predict.std.out                  |     5 +
+ ml_models/sl_3/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_3/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_3/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_3/train.std.err                    |  1979 ++++
+ ml_models/sl_3/train.std.out                    |    34 +
+ ml_models/sl_4/fpi.std.err                      |     8 +
+ ml_models/sl_4/fpi.std.out                      |     5 +
+ ml_models/sl_4/original_input_data.csv          |   679 ++
+ ml_models/sl_4/pca.std.err                      |    18 +
+ ml_models/sl_4/pca.std.out                      |     6 +
+ ml_models/sl_4/predict.std.err                  |     8 +
+ ml_models/sl_4/predict.std.out                  |     5 +
+ ml_models/sl_4/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_4/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_4/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_4/train.std.err                    |  2035 +++++
+ ml_models/sl_4/train.std.out                    |    34 +
+ ml_models/sl_5/fpi.std.err                      |     8 +
+ ml_models/sl_5/fpi.std.out                      |     5 +
+ ml_models/sl_5/original_input_data.csv          |   679 ++
+ ml_models/sl_5/pca.std.err                      |    18 +
+ ml_models/sl_5/pca.std.out                      |     6 +
+ ml_models/sl_5/predict.std.err                  |     8 +
+ ml_models/sl_5/predict.std.out                  |     5 +
+ ml_models/sl_5/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_5/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_5/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_5/train.std.err                    |  2023 +++++
+ ml_models/sl_5/train.std.out                    |    34 +
+ ml_models/sl_6/fpi.std.err                      |     8 +
+ ml_models/sl_6/fpi.std.out                      |     5 +
+ ml_models/sl_6/original_input_data.csv          |   679 ++
+ ml_models/sl_6/pca.std.err                      |    18 +
+ ml_models/sl_6/pca.std.out                      |     6 +
+ ml_models/sl_6/predict.std.err                  |     8 +
+ ml_models/sl_6/predict.std.out                  |     5 +
+ ml_models/sl_6/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_6/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_6/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_6/train.std.err                    |  2081 +++++
+ ml_models/sl_6/train.std.out                    |    34 +
+ ml_models/sl_7/fpi.std.err                      |     8 +
+ ml_models/sl_7/fpi.std.out                      |     5 +
+ ml_models/sl_7/original_input_data.csv          |   679 ++
+ ml_models/sl_7/pca.std.err                      |    18 +
+ ml_models/sl_7/pca.std.out                      |     6 +
+ ml_models/sl_7/predict.std.err                  |     8 +
+ ml_models/sl_7/predict.std.out                  |     5 +
+ ml_models/sl_7/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_7/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_7/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_7/train.std.err                    |  2077 +++++
+ ml_models/sl_7/train.std.out                    |    34 +
+ ml_models/sl_8/fpi.std.err                      |     8 +
+ ml_models/sl_8/fpi.std.out                      |     5 +
+ ml_models/sl_8/original_input_data.csv          |   679 ++
+ ml_models/sl_8/pca.std.err                      |    18 +
+ ml_models/sl_8/pca.std.out                      |     6 +
+ ml_models/sl_8/predict.std.err                  |     8 +
+ ml_models/sl_8/predict.std.out                  |     5 +
+ ml_models/sl_8/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_8/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_8/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_8/train.std.err                    |  2177 +++++
+ ml_models/sl_8/train.std.out                    |    34 +
+ ml_models/sl_9/fpi.std.err                      |     8 +
+ ml_models/sl_9/fpi.std.out                      |     5 +
+ ml_models/sl_9/original_input_data.csv          |   679 ++
+ ml_models/sl_9/pca.std.err                      |    18 +
+ ml_models/sl_9/pca.std.out                      |     6 +
+ ml_models/sl_9/predict.std.err                  |     8 +
+ ml_models/sl_9/predict.std.out                  |     5 +
+ ml_models/sl_9/requirements.txt.gz              |   Bin 0 -> 1815 bytes
+ ml_models/sl_9/requirements.yaml.gz             |   Bin 0 -> 1874 bytes
+ ml_models/sl_9/superlearner_conf_TTR_QT.py      |   535 ++
+ ml_models/sl_9/train.std.err                    |  2039 +++++
+ ml_models/sl_9/train.std.out                    |    34 +
+ output_data/filtered_predict_output.csv         |     0
+ output_data/logs.out                            |  1016 +++
+ scripts/post_01_output_ml_predict_avg.csv       | 10482 ----------------------
+ scripts/post_01_output_ml_predict_std.csv       | 10482 ----------------------
+ scripts/post_02_output_ml_pred_avg_filtered.csv |  3349 -------
+ scripts/prep_01_output_train.csv                |  1181 +--
+ scripts/prep_02_output_predict.csv              |    13 +
+ scripts/prep_03_output_colocated_train.csv      |  1101 ++-
+ scripts/prep_04_output_colocated_predict.csv    |   117 +-
+ scripts/prep_06_output_final_predict.csv        |    13 +
+ scripts/prep_06_output_final_predict.ixy        |    13 +
+ scripts/prep_06_output_final_train.csv          |  1181 +--
+ scripts/prep_06_output_final_train.ixy          |   575 +-
+ 133 files changed, 37963 insertions(+), 26030 deletions(-)
+ create mode 100644 ml_models/sl_0/fpi.std.err
+ create mode 100644 ml_models/sl_0/fpi.std.out
+ create mode 100644 ml_models/sl_0/original_input_data.csv
+ create mode 100644 ml_models/sl_0/pca.std.err
+ create mode 100644 ml_models/sl_0/pca.std.out
+ create mode 100644 ml_models/sl_0/predict.std.err
+ create mode 100644 ml_models/sl_0/predict.std.out
+ create mode 100644 ml_models/sl_0/requirements.txt.gz
+ create mode 100644 ml_models/sl_0/requirements.yaml.gz
+ create mode 100644 ml_models/sl_0/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_0/train.std.err
+ create mode 100644 ml_models/sl_0/train.std.out
+ create mode 100644 ml_models/sl_1/fpi.std.err
+ create mode 100644 ml_models/sl_1/fpi.std.out
+ create mode 100644 ml_models/sl_1/original_input_data.csv
+ create mode 100644 ml_models/sl_1/pca.std.err
+ create mode 100644 ml_models/sl_1/pca.std.out
+ create mode 100644 ml_models/sl_1/predict.std.err
+ create mode 100644 ml_models/sl_1/predict.std.out
+ create mode 100644 ml_models/sl_1/requirements.txt.gz
+ create mode 100644 ml_models/sl_1/requirements.yaml.gz
+ create mode 100644 ml_models/sl_1/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_1/train.std.err
+ create mode 100644 ml_models/sl_1/train.std.out
+ create mode 100644 ml_models/sl_2/fpi.std.err
+ create mode 100644 ml_models/sl_2/fpi.std.out
+ create mode 100644 ml_models/sl_2/original_input_data.csv
+ create mode 100644 ml_models/sl_2/pca.std.err
+ create mode 100644 ml_models/sl_2/pca.std.out
+ create mode 100644 ml_models/sl_2/predict.std.err
+ create mode 100644 ml_models/sl_2/predict.std.out
+ create mode 100644 ml_models/sl_2/requirements.txt.gz
+ create mode 100644 ml_models/sl_2/requirements.yaml.gz
+ create mode 100644 ml_models/sl_2/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_2/train.std.err
+ create mode 100644 ml_models/sl_2/train.std.out
+ create mode 100644 ml_models/sl_3/fpi.std.err
+ create mode 100644 ml_models/sl_3/fpi.std.out
+ create mode 100644 ml_models/sl_3/original_input_data.csv
+ create mode 100644 ml_models/sl_3/pca.std.err
+ create mode 100644 ml_models/sl_3/pca.std.out
+ create mode 100644 ml_models/sl_3/predict.std.err
+ create mode 100644 ml_models/sl_3/predict.std.out
+ create mode 100644 ml_models/sl_3/requirements.txt.gz
+ create mode 100644 ml_models/sl_3/requirements.yaml.gz
+ create mode 100644 ml_models/sl_3/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_3/train.std.err
+ create mode 100644 ml_models/sl_3/train.std.out
+ create mode 100644 ml_models/sl_4/fpi.std.err
+ create mode 100644 ml_models/sl_4/fpi.std.out
+ create mode 100644 ml_models/sl_4/original_input_data.csv
+ create mode 100644 ml_models/sl_4/pca.std.err
+ create mode 100644 ml_models/sl_4/pca.std.out
+ create mode 100644 ml_models/sl_4/predict.std.err
+ create mode 100644 ml_models/sl_4/predict.std.out
+ create mode 100644 ml_models/sl_4/requirements.txt.gz
+ create mode 100644 ml_models/sl_4/requirements.yaml.gz
+ create mode 100644 ml_models/sl_4/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_4/train.std.err
+ create mode 100644 ml_models/sl_4/train.std.out
+ create mode 100644 ml_models/sl_5/fpi.std.err
+ create mode 100644 ml_models/sl_5/fpi.std.out
+ create mode 100644 ml_models/sl_5/original_input_data.csv
+ create mode 100644 ml_models/sl_5/pca.std.err
+ create mode 100644 ml_models/sl_5/pca.std.out
+ create mode 100644 ml_models/sl_5/predict.std.err
+ create mode 100644 ml_models/sl_5/predict.std.out
+ create mode 100644 ml_models/sl_5/requirements.txt.gz
+ create mode 100644 ml_models/sl_5/requirements.yaml.gz
+ create mode 100644 ml_models/sl_5/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_5/train.std.err
+ create mode 100644 ml_models/sl_5/train.std.out
+ create mode 100644 ml_models/sl_6/fpi.std.err
+ create mode 100644 ml_models/sl_6/fpi.std.out
+ create mode 100644 ml_models/sl_6/original_input_data.csv
+ create mode 100644 ml_models/sl_6/pca.std.err
+ create mode 100644 ml_models/sl_6/pca.std.out
+ create mode 100644 ml_models/sl_6/predict.std.err
+ create mode 100644 ml_models/sl_6/predict.std.out
+ create mode 100644 ml_models/sl_6/requirements.txt.gz
+ create mode 100644 ml_models/sl_6/requirements.yaml.gz
+ create mode 100644 ml_models/sl_6/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_6/train.std.err
+ create mode 100644 ml_models/sl_6/train.std.out
+ create mode 100644 ml_models/sl_7/fpi.std.err
+ create mode 100644 ml_models/sl_7/fpi.std.out
+ create mode 100644 ml_models/sl_7/original_input_data.csv
+ create mode 100644 ml_models/sl_7/pca.std.err
+ create mode 100644 ml_models/sl_7/pca.std.out
+ create mode 100644 ml_models/sl_7/predict.std.err
+ create mode 100644 ml_models/sl_7/predict.std.out
+ create mode 100644 ml_models/sl_7/requirements.txt.gz
+ create mode 100644 ml_models/sl_7/requirements.yaml.gz
+ create mode 100644 ml_models/sl_7/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_7/train.std.err
+ create mode 100644 ml_models/sl_7/train.std.out
+ create mode 100644 ml_models/sl_8/fpi.std.err
+ create mode 100644 ml_models/sl_8/fpi.std.out
+ create mode 100644 ml_models/sl_8/original_input_data.csv
+ create mode 100644 ml_models/sl_8/pca.std.err
+ create mode 100644 ml_models/sl_8/pca.std.out
+ create mode 100644 ml_models/sl_8/predict.std.err
+ create mode 100644 ml_models/sl_8/predict.std.out
+ create mode 100644 ml_models/sl_8/requirements.txt.gz
+ create mode 100644 ml_models/sl_8/requirements.yaml.gz
+ create mode 100644 ml_models/sl_8/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_8/train.std.err
+ create mode 100644 ml_models/sl_8/train.std.out
+ create mode 100644 ml_models/sl_9/fpi.std.err
+ create mode 100644 ml_models/sl_9/fpi.std.out
+ create mode 100644 ml_models/sl_9/original_input_data.csv
+ create mode 100644 ml_models/sl_9/pca.std.err
+ create mode 100644 ml_models/sl_9/pca.std.out
+ create mode 100644 ml_models/sl_9/predict.std.err
+ create mode 100644 ml_models/sl_9/predict.std.out
+ create mode 100644 ml_models/sl_9/requirements.txt.gz
+ create mode 100644 ml_models/sl_9/requirements.yaml.gz
+ create mode 100644 ml_models/sl_9/superlearner_conf_TTR_QT.py
+ create mode 100644 ml_models/sl_9/train.std.err
+ create mode 100644 ml_models/sl_9/train.std.out
+ create mode 100644 output_data/filtered_predict_output.csv
+ create mode 100755 output_data/logs.out
+ delete mode 100644 scripts/post_01_output_ml_predict_avg.csv
+ delete mode 100644 scripts/post_01_output_ml_predict_std.csv
 ======> Test for presence of Conda environment
 ls: cannot access /home/sfgary/.miniconda*: No such file or directory
 ======> No Conda found; install Conda environment for SuperLearner.
-Mon Oct 30 17:01:51 UTC 2023: This process can take several minutes.
-Mon Oct 30 17:01:51 UTC 2023: See miniconda_install.log for progress.
+Mon Oct 30 19:22:16 UTC 2023: This process can take several minutes.
+Mon Oct 30 19:22:16 UTC 2023: See miniconda_install.log for progress.
 ====================================
-Mon Oct 30 17:08:28 UTC 2023: Step 2a: Preprocessing/Data Intake
+Mon Oct 30 19:28:48 UTC 2023: Step 2a: Preprocessing/Data Intake
 /home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
@@ -103,20 +346,20 @@ latest: Pulling from parallelworks/gmt
 0014b75e7078: Pulling fs layer
 be071655d959: Pulling fs layer
 2276fdfeb463: Pulling fs layer
-8ed4e8630103: Waiting
 0014b75e7078: Waiting
 be071655d959: Waiting
 2276fdfeb463: Waiting
-02932b6ffd48: Verifying Checksum
-02932b6ffd48: Download complete
+8ed4e8630103: Waiting
 44f803d09bef: Verifying Checksum
 44f803d09bef: Download complete
+02932b6ffd48: Verifying Checksum
+02932b6ffd48: Download complete
 8ed4e8630103: Verifying Checksum
 8ed4e8630103: Download complete
-06d39c85623a: Verifying Checksum
-06d39c85623a: Download complete
 be071655d959: Verifying Checksum
 be071655d959: Download complete
+06d39c85623a: Verifying Checksum
+06d39c85623a: Download complete
 2276fdfeb463: Verifying Checksum
 2276fdfeb463: Download complete
 0014b75e7078: Verifying Checksum
@@ -887,7 +1130,7 @@ Submitted batch job 754
 Submitted batch job 755
 Submitted batch job 756
 ====================================
-Mon Oct 30 17:23:47 UTC 2023: Step 3: Launch jobs on cluster
+Mon Oct 30 19:49:59 UTC 2023: Step 3: Launch jobs on cluster
 =======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
 =======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
 ======> Launching SuperLearner
@@ -939,78 +1182,185 @@ Submitted batch job 765
 WARNING: Target variable name is hard coded here!
 Submitted batch job 766
 ====================================
-Mon Oct 30 17:23:48 UTC 2023: Step 4: Monitor jobs on cluster
-Mon Oct 30 17:23:48 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:23:58 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:23:58 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:24:08 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:24:08 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:24:18 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:24:18 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:24:28 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:24:28 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:24:38 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:24:38 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:24:48 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:24:48 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:24:58 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:24:58 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:25:08 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:25:08 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:25:18 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:25:18 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:25:28 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:25:28 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:25:38 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:25:38 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:25:48 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:25:48 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:25:58 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:25:58 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:26:08 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:26:08 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:26:18 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:26:18 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:26:28 UTC 2023: Found 11 lines in squeue.
-Mon Oct 30 17:26:28 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:26:38 UTC 2023: Found 9 lines in squeue.
-Mon Oct 30 17:26:38 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:26:48 UTC 2023: Found 9 lines in squeue.
-Mon Oct 30 17:26:48 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:26:59 UTC 2023: Found 9 lines in squeue.
-Mon Oct 30 17:26:59 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:27:09 UTC 2023: Found 9 lines in squeue.
-Mon Oct 30 17:27:09 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:27:19 UTC 2023: Found 8 lines in squeue.
-Mon Oct 30 17:27:19 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:27:29 UTC 2023: Found 7 lines in squeue.
-Mon Oct 30 17:27:29 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:27:39 UTC 2023: Found 5 lines in squeue.
-Mon Oct 30 17:27:39 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:27:49 UTC 2023: Found 2 lines in squeue.
-Mon Oct 30 17:27:49 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:27:59 UTC 2023: Found 2 lines in squeue.
-Mon Oct 30 17:27:59 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:28:09 UTC 2023: Found 2 lines in squeue.
-Mon Oct 30 17:28:09 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:28:19 UTC 2023: Found 2 lines in squeue.
-Mon Oct 30 17:28:19 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:28:29 UTC 2023: Found 2 lines in squeue.
-Mon Oct 30 17:28:29 UTC 2023: Monitor waiting 10 seconds...
-Mon Oct 30 17:28:39 UTC 2023: Found 1 lines in squeue.
-Mon Oct 30 17:28:39 UTC 2023: No more pending jobs in squeue. Stage SLURM logs back.
+Mon Oct 30 19:50:00 UTC 2023: Step 4: Monitor jobs on cluster
+Mon Oct 30 19:50:00 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:50:10 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:50:10 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:50:20 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:50:20 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:50:30 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:50:30 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:50:40 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:50:40 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:50:50 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:50:50 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:51:00 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:51:00 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:51:10 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:51:10 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:51:20 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:51:20 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:51:30 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:51:30 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:51:40 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:51:40 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:51:50 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:51:50 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:52:00 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:52:00 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:52:10 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:52:10 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:52:20 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:52:20 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:52:31 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:52:31 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:52:41 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:52:41 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:52:51 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:52:51 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:53:01 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:53:01 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:53:11 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:53:11 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:53:21 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:53:21 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:53:31 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:53:31 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:53:41 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:53:41 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:53:51 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:53:51 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:54:01 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:54:01 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:54:11 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:54:11 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:54:21 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:54:21 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:54:31 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:54:31 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:54:41 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:54:41 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:54:51 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:54:51 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:55:01 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:55:01 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:55:11 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:55:11 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:55:21 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:55:21 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:55:31 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:55:31 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:55:41 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:55:41 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:55:51 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:55:51 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:56:01 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:56:01 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:56:11 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:56:11 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:56:21 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:56:21 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:56:32 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:56:32 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:56:42 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:56:42 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:56:52 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:56:52 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:57:02 UTC 2023: Found 11 lines in squeue.
+Mon Oct 30 19:57:02 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:57:12 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:57:12 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:57:22 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:57:22 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:57:32 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:57:32 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:57:42 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:57:42 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:57:52 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:57:52 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:58:02 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:58:02 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:58:12 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:58:12 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:58:22 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:58:22 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:58:32 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:58:32 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:58:42 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:58:42 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:58:52 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:58:52 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:59:02 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:59:02 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:59:12 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:59:12 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:59:22 UTC 2023: Found 10 lines in squeue.
+Mon Oct 30 19:59:22 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:59:32 UTC 2023: Found 9 lines in squeue.
+Mon Oct 30 19:59:32 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:59:42 UTC 2023: Found 9 lines in squeue.
+Mon Oct 30 19:59:42 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 19:59:53 UTC 2023: Found 9 lines in squeue.
+Mon Oct 30 19:59:53 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:00:03 UTC 2023: Found 9 lines in squeue.
+Mon Oct 30 20:00:03 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:00:13 UTC 2023: Found 9 lines in squeue.
+Mon Oct 30 20:00:13 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:00:23 UTC 2023: Found 7 lines in squeue.
+Mon Oct 30 20:00:23 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:00:33 UTC 2023: Found 7 lines in squeue.
+Mon Oct 30 20:00:33 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:00:43 UTC 2023: Found 6 lines in squeue.
+Mon Oct 30 20:00:43 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:00:53 UTC 2023: Found 6 lines in squeue.
+Mon Oct 30 20:00:53 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:01:03 UTC 2023: Found 6 lines in squeue.
+Mon Oct 30 20:01:03 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:01:13 UTC 2023: Found 6 lines in squeue.
+Mon Oct 30 20:01:13 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:01:23 UTC 2023: Found 4 lines in squeue.
+Mon Oct 30 20:01:23 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:01:33 UTC 2023: Found 3 lines in squeue.
+Mon Oct 30 20:01:33 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:01:43 UTC 2023: Found 3 lines in squeue.
+Mon Oct 30 20:01:43 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:01:53 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:01:53 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:02:03 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:02:03 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:02:13 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:02:13 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:02:23 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:02:23 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:02:33 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:02:33 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:02:43 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:02:43 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:02:53 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:02:53 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:03:03 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:03:03 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:03:13 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:03:13 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:03:23 UTC 2023: Found 2 lines in squeue.
+Mon Oct 30 20:03:23 UTC 2023: Monitor waiting 10 seconds...
+Mon Oct 30 20:03:33 UTC 2023: Found 1 lines in squeue.
+Mon Oct 30 20:03:33 UTC 2023: No more pending jobs in squeue. Stage SLURM logs back.
 ====================================
-Mon Oct 30 17:28:39 UTC 2023: Step 5: Postprocessing/
+Mon Oct 30 20:03:34 UTC 2023: Step 5: Postprocessing/
 ../ml_models/sl_0
-Traceback (most recent call last):
-  File "/home/sfgary/dynamic-learning-rivers/scripts/post_01_flatten.py", line 37, in <module>
-    with open(dir+"/hold-out-metrics.json", 'r') as in_file:
-FileNotFoundError: [Errno 2] No such file or directory: '../ml_models/sl_0/hold-out-metrics.json'
-grep: post_01_output_ml_predict_avg.csv: No such file or directory
-awk: fatal: cannot open file `post_01_output_ml_predict_avg.csv' for reading (No such file or directory)
-cp: cannot stat ‘post_01_output_holdout_score.txt’: No such file or directory
-mv: cannot stat ‘post_01_output_fpi_avg.csv’: No such file or directory
-mv: cannot stat ‘post_01_output_fpi_std.csv’: No such file or directory
-mv: cannot stat ‘post_01_output_FPI.png’: No such file or directory
+../ml_models/sl_1
+../ml_models/sl_2
+../ml_models/sl_3
+../ml_models/sl_4
+../ml_models/sl_5
+../ml_models/sl_6
+../ml_models/sl_7
+../ml_models/sl_8
+../ml_models/sl_9
+Writing mean/std hold-out score...
+Finding mean/std of predictions...
+Writing summary FPI results...
+Maximum std/avg FPI ratio over all models: 0.21137681784912504
 ======> Stage PW logs to remote repo for committing
 sending incremental file list

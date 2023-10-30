@@ -32,3 +32,19 @@ Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment an
 Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator huber
 Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator xgb
 Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator etr
+Defining estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Training estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Evaluating estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Evaluating estimator on holdout(test) high/low set for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Hold out metrics:
+{
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.7306862673226139,
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment_high": -0.3465497187585087,
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment_low": -30.906573218005022
+}
+Evaluating estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Classical metrics:
+{
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.912583699353205
+}
+Save train/test data
