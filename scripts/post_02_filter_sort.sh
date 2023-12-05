@@ -13,6 +13,7 @@ output=post_02_output_ml_pred_avg_filtered.csv
 # First, get list of sites we want to filter out (already observed):
 obsfile="../input_data/ICON-ModEx_Sites_To_Remove.csv"
 
+# Second, build a list of sites to remove based on the above file.
 # Remove the MP- prefix from the list, (but allow all SP- to remain!)
 # (Matches Sample_ID format)
 # Skip the header line
@@ -21,13 +22,17 @@ obsfile="../input_data/ICON-ModEx_Sites_To_Remove.csv"
 # Sort all and remove any diplicates
 obslist=$(sed 's/MP-//g' $obsfile | awk ' NR > 1 {print "-e ^"$1","}' | sort | uniq )
 
-# Need to add -e (-e's added above)
-# Need to put Sample_ID in rightmost
-# column so it is not interpreted as a lon,lat
-# grep -v means invert selection  (i.e. remove the matches)
-# Skip over header line.
-# Remove all "SP-" prefixes because they are converted to NaN by GMT later
-grep -v ${obslist} $input | awk -F, 'NR > 1 {print $2,$3,$4,$5,$6,$7,$8,$9,$10,$1}' | sed 's/SP-//g' > obs_filter.xyz.tmp
+# Third, apply the filters. There are two:
+# 1) Remove all CM_, SSS, S19S_ sites because those are observations and
+# 2) Remove the sites listed in the obslist, above. For the obslist filter,
+#    Need to ensure -e is present (-e's are added above)
+#  Need to put Sample_ID in rightmost
+#  column so it is not interpreted as a lon,lat
+#  grep -v means invert selection  (i.e. remove the matches)
+#  Skip over header line with NR > 1 in the awk command.
+#  Remove all "SP-" prefixes because they are converted to NaN by GMT later
+#  The SP- prefixes will be reinserted.
+grep -v CM_ $input | grep -v SSS | grep -v S19S_ | grep -v ${obslist} | awk -F, 'NR > 1 {print $2,$3,$4,$5,$6,$7,$8,$9,$10,$1}' | sed 's/SP-//g' > obs_filter.xyz.tmp
 
 # Get header for later
 awk 'NR == 1 {print $0}' $input > $output
