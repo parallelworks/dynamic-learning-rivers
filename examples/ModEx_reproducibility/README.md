@@ -14,16 +14,24 @@ files are the original source files for the
 manual ModEx iterations.
 
 `ICON-ModEx_Data.csv` is the data used for
-the first fully automated iteration in April 2023.
-This data is special because it is also the
+the first fully automated iteration in April 2023
+and at the end of 2023, once more data became available,
+this file was copied to `ICON-ModEx_Data_Apr-2023.csv`.
+The Nov-2023 data is used as the reference point
+since numerous small data quality control and
+corrections were made between April and November
+2023.
+
+Apr-2023 was special because it is also the
 first time the S91S (summer 2019) data were
 included in the **same file** as the 2022-2023
-data.  The manual ModEx iterations had to merge
-S19S with 2022-2023 data from separate files.
+data.  Previously, the manual ModEx iterations 
+had to merge S19S with 2022-2023 data from 
+separate files.
 
-`make_input_data.py` uses the April 2023 data
+`make_input_data.py` uses the Nov-2023 data
 as a reference point to compare with the
-`ICON_ModEx_Data_<YYYY>_<MM>_<DD>.csv` files.
+`ICON_ModEx_Data_<MMM>-<YYYY>.csv` files.
 Since minor (i.e. not used in learning) features
 were added to the input data as we streamlined
 the iterations, only the presence of the `Sample_ID`
@@ -35,11 +43,20 @@ also has only the data that were used at the time
 of the historical iteration.
 
 `ICON-ModEx_Data.csv.out.<MMM>-<YYYY>` are the
-corresponding files to each `ICON_ModEx_Data_<YYYY>_<MM>_<DD>.csv`
+corresponding files to each `ICON_ModEx_Data_<MMM>_<YYYY>.csv`
 but in the format expected by the fully automated
 workflow.
 
-The fully automated workflow was then run for
+The fully automated workflow was then run for:
++ `Nov-2023`
++ `Oct-2023`
++ `Sep-2023`
++ `August-2023`
++ `Jul-2023`
++ `June-2023`
++ `May-2023`
++ `Apr-2023`
++ ----------Initial runs here repeated again
 + `Jan-2023`
 + `Feb-2023`
 + `Mar-2033`
@@ -51,3 +68,10 @@ The fully automated workflow was then run for
 + `Jul-2022`
 and corresponding branches were created in
 this GitHub repository.
+
+In retrospect, we saw that that log10 `TransformedTargetRegressor`
+helped generate ML models with less bias than the standard SuperLearner
+configuration, so we repeated all the runs with `-log10` designation
+for consistency and to identify any potential plateauing of model
+score/bias reduction as more data are added.
+
