@@ -56,10 +56,19 @@ predict_merged_small = pd.merge(
 # Load the larger predict data
 predict_merged_large = pd.read_csv('prep_05_output_large_predict.csv')
 
-# Append collab predict to larger predict
+# Append collab (small) predict to larger predict
+# Also append the training set to the predict set
+# so predictions are made at all points exactly the
+# same way. Training predict sites can be filtered
+# out by site ID later. Training set has extra
+# target column, but this is transparently added
+# and filled with NaN for the rows of the true
+# predict.  We drop this column later during the
+# writing to csv.
 predict_merged = pd.concat((
     predict_merged_large,
-    predict_merged_small))
+    predict_merged_small,
+    train_merged))
 
 # Compute 2 derived variables
 # (flow speed avg = flow m3_per_sec avg/reach x-sect area)
