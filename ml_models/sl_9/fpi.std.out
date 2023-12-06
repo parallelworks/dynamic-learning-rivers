@@ -1,0 +1,104 @@
+Parsing SuperLearner FPI arguments...
+--model_dir
+--predict_var
+--num_inputs
+--predict_data
+Submodels within SuperLearner and their weights:
+['nusvr-rbf', 'nusvr-lin', 'nusvr-poly', 'nusvr-sig', 'knn-uni', 'knn-dist', 'pls', 'mlp', 'ridge', 'lasso', 'linear', 'enet', 'huber', 'xgb', 'etr']
+[0.         0.04056972 0.10813363 0.         0.21605269 0.07004446
+ 0.         0.         0.         0.1273268  0.         0.
+ 0.         0.60143777 3.088488  ]
+Did not detect any one-hot features.
+Started with 25 features.
+Finishing with 18 features in 4 groups.
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse;RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva;Mean_DO_mg_per_L,Mean_DO_percent_saturation;slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse
+Loading model for job: 0
+FPI on stacked ensemble...
+FPI on ML model: nusvr-poly...
+FPI on ML model: knn-uni...
+FPI on ML model: lasso...
+FPI on ML model: xgb...
+FPI on ML model: etr...
+                                                    Avg_Ratiostack0  Std_Ratiostack0
+Feature                                                                             
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst...         4.374402         0.230047
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                   4.294006         0.191549
+Mean_DO_mg_per_L,Mean_DO_percent_saturation                3.115599         0.192884
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_...         5.339814         0.314512
+pH                                                         1.655235         0.089776
+sgr_dk_rav                                                 1.393176         0.058335
+gla_pc_cse                                                 1.001214         0.003662
+crp_pc_cse                                                 2.995855         0.212241
+prm_pc_cse                                                 1.126026         0.043622
+ire_pc_cse                                                 1.087357         0.020080
+ppd_pk_cav                                                 1.814675         0.135301
+--------nusvr-poly---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                    0.989676
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                  1.040032
+Mean_DO_mg_per_L,Mean_DO_percent_saturation                               0.971804
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse    0.990907
+pH                                                                        1.008966
+sgr_dk_rav                                                                0.997186
+gla_pc_cse                                                                1.000000
+crp_pc_cse                                                                1.021063
+prm_pc_cse                                                                1.000179
+ire_pc_cse                                                                0.988411
+ppd_pk_cav                                                                1.006184
+Name: Avg_Rationusvr-poly0, dtype: float64
+--------knn-uni---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                    3.343728
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                  3.656789
+Mean_DO_mg_per_L,Mean_DO_percent_saturation                               1.551829
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse    4.592821
+pH                                                                        1.303679
+sgr_dk_rav                                                                1.000356
+gla_pc_cse                                                                1.001013
+crp_pc_cse                                                                1.558553
+prm_pc_cse                                                                1.021949
+ire_pc_cse                                                                1.039939
+ppd_pk_cav                                                                1.477369
+Name: Avg_Ratioknn-uni0, dtype: float32
+--------lasso---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                    24.608265
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                  10.221233
+Mean_DO_mg_per_L,Mean_DO_percent_saturation                               13.976504
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse    20.394150
+pH                                                                        11.055781
+sgr_dk_rav                                                                 1.744991
+gla_pc_cse                                                                 1.003317
+crp_pc_cse                                                                 7.828598
+prm_pc_cse                                                                 3.678916
+ire_pc_cse                                                                 3.500435
+ppd_pk_cav                                                                 5.672790
+Name: Avg_Ratiolasso0, dtype: float32
+--------xgb---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                    4.963599
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                  4.552608
+Mean_DO_mg_per_L,Mean_DO_percent_saturation                               3.756980
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse    5.899037
+pH                                                                        1.153050
+sgr_dk_rav                                                                1.756268
+gla_pc_cse                                                                1.000000
+crp_pc_cse                                                                4.129280
+prm_pc_cse                                                                1.000000
+ire_pc_cse                                                                1.159921
+ppd_pk_cav                                                                1.873112
+Name: Avg_Ratioxgb0, dtype: float32
+--------etr---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                    1.000934
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                  1.000003
+Mean_DO_mg_per_L,Mean_DO_percent_saturation                               1.000004
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse    1.004341
+pH                                                                        1.000080
+sgr_dk_rav                                                                1.000003
+gla_pc_cse                                                                1.000000
+crp_pc_cse                                                                1.001379
+prm_pc_cse                                                                1.000000
+ire_pc_cse                                                                1.000005
+ppd_pk_cav                                                                1.000000
+Name: Avg_Ratioetr0, dtype: float64
