@@ -1,0 +1,24 @@
+Parsing SuperLearner PCA arguments...
+--model_dir
+--num_inputs
+--data
+--predict_var
+--predict_data
+Shapes at start:
+(11213, 25)
+(11213, 6)
+Shape after concat:
+(11213, 31)
+Shapes after NaN, x, y, error separation:
+(11106, 24)
+(11106, 2)
+(11106, 2)
+(11106, 1)
+Training data shape:
+(615, 23)
+data_all shape after adding training data:
+(11721, 24)
+data_all shape after removing NaN:
+(11718, 24)
+0.9999999999999998
+Done!
