@@ -1,0 +1,19 @@
+Parsing SuperLearner predict arguments...
+--model_dir
+--predict_var
+--num_inputs
+--predict_data
+Submodels within SuperLearner and their weights:
+['nusvr-rbf', 'nusvr-lin', 'nusvr-poly', 'nusvr-sig', 'knn-uni', 'knn-dist', 'pls', 'mlp', 'ridge', 'lasso', 'linear', 'enet', 'huber', 'xgb', 'etr']
+[0.         0.         0.09791041 0.53253587 0.         0.20502412
+ 0.         0.02894165 0.         0.         0.         0.
+ 0.         0.70046505 1.2349096 ]
+RSE: 305.2297814740699 +/- 499.0210875361727
+mean.error: 147.1745 +/- 67.918915
+predict.error: 1185.2366 +/- 13.476161
+RSE vs mean.error: [[1.         0.40668457]
+ [0.40668457 1.        ]]
+RSE vs predict.error: [[1.         0.35380122]
+ [0.35380122 1.        ]]
+evaluating hold out on a high/low split
+Done!
