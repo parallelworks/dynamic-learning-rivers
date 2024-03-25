@@ -1,0 +1,307 @@
+ 
+====================================
+Step 1: Local setup on PW platform
+Execution is in /home/sfgary/pw/jobs/sl_core/00142/workflow.sh at Mon Mar 25 05:21:19 PM UTC 2024
+ 
+Workflow parameters from workflow.xml, apirun/main.py, or ./github/workflows/main.yaml:
+These parameters are command line arguments when invoking this script and
+are likely to be blank due to the usage of inputs.sh replacing command line arguments.
+
+ 
+=========================================================
+Starting sl_core
+Running in /home/sfgary/pw/jobs/sl_core/00142 with job number: 00142
+ 
+=========================================================
+Mon Mar 25 05:21:19 PM UTC 2024: Testing echod. Currently on pw-user-sfgary.
+Mon Mar 25 05:21:19 PM UTC 2024: Will excute on remote resource as sfgary@34.71.134.112
+ 
+Checking inputs to test:
+local user: sfgary
+remote user: sfgary
+remote_node: 34.71.134.112
+cluster name: cloud
+private_key: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers
+Checking for private_key: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers
+ML archive repo: git@github.com:parallelworks/dynamic-learning-rivers
+ML archive branch: Nov-2023-log10-DOcorrected
+ML code repo: https://github.com/parallelworks/sl_core
+ML data repo: https://github.com/parallelworks/global-river-databases
+ 
+Absolute paths on cluster:
+Arch: /home/sfgary/dynamic-learning-rivers
+Data: /home/sfgary/global-river-databases
+Code: /home/sfgary/sl_core
+ 
+Miniconda information:
+Location: /home/sfgary/.miniconda3
+Env. name: superlearner
+ 
+Data flow information:
+Working dir basename: ml_models/sl_
+ 
+Number of instances
+num_inst: 10
+ 
+FPI correlation cutoff
+fpi_corr_cutoff: 50
+Convert from percentage to decimal...
+fpi_corr_cutoff: 0.5
+====================================
+Mon Mar 25 05:21:19 PM UTC 2024: Step 2: Cluster setup - staging files to head node
+ 
+======> Clone repos to node...
+PARSL_CLIENT_HOST is
+PARSL_CLIENT_HOST=cloud.parallel.works
+Exit request sent.
+Identity added: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
+Mon Mar 25 17:21:19 UTC 2024
+Cloning into 'dynamic-learning-rivers'...
+Warning: Permanently added 'github.com,140.82.114.3' (ECDSA) to the list of known hosts.
+Cloning into 'sl_core'...
+Cloning into 'global-river-databases'...
+Already up-to-date.
+Already up-to-date.
+======> Create Nov-2023-log10-DOcorrected...
+======> Checkout Nov-2023-log10-DOcorrected...
+Switched to branch 'Nov-2023-log10-DOcorrected'
+======> Set upstream branch in case branch exists already Nov-2023-log10-DOcorrected...
+Branch Nov-2023-log10-DOcorrected set up to track remote branch Nov-2023-log10-DOcorrected from origin.
+Exit request sent.
+Identity added: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
+Warning: Permanently added 'github.com,140.82.113.4' (ECDSA) to the list of known hosts.
+Updating 2e0a2b4..3e2ecb5
+Fast-forward
+ .github/workflows/main.yml                |    2 +-
+ input_data/ICON-ModEx_Data.csv            | 1508 +++++++++++++++--------------
+ input_data/ICON-ModEx_Sites_To_Remove.csv |   21 +-
+ 3 files changed, 773 insertions(+), 758 deletions(-)
+======> Test for presence of Conda environment
+ls: cannot access /home/sfgary/.miniconda*: No such file or directory
+======> No Conda found; install Conda environment for SuperLearner.
+Mon Mar 25 05:23:20 PM UTC 2024: This process can take several minutes.
+Mon Mar 25 05:23:20 PM UTC 2024: See miniconda_install.log for progress.
+====================================
+Mon Mar 25 05:28:15 PM UTC 2024: Step 2a: Preprocessing/Data Intake
+Traceback (most recent call last):
+  File "/home/sfgary/dynamic-learning-rivers/scripts/prep_01_intake_train.py", line 38, in <module>
+    core_vars = data[vars_to_use]
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/core/frame.py", line 4096, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 6252, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['Mean_DO_percent_saturation'] not in index"
+/home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  core_vars.replace(
+Unable to find image 'parallelworks/gmt:latest' locally
+latest: Pulling from parallelworks/gmt
+06d39c85623a: Pulling fs layer
+44f803d09bef: Pulling fs layer
+02932b6ffd48: Pulling fs layer
+8ed4e8630103: Pulling fs layer
+0014b75e7078: Pulling fs layer
+be071655d959: Pulling fs layer
+2276fdfeb463: Pulling fs layer
+8ed4e8630103: Waiting
+2276fdfeb463: Waiting
+be071655d959: Waiting
+0014b75e7078: Waiting
+06d39c85623a: Download complete
+44f803d09bef: Verifying Checksum
+44f803d09bef: Download complete
+02932b6ffd48: Verifying Checksum
+02932b6ffd48: Download complete
+8ed4e8630103: Verifying Checksum
+8ed4e8630103: Download complete
+be071655d959: Verifying Checksum
+be071655d959: Download complete
+06d39c85623a: Pull complete
+44f803d09bef: Pull complete
+02932b6ffd48: Pull complete
+8ed4e8630103: Pull complete
+2276fdfeb463: Verifying Checksum
+2276fdfeb463: Download complete
+0014b75e7078: Verifying Checksum
+0014b75e7078: Download complete
+0014b75e7078: Pull complete
+be071655d959: Pull complete
+2276fdfeb463: Pull complete
+Digest: sha256:9b4274e2b29d9678583fd5ad1d64cc5cb7c6b830de542d418fd2a3a76399c871
+Status: Downloaded newer image for parallelworks/gmt:latest
+awk: fatal: cannot open file `prep_01_output_train.csv' for reading (No such file or directory)
+cat: /home/sfgary/global-river-databases/scripts/colocated.??????????.tmp: No such file or directory
+-------------Predict Data----------------
+Submitted batch job 2
+Submitted batch job 3
+Submitted batch job 4
+Submitted batch job 5
+Submitted batch job 6
+Submitted batch job 7
+Submitted batch job 8
+Submitted batch job 9
+Submitted batch job 10
+Submitted batch job 11
+Submitted batch job 12
+Submitted batch job 13
+Submitted batch job 14
+Submitted batch job 15
+Submitted batch job 16
+Submitted batch job 17
+Submitted batch job 18
+Submitted batch job 19
+Submitted batch job 20
+Submitted batch job 21
+Submitted batch job 22
+Submitted batch job 23
+Submitted batch job 24
+Submitted batch job 25
+Submitted batch job 26
+Submitted batch job 27
+Submitted batch job 28
+Submitted batch job 29
+Submitted batch job 30
+Submitted batch job 31
+Submitted batch job 32
+Submitted batch job 33
+Submitted batch job 34
+Submitted batch job 35
+Submitted batch job 36
+Submitted batch job 37
+Submitted batch job 38
+Submitted batch job 39
+Submitted batch job 40
+Submitted batch job 41
+Submitted batch job 42
+Submitted batch job 43
+Submitted batch job 44
+Submitted batch job 45
+Submitted batch job 46
+Submitted batch job 47
+Submitted batch job 48
+Submitted batch job 49
+Submitted batch job 50
+Submitted batch job 51
+Submitted batch job 52
+Submitted batch job 53
+Submitted batch job 54
+Submitted batch job 55
+Submitted batch job 56
+Submitted batch job 57
+Submitted batch job 58
+Submitted batch job 59
+Submitted batch job 60
+Submitted batch job 61
+Submitted batch job 62
+Submitted batch job 63
+Submitted batch job 64
+Submitted batch job 65
+Submitted batch job 66
+Submitted batch job 67
+Submitted batch job 68
+Submitted batch job 69
+Submitted batch job 70
+Submitted batch job 71
+Submitted batch job 72
+Submitted batch job 73
+Submitted batch job 74
+Submitted batch job 75
+Submitted batch job 76
+Submitted batch job 77
+Submitted batch job 78
+Traceback (most recent call last):
+  File "/home/sfgary/dynamic-learning-rivers/scripts/prep_06_merge.py", line 27, in <module>
+    train_chem = pd.read_csv('prep_01_output_train.csv')
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'prep_01_output_train.csv'
+====================================
+Mon Mar 25 05:34:01 PM UTC 2024: Step 3: Launch jobs on cluster
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 79
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_1
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_1
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 80
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_2
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_2
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 81
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_3
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_3
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 82
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_4
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_4
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 83
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_5
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_5
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 84
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_6
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_6
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 85
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_7
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_7
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 86
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_8
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_8
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 87
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_9
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_9
+======> Launching SuperLearner
+WARNING: Target variable name is hard coded here!
+Submitted batch job 88
+====================================
+Mon Mar 25 05:34:02 PM UTC 2024: Step 4: Monitor jobs on cluster
+Mon Mar 25 05:34:02 PM UTC 2024: Monitor waiting 10 seconds...
+Mon Mar 25 05:34:12 PM UTC 2024: Found 11 lines in squeue.
+Mon Mar 25 05:34:12 PM UTC 2024: Monitor waiting 10 seconds...
+Mon Mar 25 05:34:22 PM UTC 2024: Found 11 lines in squeue.
+Mon Mar 25 05:34:22 PM UTC 2024: Monitor waiting 10 seconds...
+Mon Mar 25 05:34:32 PM UTC 2024: Found 11 lines in squeue.
+Mon Mar 25 05:34:32 PM UTC 2024: Monitor waiting 10 seconds...
+Mon Mar 25 05:34:42 PM UTC 2024: Found 1 lines in squeue.
+Mon Mar 25 05:34:42 PM UTC 2024: No more pending jobs in squeue. Stage SLURM logs back.
+====================================
+Mon Mar 25 05:34:42 PM UTC 2024: Step 5: Postprocessing/
+../ml_models/sl_0
+Traceback (most recent call last):
+  File "/home/sfgary/dynamic-learning-rivers/scripts/post_01_flatten.py", line 37, in <module>
+    with open(dir+"/hold-out-metrics.json", 'r') as in_file:
+FileNotFoundError: [Errno 2] No such file or directory: '../ml_models/sl_0/hold-out-metrics.json'
+grep: post_01_output_ml_predict_avg.csv: No such file or directory
+awk: fatal: cannot open file `post_01_output_ml_predict_avg.csv' for reading (No such file or directory)
+cp: cannot stat ‘post_01_output_holdout_score.txt’: No such file or directory
+mv: cannot stat ‘post_01_output_fpi_avg.csv’: No such file or directory
+mv: cannot stat ‘post_01_output_fpi_std.csv’: No such file or directory
+mv: cannot stat ‘post_01_output_FPI.png’: No such file or directory
+======> Stage PW logs to remote repo for committing
+sending incremental file list
