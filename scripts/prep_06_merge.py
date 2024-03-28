@@ -121,14 +121,14 @@ for index, row in train_merged.iterrows():
 
         # Using FW equation (with elevation correction)
         o2_sat_mg_per_l = o2sat.fw_o2sat(0.0, row['Mean_Temp_Deg_C'], row['ele_mt_cav']/1000.0)
-        print('sw_O2_sat'+str(o2_sat_mg_per_l))
+        #print('sw_O2_sat'+str(o2_sat_mg_per_l))
         
         if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
-            print('Missing regular DO!')
+            #print('Missing regular DO!')
             # Compute any missing DO_mg_per_L from T and DOSAT  
             train_merged.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
         elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
-            print('Missing DOSAT')
+            #print('Missing DOSAT')
             # Compute any missing DOSAT from T and DO_mg_per_L.
             train_merged.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
 
@@ -142,14 +142,14 @@ for index, row in predict_merged.iterrows():
 
         # Using FW equation (with elevation correction)
         o2_sat_mg_per_l = o2sat.fw_o2sat(0.0, row['Mean_Temp_Deg_C'], row['ele_mt_cav']/1000.0)
-        print('sw_O2_sat'+str(o2_sat_mg_per_l))
+        #print('sw_O2_sat'+str(o2_sat_mg_per_l))
         
         if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
-            print('Missing regular DO!')
+            #print('Missing regular DO!')
             # Compute any missing DO_mg_per_L from T and DOSAT  
             predict_merged.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
         elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
-            print('Missing DOSAT')
+            #print('Missing DOSAT')
             # Compute any missing DOSAT from T and DO_mg_per_L.
             predict_merged.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l
 
