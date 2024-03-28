@@ -126,11 +126,11 @@ for index, row in train_merged.iterrows():
         if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
             print('Missing regular DO!')
             # Compute any missing DO_mg_per_L from T and DOSAT  
-            targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
+            train_merged.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
         elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
             print('Missing DOSAT')
             # Compute any missing DOSAT from T and DO_mg_per_L.
-            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
+            train_merged.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
 
 print('---> Predict data...')
 for index, row in predict_merged.iterrows():
@@ -147,11 +147,11 @@ for index, row in predict_merged.iterrows():
         if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
             print('Missing regular DO!')
             # Compute any missing DO_mg_per_L from T and DOSAT  
-            targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
+            predict_merged.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
         elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
             print('Missing DOSAT')
             # Compute any missing DOSAT from T and DO_mg_per_L.
-            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l
+            predict_merged.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l
 
 #==========================================================================================
 print('Selecting which columns/vars/features to use for training and which go to ixy...')
