@@ -39,3 +39,48 @@ def sw_o2sat(sa,te):
         np.multiply(sa,(b1 + b2*(tek/100) + b3*(np.power((tek/100),2) )))
 
     return np.exp(lnC)
+
+#=======================================================
+# Function for saturated oxygen in freshwater
+# from:
+# Rice, E. W., Baird, R. B., Eaton, A. D. & Eds.
+# American Public Health Association (APHA). Standard Methods for the Examination
+# of Water and Wastewater, 23rd ed. APHA: Washington, DC, USA (2017).
+# as used and described in:
+# Rajesh, M., Rehana, S. Impact of climate change on river water temperature
+# and dissolved oxygen: Indian riverine thermal regimes. Sci Rep 12, 9222
+# (2022). https://doi.org/10.1038/s41598-022-12996-7.
+#
+# Inputs:
+# salinity (ignored, assumed 0)
+# temperature deg C
+# elevation kilometers
+#
+# Outputs:
+# Saturated DO (mg O2/L)
+#=======================================================
+def fw_o2sat(sa,te,km):
+
+    import numpy as np
+
+    # convert T to Kelvin
+    tek = 273.15 + te
+
+    # Compute temperature term:
+    lnosf = -139.34411 + \
+        np.divide(1.575701e5,tek) - \
+        np.divide(6.642308e7,np.power(tek,2)) + \
+        np.divide(1.243800e10,np.power(tek,3)) - \
+        np.divide(8.621949e11,np.power(tek,4))
+
+    # Compute salinity term (assume Salinity = 0)
+    ws = 1.0
+
+    # Compute elevation term:
+    wk = 1.0 - np.multiply(0.11988,km) + \
+        np.multiply(6.10834e-3,np.power(km,2)) - \
+        np.multiply(-1.60747e-4,np.power(km,3))
+
+    # Put it all together
+    return np.multiply(ws,np.multiply(wk,np.exp(lnosf)))
+
