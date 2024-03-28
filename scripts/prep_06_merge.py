@@ -70,7 +70,9 @@ predict_merged = pd.concat((
     predict_merged_small,
     train_merged))
 
+#==========================================================================================
 # Compute 2 derived variables
+#==========================================================================================
 # (flow speed avg = flow m3_per_sec avg/reach x-sect area)
 # (annual range in flow speed = (max-min)/area
 predict_merged['RA_ms_av'] = predict_merged['RA_cms_cyr']/predict_merged['RA_xam2']
@@ -79,6 +81,79 @@ predict_merged['RA_ms_di'] = (predict_merged['RA_cms_cmx'] - predict_merged['RA_
 train_merged['RA_ms_av'] = train_merged['RA_cms_cyr']/train_merged['RA_xam2']
 train_merged['RA_ms_di'] = (train_merged['RA_cms_cmx'] - train_merged['RA_cms_cmn'])/train_merged['RA_xam2']
 
+#-------------------------------------------------
+# Try to recover as much oxygen data as possible - if there
+# is one oxygen value, compute the other. Since we are working 
+# with river data and river salinities are usually under 10 PSU, 
+# we can assume S=0 and the error in saturated O2 will be less 
+# than about 10% over a very wide range of temperatures.  
+# Temperature has the biggest impact on saturated O2 in water.
+#-------------------------------------------------
+# Example using sw_o2sat with sa=0 and whatever temperature 
+# is at a given time.  Then, to compute the percent saturated oxygen,
+#
+# percent_o2sat = 100*o2/sw_o2sat(0.0, temperature)
+#-------------------------------------------------
+# Units
+#
+# ICES is a great resource for water units conversions,
+# https://ocean.ices.dk/tools/unitconversion.aspx. We 
+# can convert the sw_o2sat output (mL/L) to the units 
+# used in hydrology (mg/L) with:
+#
+# o2sat_mg_per_l = o2sat_ml_per_l*1.4291
+#
+#-------------------------------------------------
+#
+# ORIGINALLY IN STEPS 1 and 2
+# Moved here so elevation can be used to correct saturated DO.
+# Loop over all rows
+print('Reconstructing DOsat from DO and vice-versa...')
+print('---> Training data...')
+for index, row in train_merged.iterrows():
+
+    # Must have temperature to attempt reconstruction
+    if ( not np.isnan(row['Mean_Temp_Deg_C']) ):
+        # Not accounting for elevation
+        #o2_sat_mg_per_l = o2sat.sw_o2sat(0.0, row['Mean_Temp_Deg_C'])*1.4291
+
+        # Using FW equation (with elevation correction)
+        o2_sat_mg_per_l = o2sat.fw_o2sat(0.0, row['Mean_Temp_Deg_C'], row['ele_mt_cav']/1000.0)
+        print('sw_O2_sat'+str(o2_sat_mg_per_l))
+        
+        if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
+            print('Missing regular DO!')
+            # Compute any missing DO_mg_per_L from T and DOSAT  
+            targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
+        elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
+            print('Missing DOSAT')
+            # Compute any missing DOSAT from T and DO_mg_per_L.
+            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
+
+print('---> Predict data...')
+for index, row in predict_merged.iterrows():
+
+    # Must have temperature to attempt reconstruction
+    if ( not np.isnan(row['Mean_Temp_Deg_C']) ):
+        # Not accounting for elevation
+        #o2_sat_mg_per_l = o2sat.sw_o2sat(0.0, row['Mean_Temp_Deg_C'])*1.4291
+
+        # Using FW equation (with elevation correction)
+        o2_sat_mg_per_l = o2sat.fw_o2sat(0.0, row['Mean_Temp_Deg_C'], row['ele_mt_cav']/1000.0)
+        print('sw_O2_sat'+str(o2_sat_mg_per_l))
+        
+        if (np.isnan(row['Mean_DO_mg_per_L']) and not np.isnan(row['Mean_DO_percent_saturation'])):
+            print('Missing regular DO!')
+            # Compute any missing DO_mg_per_L from T and DOSAT  
+            targets.at[index,'Mean_DO_mg_per_L'] = row['Mean_DO_percent_saturation']*o2_sat_mg_per_l/100.0
+        elif (not np.isnan(row['Mean_DO_mg_per_L']) and np.isnan(row['Mean_DO_percent_saturation'])):
+            print('Missing DOSAT')
+            # Compute any missing DOSAT from T and DO_mg_per_L.
+            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l
+
+#==========================================================================================
+print('Selecting which columns/vars/features to use for training and which go to ixy...')
+#==========================================================================================
 # Cut all columns (separate ID, lon, lat as ixy)
 csv_cols = [
     "RA_SO",
