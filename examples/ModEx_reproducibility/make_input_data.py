@@ -74,5 +74,5 @@ for ref_file in ref_file_list:
     out=src[src['Sample_ID'].str.contains(search_str)]
 
     # Write output
-    out.to_csv(out_file,mode="w")
+    out.to_csv(out_file,mode="w",index=False)
 
