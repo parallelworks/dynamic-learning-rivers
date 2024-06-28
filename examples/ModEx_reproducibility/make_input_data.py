@@ -66,7 +66,11 @@ for ref_file in ref_file_list:
 
     # Add S19S data (these data were
     # added downstream in the older ModEx iterations)
-    search_list.append("S19S")
+    # Only add this data for the ModEx iterations,
+    # the Dec 2021 community meeting predates the
+    # availability of all S19S data.
+    if ( ref_file != "ICON-ModEx_Data_Dec-2021-community-meeting.csv" ):
+        search_list.append("S19S")
 
     # Insert | between each item in list
     search_str="|".join(search_list)
