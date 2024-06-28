@@ -21,6 +21,7 @@ src_file="ICON-ModEx_Data_Nov-2023.csv"
 # List of files that sets the limit of data in the output
 ref_file_list=[
     "ICON-ModEx_Data_S19S.csv",
+    "ICON-ModEx_Data_Dec-2021-community-meeting.csv",
     "ICON-ModEx_Data_Jul-2022.csv",
     "ICON-ModEx_Data_Aug-2022.csv",
     "ICON-ModEx_Data_Sep-2022.csv",
