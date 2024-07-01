@@ -19,7 +19,7 @@ conda activate $my_env
 rm -f *.csv
 
 # Set the name of the target feature
-target_name="Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment"
+target_name="Respiration_Rate_mg_DO_per_L_per_H"
 
 #=============================================
 # Steps 1 & 2: Intake training and predict data
