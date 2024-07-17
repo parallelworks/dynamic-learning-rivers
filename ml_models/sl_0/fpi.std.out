@@ -1,0 +1,43 @@
+Parsing SuperLearner FPI arguments...
+--model_dir
+--predict_var
+--num_inputs
+--corr_cutoff
+--predict_data
+Submodels within SuperLearner and their weights:
+['nusvr-rbf', 'nusvr-lin', 'nusvr-poly', 'nusvr-sig', 'knn-uni', 'knn-dist', 'pls', 'mlp', 'ridge', 'lasso', 'linear', 'enet', 'huber', 'xgb', 'etr']
+[0.98528963 0.         0.         0.         0.         0.00209582
+ 0.         0.         0.         0.         0.         0.
+ 0.         0.         0.        ]
+Did not detect any one-hot features.
+Started with 25 features.
+Finishing with 18 features in 3 groups.
+Mean_DO_percent_saturation,Mean_DO_mg_per_L;RA_ms_di,RA_SO,RA_dm,RA_ms_av,dor_pc_pva;run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,gwt_cm_cav,slp_dg_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,prm_pc_cse,for_pc_cse
+Loading model for job: 0
+FPI on stacked ensemble...
+FPI on ML model: nusvr-rbf...
+                                                    Avg_Ratiostack0  Std_Ratiostack0
+Feature                                                                             
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                1.270607         0.227530
+RA_ms_di,RA_SO,RA_dm,RA_ms_av,dor_pc_pva                   1.226194         0.562260
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,gwt...         1.761187         0.383164
+ire_pc_cse                                                 1.053216         0.491399
+sgr_dk_rav                                                 0.999776         0.429652
+ppd_pk_cav                                                 0.877431         0.343011
+pst_pc_cse                                                 1.078989         0.461890
+gla_pc_cse                                                 1.001965         0.000590
+pH                                                         1.319597         0.565240
+crp_pc_cse                                                 0.996053         0.374936
+--------nusvr-rbf---------
+Feature
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                                                                                      1.265322
+RA_ms_di,RA_SO,RA_dm,RA_ms_av,dor_pc_pva                                                                                         1.232580
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,gwt_cm_cav,slp_dg_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,prm_pc_cse,for_pc_cse    1.877870
+ire_pc_cse                                                                                                                       1.072100
+sgr_dk_rav                                                                                                                       1.046664
+ppd_pk_cav                                                                                                                       1.073747
+pst_pc_cse                                                                                                                       0.963227
+gla_pc_cse                                                                                                                       0.954849
+pH                                                                                                                               1.069465
+crp_pc_cse                                                                                                                       1.104994
+Name: Avg_Rationusvr-rbf0, dtype: float64
