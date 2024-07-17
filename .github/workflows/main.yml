@@ -1,3 +1,5 @@
+name: Run SuperLearner
+run-name: Run SuperLearner workflow ${{ github.event.inputs.workflow-name }} as user ${{ github.event.inputs.pw-user }}
 on:
   release:
     types: [published]
@@ -6,14 +8,16 @@ jobs:
   test-workflow:
     runs-on: ubuntu-latest
     name: modex-iteration-cloud-pw
+    env:
+      PW_PLATFORM_HOST: 'cloud.parallel.works'
+      PW_API_KEY: ${{ secrets.PW_API_KEY }}
+
     steps:
       - name: run-workflow
         id: run-cloud-pw
-        uses: parallelworks/test-workflow-action@v6
+        uses: parallelworks/test-workflow-action@v7.1
         with:
-          pw-user-host: 'cloud.parallel.works'
-          pw-api-key: ${{ secrets.PW_API_KEY }}
           pw-user: 'sfgary'
-          resource-pool-names: 'cloud'
+          resource-names: 'cloud'
           workflow-name: 'sl_core'
           workflow-parameters: '{"startCmd": "workflow.sh", "repos": { "ml_arch_repo": "git@github.com:parallelworks/dynamic-learning-rivers", "ml_arch_branch": "Dec-2021", "push_to_gh": "true", "ml_code_repo": "https://github.com/parallelworks/sl_core", "ml_data_repo": "https://github.com/parallelworks/global-river-databases", "whost": { "type": "computeResource", "id": "636dec4b565b200008495822" }, "miniconda_loc": "/home/__USER__/.miniconda3", "my_env": "superlearner" }, "superlearner": { "train_test_data": "scripts/prep_06_output_final_train.csv", "predict_data": "scripts/prep_06_output_final_predict", "num_inputs": "25", "superlearner_conf": "sample_inputs/superlearner_conf.py", "work_dir_base": "ml_models/sl_", "hpo": "true", "cross_val_score": "false", "smogn": "false", "onnx": "false", "backend": "loky", "n_jobs": "8", "num_inst": "10", "fpi_corr_cutoff": "50" } }'
