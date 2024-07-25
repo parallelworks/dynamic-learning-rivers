@@ -37,7 +37,13 @@ ref_file_list=[
     "ICON-ModEx_Data_Jul-2023.csv",
     "ICON-ModEx_Data_August-2023.csv",
     "ICON-ModEx_Data_Sep-2023.csv",
-    "ICON-ModEx_Data_Oct-2023.csv"
+    "ICON-ModEx_Data_Oct-2023.csv",
+    "best_100.csv",
+    "best_200.csv",
+    "best_300.csv",
+    "worst_100.csv",
+    "worst_200.csv",
+    "worst_300.csv"
     ]
 
 #=======================
@@ -70,7 +76,9 @@ for ref_file in ref_file_list:
     # the Dec 2021 community meeting predates the
     # availability of all S19S data.
     if ( ref_file != "ICON-ModEx_Data_Dec-2021-community-meeting.csv" ):
-        search_list.append("S19S")
+        if ( not ref_file.__contains__('best') ):
+            if ( not ref_file.__contains__('worst') ):
+                search_list.append("S19S")
 
     # Insert | between each item in list
     search_str="|".join(search_list)
