@@ -1,5 +1,7 @@
 # ModEx Reproducibility
 
+## Hindcast runs
+
 This directory documents the steps taken to
 verify the reproducibility of the initial,
 manual, ModEx iterations with the new,
@@ -74,4 +76,30 @@ helped generate ML models with less bias than the standard SuperLearner
 configuration, so we repeated all the runs with `-log10` designation
 for consistency and to identify any potential plateauing of model
 score/bias reduction as more data are added.
+
+## ModEx methodology test
+
+To explore the extent to which the site selection process of the 
+ICON-ModEx approach helps train ML models, we decided to train ML
+models with the "best" and "worst" data and see if each series of
+ML models' scores improved more or less quickly relative to each 
+other.
+
+To ensure an apples-to-apples test, we want to ensure that
+the ML models are predicting on the same data set. So, we train
+a series of ML models with the best (worst) 100, 200, and 300 
+points. The data points not used by **either** the best and worst
+case ML model training then become the data used for assessing
+the model scores.
+
+To implement this, we will:
+1. Train each of the 6 ML model ensembles by setting the training data
+   to a subset of the 100, 200, or 300 best or worst points.
+2. Reuse/reload each ML models and have it run a [score](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyRegressor.html#sklearn.dummy.DummyRegressor.score) on the unused "neutral" data.
+
+So, first, I need a list of "best" and "worst" sites. Use the output
+from the Nov-2023-log10-DO-update-correct branch since this ML model
+was trained on all the available and corrected data. Copy that file
+here for archiving from ./scripts/post_01_output_ml_predict_avg.csv.
+
 
