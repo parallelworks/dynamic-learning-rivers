@@ -1,0 +1,497 @@
+ 
+====================================
+Step 1: Local setup on PW platform
+Execution is in /home/sfgary/pw/jobs/sl_core/00162/workflow.sh at Fri Jul 26 06:22:16 PM UTC 2024
+ 
+Workflow parameters from workflow.xml, apirun/main.py, or ./github/workflows/main.yaml:
+These parameters are command line arguments when invoking this script and
+are likely to be blank due to the usage of inputs.sh replacing command line arguments.
+
+ 
+=========================================================
+Starting sl_core
+Running in /home/sfgary/pw/jobs/sl_core/00162 with job number: 00162
+ 
+=========================================================
+Fri Jul 26 06:22:16 PM UTC 2024: Testing echod. Currently on pw-user-sfgary.
+Fri Jul 26 06:22:16 PM UTC 2024: Will excute on remote resource as sfgary@34.45.247.56
+ 
+Checking inputs to test:
+local user: sfgary
+remote user: sfgary
+remote_node: 34.45.247.56
+cluster name: cloud
+private_key: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers
+Checking for private_key: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers
+ML archive repo: git@github.com:parallelworks/dynamic-learning-rivers
+ML archive branch: best_100
+ML code repo: https://github.com/parallelworks/sl_core
+ML data repo: https://github.com/parallelworks/global-river-databases
+ 
+Absolute paths on cluster:
+Arch: /home/sfgary/dynamic-learning-rivers
+Data: /home/sfgary/global-river-databases
+Code: /home/sfgary/sl_core
+ 
+Miniconda information:
+Location: /home/sfgary/.miniconda3
+Env. name: superlearner
+ 
+Data flow information:
+Working dir basename: ml_models/sl_
+ 
+Number of instances
+num_inst: 10
+ 
+FPI correlation cutoff
+fpi_corr_cutoff: 50
+Convert from percentage to decimal...
+fpi_corr_cutoff: 0.5
+====================================
+Fri Jul 26 06:22:16 PM UTC 2024: Step 2: Cluster setup - staging files to head node
+ 
+======> Clone repos to node...
+PARSL_CLIENT_HOST is
+PARSL_CLIENT_HOST=cloud.parallel.works
+Control socket connect(/home/sfgary/.ssh/control:7a2cf99b0f9ca60f2353e68993c3dca758b0c42d): No such file or directory
+Identity added: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
+Fri Jul 26 18:22:17 UTC 2024
+Cloning into 'dynamic-learning-rivers'...
+Warning: Permanently added 'github.com,140.82.112.4' (ECDSA) to the list of known hosts.
+Cloning into 'sl_core'...
+Cloning into 'global-river-databases'...
+Already up-to-date.
+Already up-to-date.
+======> Create best_100...
+======> Checkout best_100...
+Switched to branch 'best_100'
+======> Set upstream branch in case branch exists already best_100...
+Branch best_100 set up to track remote branch best_100 from origin.
+Control socket connect(/home/sfgary/.ssh/control:7a2cf99b0f9ca60f2353e68993c3dca758b0c42d): No such file or directory
+Identity added: /home/sfgary/.ssh/id_ed25519_parallelworks_dynamic-learning-rivers (sfgary@cloud-user-private-1.parallel.works)
+Warning: Permanently added 'github.com,140.82.113.3' (ECDSA) to the list of known hosts.
+Updating b81bf1c..7068f15
+Fast-forward
+ .github/workflows/main.yml     |   2 +-
+ input_data/ICON-ModEx_Data.csv | 889 +++++------------------------------------
+ 2 files changed, 101 insertions(+), 790 deletions(-)
+======> Test for presence of Conda environment
+ls: cannot access /home/sfgary/.miniconda*: No such file or directory
+======> No Conda found; install Conda environment for SuperLearner.
+Fri Jul 26 06:25:06 PM UTC 2024: This process can take several minutes.
+Fri Jul 26 06:25:06 PM UTC 2024: See miniconda_install.log for progress.
+====================================
+Setting target name...
+Set target name to Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+====================================
+Fri Jul 26 06:30:39 PM UTC 2024: Step 2a: Preprocessing/Data Intake
+Requested input feature Sample_ID is available in data set.
+Requested input feature Sample_Longitude is available in data set.
+Requested input feature Sample_Latitude is available in data set.
+Requested input feature Mean_Temp_Deg_C is available in data set.
+Requested input feature pH is available in data set.
+Requested input feature Mean_DO_mg_per_L is available in data set.
+Requested input feature Mean_DO_percent_saturation is NOT in data set. Make fill column.
+WARNING: Made fill column. If these fill values are not replaced later, ML training will crash.
+Requested input feature Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment is available in data set.
+/home/sfgary/dynamic-learning-rivers/scripts/prep_02_intake_predict.py:32: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  core_vars.replace(
+Unable to find image 'parallelworks/gmt:latest' locally
+latest: Pulling from parallelworks/gmt
+06d39c85623a: Pulling fs layer
+44f803d09bef: Pulling fs layer
+02932b6ffd48: Pulling fs layer
+8ed4e8630103: Pulling fs layer
+0014b75e7078: Pulling fs layer
+be071655d959: Pulling fs layer
+2276fdfeb463: Pulling fs layer
+0014b75e7078: Waiting
+be071655d959: Waiting
+2276fdfeb463: Waiting
+8ed4e8630103: Waiting
+02932b6ffd48: Verifying Checksum
+02932b6ffd48: Download complete
+44f803d09bef: Verifying Checksum
+44f803d09bef: Download complete
+8ed4e8630103: Verifying Checksum
+8ed4e8630103: Download complete
+06d39c85623a: Verifying Checksum
+06d39c85623a: Download complete
+be071655d959: Verifying Checksum
+be071655d959: Download complete
+2276fdfeb463: Verifying Checksum
+2276fdfeb463: Download complete
+06d39c85623a: Pull complete
+44f803d09bef: Pull complete
+02932b6ffd48: Pull complete
+8ed4e8630103: Pull complete
+0014b75e7078: Verifying Checksum
+0014b75e7078: Download complete
+0014b75e7078: Pull complete
+be071655d959: Pull complete
+2276fdfeb463: Pull complete
+Digest: sha256:9b4274e2b29d9678583fd5ad1d64cc5cb7c6b830de542d418fd2a3a76399c871
+Status: Downloaded newer image for parallelworks/gmt:latest
+Submitted batch job 2
+Submitted batch job 3
+Submitted batch job 4
+Submitted batch job 5
+Submitted batch job 6
+Submitted batch job 7
+Submitted batch job 8
+Submitted batch job 9
+Submitted batch job 10
+Submitted batch job 11
+Submitted batch job 12
+Submitted batch job 13
+Submitted batch job 14
+Submitted batch job 15
+Submitted batch job 16
+Submitted batch job 17
+Submitted batch job 18
+Submitted batch job 19
+Submitted batch job 20
+Submitted batch job 21
+Submitted batch job 22
+Submitted batch job 23
+Submitted batch job 24
+Submitted batch job 25
+Submitted batch job 26
+Submitted batch job 27
+Submitted batch job 28
+Submitted batch job 29
+Submitted batch job 30
+Submitted batch job 31
+Submitted batch job 32
+Submitted batch job 33
+Submitted batch job 34
+Submitted batch job 35
+Submitted batch job 36
+Submitted batch job 37
+Submitted batch job 38
+Submitted batch job 39
+Submitted batch job 40
+Submitted batch job 41
+Submitted batch job 42
+Submitted batch job 43
+Submitted batch job 44
+Submitted batch job 45
+Submitted batch job 46
+Submitted batch job 47
+Submitted batch job 48
+Submitted batch job 49
+Submitted batch job 50
+Submitted batch job 51
+Submitted batch job 52
+Submitted batch job 53
+Submitted batch job 54
+Submitted batch job 55
+Submitted batch job 56
+Submitted batch job 57
+Submitted batch job 58
+Submitted batch job 59
+Submitted batch job 60
+Submitted batch job 61
+Submitted batch job 62
+Submitted batch job 63
+Submitted batch job 64
+Submitted batch job 65
+Submitted batch job 66
+Submitted batch job 67
+Submitted batch job 68
+Submitted batch job 69
+Submitted batch job 70
+Submitted batch job 71
+Submitted batch job 72
+Submitted batch job 73
+Submitted batch job 74
+Submitted batch job 75
+Submitted batch job 76
+Submitted batch job 77
+Submitted batch job 78
+Submitted batch job 79
+Submitted batch job 80
+Submitted batch job 81
+Submitted batch job 82
+Submitted batch job 83
+Submitted batch job 84
+Submitted batch job 85
+Submitted batch job 86
+Submitted batch job 87
+Submitted batch job 88
+Submitted batch job 89
+Submitted batch job 90
+Submitted batch job 91
+Submitted batch job 92
+Submitted batch job 93
+Submitted batch job 94
+Submitted batch job 95
+Submitted batch job 96
+Submitted batch job 97
+Submitted batch job 98
+Submitted batch job 99
+Submitted batch job 100
+Submitted batch job 101
+-------------Predict Data----------------
+Submitted batch job 102
+Submitted batch job 103
+Submitted batch job 104
+Submitted batch job 105
+Submitted batch job 106
+Submitted batch job 107
+Submitted batch job 108
+Submitted batch job 109
+Submitted batch job 110
+Submitted batch job 111
+Submitted batch job 112
+Submitted batch job 113
+Submitted batch job 114
+Submitted batch job 115
+Submitted batch job 116
+Submitted batch job 117
+Submitted batch job 118
+Submitted batch job 119
+Submitted batch job 120
+Submitted batch job 121
+Submitted batch job 122
+Submitted batch job 123
+Submitted batch job 124
+Submitted batch job 125
+Submitted batch job 126
+Submitted batch job 127
+Submitted batch job 128
+Submitted batch job 129
+Submitted batch job 130
+Submitted batch job 131
+Submitted batch job 132
+Submitted batch job 133
+Submitted batch job 134
+Submitted batch job 135
+Submitted batch job 136
+Submitted batch job 137
+Submitted batch job 138
+Submitted batch job 139
+Submitted batch job 140
+Submitted batch job 141
+Submitted batch job 142
+Submitted batch job 143
+Submitted batch job 144
+Submitted batch job 145
+Submitted batch job 146
+Submitted batch job 147
+Submitted batch job 148
+Submitted batch job 149
+Submitted batch job 150
+Submitted batch job 151
+Submitted batch job 152
+Submitted batch job 153
+Submitted batch job 154
+Submitted batch job 155
+Submitted batch job 156
+Submitted batch job 157
+Submitted batch job 158
+Submitted batch job 159
+Submitted batch job 160
+Submitted batch job 161
+Submitted batch job 162
+Submitted batch job 163
+Submitted batch job 164
+Submitted batch job 165
+Submitted batch job 166
+Submitted batch job 167
+Submitted batch job 168
+Submitted batch job 169
+Submitted batch job 170
+Submitted batch job 171
+Submitted batch job 172
+Submitted batch job 173
+Submitted batch job 174
+Submitted batch job 175
+Submitted batch job 176
+Submitted batch job 177
+Submitted batch job 178
+Reconstructing DOsat from DO and vice-versa...
+---> Training data...
+---> Predict data...
+Selecting which columns/vars/features to use for training and which go to ixy...
+====================================
+Fri Jul 26 06:38:22 PM UTC 2024: Step 3: Launch jobs on cluster
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_0
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_1
+Submitted batch job 179
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_1
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_2
+Submitted batch job 180
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_2
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_3
+Submitted batch job 181
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_3
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_4
+Submitted batch job 182
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_4
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_5
+Submitted batch job 183
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_5
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_6
+Submitted batch job 184
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_6
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_7
+Submitted batch job 185
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_7
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_8
+Submitted batch job 186
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_8
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+=======> Deleting any existing data in /home/sfgary/dynamic-learning-rivers/ml_models/sl_9
+Submitted batch job 187
+=======> Creating work dir: /home/sfgary/dynamic-learning-rivers/ml_models/sl_9
+======> Launching SuperLearner
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+====================================
+Fri Jul 26 06:38:37 PM UTC 2024: Step 4: Monitor jobs on cluster
+Fri Jul 26 06:38:37 PM UTC 2024: Monitor waiting 10 seconds...
+Submitted batch job 188
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:38:47 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:38:47 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:38:58 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:38:58 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:39:08 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:39:08 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:39:19 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:39:19 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:39:29 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:39:29 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:39:40 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:39:40 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:39:50 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:39:50 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:40:01 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:40:01 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:40:12 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:40:12 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:40:22 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:40:22 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:40:33 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:40:33 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:40:43 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:40:43 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:40:54 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:40:54 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:41:04 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:41:04 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:41:15 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:41:15 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:41:25 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:41:25 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:41:36 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:41:36 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:41:46 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:41:46 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:41:57 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:41:57 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:42:08 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:42:08 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:42:18 PM UTC 2024: Found 11 lines in squeue.
+Fri Jul 26 06:42:18 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:42:29 PM UTC 2024: Found 10 lines in squeue.
+Fri Jul 26 06:42:29 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:42:39 PM UTC 2024: Found 9 lines in squeue.
+Fri Jul 26 06:42:39 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:42:50 PM UTC 2024: Found 7 lines in squeue.
+Fri Jul 26 06:42:50 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:43:00 PM UTC 2024: Found 7 lines in squeue.
+Fri Jul 26 06:43:00 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:43:11 PM UTC 2024: Found 7 lines in squeue.
+Fri Jul 26 06:43:11 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:43:22 PM UTC 2024: Found 7 lines in squeue.
+Fri Jul 26 06:43:22 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:43:32 PM UTC 2024: Found 7 lines in squeue.
+Fri Jul 26 06:43:32 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:43:43 PM UTC 2024: Found 5 lines in squeue.
+Fri Jul 26 06:43:43 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:43:53 PM UTC 2024: Found 5 lines in squeue.
+Fri Jul 26 06:43:53 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:44:04 PM UTC 2024: Found 2 lines in squeue.
+Fri Jul 26 06:44:04 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:44:14 PM UTC 2024: Found 2 lines in squeue.
+Fri Jul 26 06:44:14 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:44:25 PM UTC 2024: Found 2 lines in squeue.
+Fri Jul 26 06:44:25 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:44:36 PM UTC 2024: Found 2 lines in squeue.
+Fri Jul 26 06:44:36 PM UTC 2024: Monitor waiting 10 seconds...
+Warning: Permanently added '34.45.247.56' (ED25519) to the list of known hosts.
+Fri Jul 26 06:44:46 PM UTC 2024: Found 1 lines in squeue.
+Fri Jul 26 06:44:46 PM UTC 2024: No more pending jobs in squeue. Stage SLURM logs back.
+====================================
+Fri Jul 26 06:44:47 PM UTC 2024: Step 5: Postprocessing/
+../ml_models/sl_0
+../ml_models/sl_1
+../ml_models/sl_2
+../ml_models/sl_3
+../ml_models/sl_4
+../ml_models/sl_5
+../ml_models/sl_6
+../ml_models/sl_7
+../ml_models/sl_8
+../ml_models/sl_9
+Writing mean/std hold-out score...
+Finding mean/std of predictions...
+Writing summary FPI results...
+Maximum std/avg FPI ratio over all models: 0.1654299468314418
+======> Stage PW logs to remote repo for committing
+sending incremental file list
