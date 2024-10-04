@@ -1,0 +1,2 @@
+/home/sfgary/.miniconda3/envs/superlearner/lib/python3.9/site-packages/skopt/space/space.py:116: UserWarning: Dimension [-0.99, 0.99, 'uniform'] was inferred to Real(low=-0.99, high=0.99, prior='uniform', transform='identity'). In upcoming versions of scikit-optimize, it will be inferred to Categorical(categories=(-0.99, 0.99, 'uniform'), prior=None). See the documentation of the check_dimension function for the upcoming API.
+  warnings.warn(
