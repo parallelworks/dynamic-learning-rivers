@@ -77,9 +77,10 @@ for ref_file in ref_file_list:
     # the Dec 2021 community meeting predates the
     # availability of all S19S data.
     if ( ref_file != "ICON-ModEx_Data_Dec-2021-community-meeting.csv" ):
-        if ( not ref_file.__contains__('best') ):
-            if ( not ref_file.__contains__('worst') ):
-                search_list.append("S19S")
+        if ( not ref_file.__contains__('hp') ):
+            if ( not ref_file.__contains__('lp') ):
+                if ( not ref_file.__contains__('mp') ):
+                    search_list.append("S19S")
 
     # Insert | between each item in list
     search_str="|".join(search_list)
