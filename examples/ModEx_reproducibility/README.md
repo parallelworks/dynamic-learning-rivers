@@ -95,11 +95,21 @@ the model scores.
 To implement this, we will:
 1. Train each of the 6 ML model ensembles by setting the training data
    to a subset of the 100, 200, or 300 HP or LP points.
-2. Reuse/reload each ML models and have it run a [score](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyRegressor.html#sklearn.dummy.DummyRegressor.score) on the unused "neutral" data.
+2. Reuse/reload each ML models and have it run a [score](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyRegressor.html#sklearn.dummy.DummyRegressor.score)
+   on the unused "neutral" data. To simplify the process,
+   we use the "neutral" data as the collaborator site data.
 
 So, first, I need a list of HP and LP sites. Use the output
 from the Nov-2023-log10-DO-update-correct branch since this ML model
 was trained on all the available and corrected data. Copy that file
 here for archiving from ./scripts/post_01_output_ml_predict_avg.csv.
 
+This process is coordinated by the following three notebooks:
++ `get_hp_and_lp_sites.ipynb` - rank HP/LP sites by combined.metric = pca.dist * est.error
++ `get_hp_and_lp_sites_by_pca_only.ipynb` - rank HP/LP sites by pca.dist only to remove the potential bias due to the magnitude of the respiration rate.
++ `get_cold_and_hot_spot_sites.ipynb` - rank sites by magnitude of respiration rate - accentuates the potential bias due to the magnitude of the respiration rate.
 
+After the notebooks run, there is some manual work necessary with
+`head` and `tail` to get the 100, 200, and 300 ranked sites as 
+described in the notebooks. The results are stored in the separate
+subdirectories here for use by the ML workflow.
