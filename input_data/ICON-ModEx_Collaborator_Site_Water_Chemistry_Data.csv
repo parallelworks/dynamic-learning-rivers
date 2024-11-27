@@ -1,78 +1,85 @@
-Site_ID,Contact_First_Name,Contact_Last_Name,Email,Stream_Name,Sample_Latitude,Sample_Longitude,Mean_DO_mg_per_L,Mean_Temp_Deg_C,pH
-SP-1,Laura,Johnson,ljohnson@heidelberg.edu,N/A,41.30867614,-83.1582457,-9999,-9999,-9999
-SP-2,Melissa,Wuellner,wuellnermr@unk.edu,N/A,41.293016,-101.989284,-9999,-9999,-9999
-SP-3,Melissa,Wuellner,wuellnermr@unk.edu,N/A,40.077165,-99.161385,-9999,-9999,-9999
-SP-4,Angelos,Hannides,ahannides@coastal.edu,N/A,33.83207,-79.04419,-9999,-9999,-9999
-SP-5,Shuo,Chen,schen83@crimson.ua.edu,N/A,33.68401,-84.41527,8.78,16.69,6.93
-SP-6,Cara,Santelli,santelli@umn.edu,N/A,45.456254,-92.656935,-9999,-9999,-9999
-SP-8,Renee,Brooks,brooks.reneej@epa.gov,N/A,44.550674,-123.24984,-9999,-9999,-9999
-SP-9,Renee,Brooks,brooks.reneej@epa.gov,N/A,44.55593,-123.275026,-9999,-9999,-9999
-SP-10,Malak,Tfaily,tfaily@email.arizona.edu,N/A,32.351111,-111.093889,-9999,-9999,-9999
-SP-11,Kristin,Boye,kboye@slac.stanford.edu,N/A,38.923901,-106.950572,-9999,-9999,-9999
-SP-12,Kristin,Boye,kboye@slac.stanford.edu,N/A,38.907533,-107.023765,-9999,-9999,-9999
-SP-13,Malak,Tfaily,tfaily@email.arizona.edu,N/A,32.471459,-111.307607,-9999,-9999,-9999
-SP-14,Ashley,Moerke,amoerke@lssu.edu,N/A,46.496146,-84.379571,-9999,-9999,-9999
-SP-15,Jun,Xu,yjxu@lsu.edu,N/A,30.445667,-91.191556,-9999,-9999,-9999
-SP-16,Bill,McDowell,bill.mcdowell@unh.edu,N/A,44.640715,-68.445497,10.24,4.7,4.51
-SP-17,Hyun,Song,hsong5@unl.edu,N/A,41.018166,-96.2461608,-9999,-9999,-9999
-SP-18,Kenneth,Johnston,kjohnston@nyenvironcom.onmicrosoft.com,N/A,44.381086,-72.941264,-9999,-9999,-9999
-SP-19,India,Southern,indiasouthern@gmail.com,N/A,43.605091,-116.2028288,-9999,-9999,-9999
-SP-20,Jacob,Nesslage,jnesslage@ucmerced.edu,N/A,37.58132,-121.167,-9999,-9999,-9999
-SP-21,Jacob,Nesslage,jnesslage@ucmerced.edu,N/A,38.311348,-121.37615,-9999,-9999,-9999
-SP-22,Corianne,Tatariw,ctatariw@ua.edu,N/A,32.854756,-87.657803,-9999,-9999,-9999
-SP-23,Nick,Bouskill,njbouskill@lbl.gov,N/A,38.97338,-121.53994,-9999,-9999,-9999
-SP-24,Shuo,Chen,schen83@crimson.ua.edu,N/A,33.665688,-84.224084,8.36,17.19,7.21
-SP-25,Shuo,Chen,schen83@crimson.ua.edu,N/A,33.679069,-84.358018,8.01,16.9,7.17
-SP-26,BK,Song,songb@vims.edu,N/A,37.571283,-76.88405,6.6,24.1,7
-SP-27,Varun,Paul,vgp25@msstate.edu,N/A,33.430906,-88.655746,5.1,20.2,6.52
-SP-28,Varun,Paul,vgp25@msstate.edu,N/A,33.453633,-88.433519,5.8,26,6.56
-SP-29,Varun,Paul,vgp25@msstate.edu,N/A,33.289214,-88.776194,1.1,21.2,6.62
-SP-30,Allison,DeLoache,allison.deloache@selu.edu,Pearl River,31.658917,-90.117483,8.45,18.1,7.9
-SP-31,Allison,DeLoache,allison.deloache@selu.edu,Pearl River,30.765533,-89.834233,8.09,20.5,7.11
-SP-32,Nicole,Hucke,huck4481@vandals.uidaho.edu,La Jara,35.868558,-106.524518,7.9968,11.3757,7.31
-SP-33,Amy,Hansen,amy.hansen@ku.edu,Buck Creek Road,39.0926023,-95.2857911,14.66,7,7.94
-SP-34,Matthew,Cohen,mjc@ufl.edu,Catchment 3,29.9683,-82.2,3.45,56.54,3.69
-SP-35,Matthew,Cohen,mjc@ufl.edu,Catchment 5,29.862,-82.2837,6.46,58.96,5.23
-SP-36,Matthew,Cohen,mjc@ufl.edu,Catchment 6,29.9435,-82.1886,3.72,59.46,3.84
-SP-37,Matthew,Cohen,mjc@ufl.edu,Catchment 7,29.9815,-82.2433,1.93,55.86,3.77
-SP-38,Matthew,Cohen,mjc@ufl.edu,Catchment 9,29.9046,-82.2206,6.54,58.12,3.51
-SP-39,Matthew,Cohen,mjc@ufl.edu,Catchment 13,29.8763,-82.2105,7.23,58.15,7.66
-SP-40,Matthew,Cohen,mjc@ufl.edu,Catchment 14,29.9264,-82.3034,3.22,57.58,6.29
-SP-41,Matthew,Cohen,mjc@ufl.edu,Catchment 15,29.8933,-82.3193,1.55,57.74,3.85
-SP-42,Matthew,Cohen,mjc@ufl.edu,Catchment 5a,29.8909,-82.2683,0.1,55.21,3.67
-SP-43,Matthew,Cohen,mjc@ufl.edu,Catchment 6a,29.9499,-82.2105,1.39,57.62,3.77
-SP-44,Matthew,Cohen,mjc@ufl.edu,Gilchrist Blue,29.8325,-82.6819,5.43,72.27,7.91
-SP-45,Matthew,Cohen,mjc@ufl.edu,Allen Mill Pond,30.1553,-83.2387,5.17,71.15,8.26
-SP-46,Matthew,Cohen,mjc@ufl.edu,Otter Spring,29.6404,-82.9548,4.46,73.08,7.41
-SP-47,Matthew,Cohen,mjc@ufl.edu,Ichetucknee River,29.9365,-82.7982,5.96,67.84,7.59
-SP-48,Matthew,Cohen,mjc@ufl.edu,Little Fanning Spring,29.5861,-82.9382,4.32,72.2,7.52
-SP-49,Alba,Argerich,argericha@missouri.edu,Lone Elm Creek,37.092542,-94.526757,9.3,22.5,7.5
-SP-50,Alba,Argerich,argericha@missouri.edu,Lone Elm Creek Upstream,37.091254,-94.526679,9.6,23,7.6
-SP-51,Karen,Mager,magerk@sou.edu,Ashland Creek,42.179225,-122.717501,13.91,4.07,6.25
-SP-52,Karen,Mager,magerk@sou.edu,Ashland Creek,42.20135,-122.712661,15.91,5.27,6.35
-SP-53,Karen,Mager,magerk@sou.edu,Ashland Creek,42.214651,-122.716415,11.68,10.27,6.38
-SP-54,Karen,Mager,magerk@sou.edu,Neil Creek,42.170556,-122.641465,12.4,10.82,5.19
-SP-55,John,Kennedy,ken2edy@cox.net,Lower San Diego River (Site 13E),32.844144,-116.989642,2.8,18.25,7.67
-SP-56,John,Kennedy,ken2edy@cox.net,Lower San Diego River (Site 5) Ward Rd,32.780475,-117.110272,4.8,17.19,7.63
-SP-57,John,Kennedy,ken2edy@cox.net,Lower San Diego River (Site 6),32.783567,-117.104078,3.5,18.28,7.61
-SP-58,Jamie,Shanley,jshanley@usgs.gov,Sleepers River W-9,44.49125,-72.16147,10.64,6.98,7.69
-SP-59,Claire,Griffin,griffinc1@sou.edu,"Link River Below Keno Canal, Near Klamath Falls,Or - 11507501",42.2193114,-121.7902816,10.3,7.8,8.2
-SP-60,Claire,Griffin,griffinc1@sou.edu,"Klamath River Above Keno Dam, at Keno, OR - 11509370",42.12792225,-121.9288964,9.7,7.9,9.3
-SP-61,Claire,Griffin,griffinc1@sou.edu,"Klamath River Abv Keno Dam, at Keno - Bottom - 420741121554001",42.12805556,-121.9277778,9.7,7.5,9.3
-SP-62,Ami,Riscassi,alr8m@virginia.edu,Paine Run,38.1986,-78.7934,10.01,12.85,5.94
-SP-63,Ami,Riscassi,alr8m@virginia.edu,Meadow Run,38.1583,-78.8105,9.65,12.63,5.61
-SP-64,Ami,Riscassi,alr8m@virginia.edu,Staunton River,38.44461,-78.3708,9.1,12.78,6.79
-SP-65,Larry,Minton,Larry.Minton@lonestar.edu,San Jacinto River,30.05111111,-95.2725,8.685,22.42,7
-SP-66,Alex,Chow,achow@clemson.edu,Waccamaw River,33.436432,-79.182578,6.58,19.6,6.68
-SP-67,Alba,Argerich,argericha@missouri.edu,Brushy Creek,38.752916,-92.205328,12,10,6.5
-SP-68,Alba,Argerich,argericha@missouri.edu,Hinkson Creek,38.92475,-92.327163,8,9,6.5
-SP-69,Bethany,Neilson,bethany.neilson@usu.edu,Logan River,41.875846,-111.564533,9.53,3.98,8.39
-SP-70,Bethany,Neilson,bethany.neilson@usu.edu,Logan River,41.9502,-111.580553,10.6,2.72,7.98
-SP-71,Bethany,Neilson,bethany.neilson@usu.edu,Logan River,41.720533,-111.886928,8.94,8.96,8.08
-SP-72,Bethany,Neilson,bethany.neilson@usu.edu,Logan River,41.739034,-111.795742,10.79,6.45,8.16
-SP-73,Bethany,Neilson,bethany.neilson@usu.edu,Logan River,41.721091,-111.835096,11.86,6.68,8.24
-SP-74,Cindy,Buxton,cbuxton@thewatershedcenter.com,South Fork Trinity River,40.605435,-123.448227,9.162,15.541,6.5
-SP-75,Charlotte,Desaulnier,desauc@rpi.edu,Wynantskill,42.70242,-73.66748,10,26.6,8.055
-SP-76,Yi,Dou,douy2@rpi.edu,"Wynantskill, Troy, NY",42.7025,-73.6675,7.5,26.7,7.8
-SP-77,Isabella,Winston,winsti@rpi.edu,Poestenkill,42.732778,-73.631389,8.5,28.7,6.76
-SP-78,Nicole,McDonald,mcdonn4@rpi.edu,Shippey Ln.,42.73264,-73.63141,10,25.4,7.66
+,Site_ID,Sample_Latitude,Sample_Longitude,Mean_DO_mg_per_L,Mean_Temp_Deg_C,pH
+0,CM_001-1,46.732215,-117.180494,10.42,8.66,6.5
+1,CM_001-2,46.732215,-117.180494,10.42,8.66,6.5
+2,CM_001-3,46.732215,-117.180494,10.42,8.66,6.5
+3,CM_027-1,29.33381,-95.28318,11.14,32.93,7.5
+4,CM_027-2,29.33381,-95.28318,11.14,32.93,7.5
+5,CM_027-3,29.33381,-95.28318,11.14,32.93,7.5
+6,CM_071-4,40.989942,-96.20896,11.76,10.41,6.5
+7,CM_071-5,40.989942,-96.20896,11.76,10.41,6.5
+8,CM_071-6,40.989942,-96.20896,11.76,10.41,6.5
+9,CM_078-4,39.96766,-75.185,12.82,9.64,6.75
+10,CM_078-5,39.96766,-75.185,12.82,9.64,6.75
+11,CM_078-6,39.96766,-75.185,12.82,9.64,6.75
+12,CM_088-1,45.537135,-122.379308,11.43,9.64,6.5
+13,CM_088-2,45.537135,-122.379308,11.43,9.64,6.5
+14,CM_088-3,45.537135,-122.379308,11.43,9.64,6.5
+15,CM_099-4,29.93382,-82.79881,7.19,22.73,8.0
+16,CM_099-5,29.93382,-82.79881,7.19,22.73,8.0
+17,CM_099-6,29.93382,-82.79881,7.19,22.73,8.0
+18,SSS001-1,46.0417,-120.5731,9.75,15.84,8.18
+19,SSS001-2,46.0417,-120.5731,9.75,15.84,8.18
+20,SSS001-3,46.0417,-120.5731,9.75,15.84,8.18
+21,SSS006-1,46.6218,-120.6206,9.81,19.43,8.59
+22,SSS006-2,46.6218,-120.6206,9.81,19.43,8.59
+23,SSS006-3,46.6218,-120.6206,9.81,19.43,8.59
+24,SSS010-1,46.8095,-121.0675,9.68,13.61,8.0
+25,SSS010-2,46.8095,-121.0675,9.68,13.61,8.0
+26,SSS010-3,46.8095,-121.0675,9.68,13.61,8.0
+27,SSS011-1,46.8099,-121.0672,9.92,12.59,7.79
+28,SSS011-2,46.8099,-121.0672,9.92,12.59,7.79
+29,SSS011-3,46.8099,-121.0672,9.92,12.59,7.79
+30,SSS013-1,46.2554,-119.474,8.37,22.45,8.19
+31,SSS013-2,46.2554,-119.474,8.37,22.45,8.19
+32,SSS013-3,46.2554,-119.474,8.37,22.45,8.19
+33,SSS019-1,47.0195,-121.1285,9.84,12.24,8.02
+34,SSS019-2,47.0195,-121.1285,9.84,12.24,8.02
+35,SSS019-3,47.0195,-121.1285,9.84,12.24,8.02
+36,SSS021-1,47.3543,-121.1082,9.46,14.94,7.69
+37,SSS021-2,47.3543,-121.1082,9.46,14.94,7.69
+38,SSS021-3,47.3543,-121.1082,9.46,14.94,7.69
+39,SSS028-1,46.2902,-120.8717,8.41,15.5,7.69
+40,SSS028-2,46.2902,-120.8717,8.41,15.5,7.69
+41,SSS028-3,46.2902,-120.8717,8.41,15.5,7.69
+42,SSS034-2,47.3966,-121.0977,9.78,15.09,7.6
+43,SSS039-1,46.0284,-120.6115,9.35,18.3,7.84
+44,SSS039-2,46.0284,-120.6115,9.35,18.3,7.84
+45,SSS039-3,46.0284,-120.6115,9.35,18.3,7.84
+46,SSS044-1,46.9754,-121.158,9.29,17.03,7.41
+47,SSS044-2,46.9754,-121.158,9.29,17.03,7.41
+48,SSS044-3,46.9754,-121.158,9.29,17.03,7.41
+49,SSS045-1,46.976,-121.1579,9.91,14.91,7.61
+50,SSS045-2,46.976,-121.1579,9.91,14.91,7.61
+51,SSS045-3,46.976,-121.1579,9.91,14.91,7.61
+52,S19S_0007-D,37.05255,-119.195598,,11.2,6.5
+53,S19S_0007-U,37.05229,-119.195359,,11.2,6.5
+54,S19S_0009-D,42.9877,-108.3983,,25.6,8.0
+55,S19S_0009-M,42.9876,-108.3983,,25.6,8.0
+56,S19S_0009-U,42.9875,-108.3982,,25.6,8.0
+57,S19S_0043-D,43.14501,-89.472992,,15.7,7.5
+58,S19S_0043-M,43.145025,-89.472023,,15.7,7.5
+59,S19S_0055-D,46.732428,-117.180863,,20.1,7.5
+60,S19S_0055-M,46.732323,-117.180621,,20.1,7.5
+61,S19S_0055-U,46.7322206,-117.180384,,20.1,7.5
+62,S19S_0033-D,37.0576,-119.2554,9.46,16.6,7.0
+63,S19S_0033-M,37.0582,-119.2557,9.46,16.6,7.0
+64,S19S_0033-U,37.0581,-119.256,9.46,16.6,7.0
+65,S19S_0059-D,48.16874998,-117.3915976,,11.0,6.5
+66,S19S_0059-M,48.16841972,-117.3913007,,11.0,6.5
+67,S19S_0059-U,48.16859001,-117.3903992,,11.0,6.5
+68,S19S_0069-D,39.362202,-123.735151,,15.0,6.5
+69,S19S_0069-M,39.362129,-123.734753,,15.0,6.5
+70,S19S_0069-U,39.362343,-123.734848,,15.0,6.5
+71,S19S_0070-D,39.339914,-123.752414,,16.0,6.5
+72,S19S_0070-M,39.339892,-123.752441,,16.0,6.5
+73,S19S_0070-U,39.339682,-123.752011,,16.0,6.5
+74,S19S_0066-D,35.19845,-106.643178,,31.2,6.5
+75,S19S_0066-M,35.198511,-106.643131,,31.2,6.5
+76,S19S_0066-U,35.198601,-106.643074,,31.2,6.5
+77,S19S_0060-D,46.2531882,-119.4768203,13.31,25.6,8.0
+78,S19S_0060-M,46.253117,-119.4769597,13.31,25.6,8.0
+79,S19S_0060-U,46.2530248,-119.4772256,13.31,25.6,8.0
+80,S19S_0084-D,43.954722,-71.722778,,17.2,6.0
+81,S19S_0084-M,43.954722,-71.722778,,17.2,6.0
+82,S19S_0084-U,43.954722,-71.722778,,17.2,6.0
+83,S19S_0032-D,39.95545,-119.02313,9.35,13.1,7.0
