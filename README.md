@@ -1,15 +1,19 @@
 # dynamic-learning-rivers
 
-Dynamic river model with observation-driven machine learning. This repository
+Observation-driven machine learning. This repository
 is a machine learning (ML) archive repository; the training data and corresponding 
 trained models are stored here. Also, ancilliary preprocessing scripts for
 some data wrangling are stored here.
 
-This ML archive repository is set up to use a [SuperLearner ML workflow repository](https://github.com/parallelworks/sl_core)
+This ML archive repository is set up to use a
+[SuperLearner ML workflow repository](https://github.com/parallelworks/sl_core)
 that holds the training code itself.  The workflow is divided into two stages:
-1. a workflow launch, orchestrated by a GitHub action in this repository (see `.github/workflows/main.yml`) that starts a high performance computing (i.e. on a cloud cluster) workflow on the PW platform and
+1. a workflow launch, orchestrated by a GitHub action in this repository
+(see `.github/workflows/main.yml`) that starts a high performance computing
+(i.e. on a cloud cluster) workflow on the Parallel Works ACTIVATE platform and
 2. the [HPC workflow itself](https://github.com/parallelworks/sl_core/blob/main/workflow.sh).
-Therefore, this ML archive repository is at the center of an automated ML workflow that
+
+This ML archive repository is at the center of an automated ML workflow that
 kicks off the training of ML models (with the code in the ML workflow repo) whenever
 new data is available in this repository. The presence of new data is determined with
 a new release of this repository, not just a push.  Since we want to automate the
@@ -21,12 +25,18 @@ would start another round of training.
 
 ## Contents
 
-1. `containers` holds build files and instructions for building containers.
-2. `input_data` training data for the ML models.
-3. `ml_models` machine learning models trained on the `input_data`.
-4. `examples` files for direct experimentation with the ML model.
-5. `test_deploy_key.sh` allows for testing the deploy key of a repository by cloning, making a branch, and pushing changes on that branch back to the repository.
-6. `scripts` contains data preprocessing/wrangling/postprocessing scripts specific to this data set that bookend the workflow.
+1. `input_data` training data for the ML models.
+2. `ml_models` machine learning models trained on the `input_data`.
+3. `examples` files for direct experimentation with the ML model, including
+   scripts for setting up "hindcast" runs.
+4. `scripts` contains data preprocessing/wrangling/postprocessing scripts and
+   intermediate data specific to this data set that bookend the workflow.
+5. `outputs` contains selected output files from the workflow.
+
+The ML models in this archive are stored on different branches. Therefore, the
+contents of all the directories listed above will change when you change to
+different branches. (The exception to this general rule is `examples` which
+was established for setting up reproducibility runs with the ML workflow.)
 
 ## Automation Setup
 
