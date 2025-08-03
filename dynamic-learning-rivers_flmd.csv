@@ -45,10 +45,10 @@ ICON-ModEx_Data.csv,"Example ML workflow training data raw input (training input
 ICON-ModEx_Sites_To_Remove.csv,"List of collaborator sites that have been sampled so they should not be included in the final ranking of candidate sites",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/input_data
 README.md,"Placeholder in input_data to describe the purpose of this directory",N/A,-9999,-9999,/dynamic-learning-rivers/input_data
 whondrs_25_inputs_train.csv,"Example ML workflow training data raw input (old format)",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/input_data
-whondrs_25_inputs_train.csv.bkup,"Example training data raw input (very old format, predates automation)",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/input_data
+whondrs_25_inputs_train.csv.bkup,"Example training data raw input (very old format predates automation)",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/input_data
 README.md,"Placeholder in ml_models to describe purpose of this directory",N/A,-9999,-9999,/dynamic-learning-rivers/ml_models
 requirements.txt,"Specifiction of the Python packages used by the ML model for training and inference",N/A,-9999,-9999,/dynamic-learning-rivers/ml_models/sl_0
-README.md,"Placeholder in output_data; otherwise, git will not track an empty directory",N/A,-9999,-9999,/dynamic-learning-rivers/output_data
+README.md,"Placeholder in output_data; otherwise git will not track an empty directory",N/A,-9999,-9999,/dynamic-learning-rivers/output_data
 o2sat.py,"Script to compute saturated oxygen",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
 post_01_flatten.py,"Post processing script to merge the results of the ensemble of ML models into avg and std statistics",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
 post_01_output_ml_predict_avg.csv,"Example intermediate file output from post_01_flatten.py",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/scripts
@@ -65,9 +65,9 @@ prep_04_output_colocated_predict.csv,"Example intermediate file with data from s
 prep_05_output_large_predict.csv,"Example intermediate file with inputs needed for making predictions across all sites",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/scripts
 prep_06_merge.py,"Preprocessing step 6 that generates prep_06_output_*.*",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
 prep_06_output_final_predict.csv,"Example final predict set",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/scripts
-prep_06_output_final_predict.ixy,"Example final predict set ancilliary information (lon, lat, not used in training) but in same order as prep_06_output_final_predict.csv for merging later if needed",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
+prep_06_output_final_predict.ixy,"Example final predict set ancilliary information (lon and lat not used in training) but in same order as prep_06_output_final_predict.csv for merging later if needed",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
 prep_06_output_final_train.csv,"Example final training set",ESS-DIVE CSV v1,1,1,/dynamic-learning-rivers/scripts
-prep_06_output_final_train.ixy,"Example final training set ancilliary information (lon, lat, not used in training) but in same order as prep_06_output_final_train.csv for merging later if needed",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
+prep_06_output_final_train.ixy,"Example final training set ancilliary information (lon and lat not used in training) but in same order as prep_06_output_final_train.csv for merging later if needed",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
 preprocess.sh,"Main ML workflow preprocessing orchestration script (launches prep_* series before training)",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
 README_o2sat.md,"Attribution for o2sat.py",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
-us.xy.gz,"Compressed file containing lon,lat coordinates of high resolution CONUS outline for sorting points inside and outside CONUS",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
+us.xy.gz,"Compressed file containing lon and lat coordinates of high resolution CONUS outline for sorting points inside and outside CONUS",N/A,-9999,-9999,/dynamic-learning-rivers/scripts
