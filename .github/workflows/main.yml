@@ -20,7 +20,7 @@ jobs:
         run: |
           mkdir -p ~/bin
           wget "https://activate.parallel.works/cli/pw-linux-amd64" -O ~/bin/pw
-          chomd u+x ~/bin/pw
+          chmod u+x ~/bin/pw
           echo "PATH=${PATH}:~/bin" >> $GITHUB_ENV
       - name: Authenticate to PW CLI
         run: |
