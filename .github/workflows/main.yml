@@ -15,10 +15,12 @@ jobs:
     steps:
       - name: Install PW CLI
         # See more installation instructions at https://parallelworks.com/docs/cli
+        # To keep environment changes persistent step to step, must write to special
+        # file $GITHUB_ENV.
         run: |
           mkdir -p ~/bin
           wget "https://activate.parallel.works/cli/pw-linux-amd64" -O ~/bin/pw
-          export PATH="${PATH}":~/bin
+          echo "PATH=${PATH}:~/bin" >> $GITHUB_ENV
       - name: Authenticate to PW CLI
         run: |
           pw auth apikey "${PW_API_KEY}"
