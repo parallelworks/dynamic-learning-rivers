@@ -1,8 +1,16 @@
 name: Run SuperLearner
 run-name: Run SuperLearner workflow ${{ github.event.inputs.workflow-name }} as user ${{ github.event.inputs.pw-user }}
 on:
-  release:
-    types: [published]
+  # We previously launched the workflow on release. However,
+  # a releas/tag is a static thing and points only to the state
+  # of the repository BEFORE the machine learning runs (i.e.
+  # when the new input data is uploaded) so the release itself
+  # was not a snapshot of the final result.
+  #release:
+  #  types: [published]
+  push:
+    paths:
+      - 'input_data/ICON-ModEx_*.csv'
 
 jobs:
   run-workflow:
