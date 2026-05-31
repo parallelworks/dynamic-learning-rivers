@@ -41,7 +41,7 @@ jobs:
         run: |
           pw workflow run superlearner -i '{
             "repositories": {
-              "ml_arch_repo": "${{ github.event.repository.name }}",
+              "ml_arch_repo": "${{ github.repository }}",
               "ml_arch_branch": "${{ github.ref_name }}",
               "ml_arch_token": "${{ secrets.GITHUB_TOKEN }}",
               "push_to_gh": true,
