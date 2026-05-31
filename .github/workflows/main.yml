@@ -39,8 +39,34 @@ jobs:
         # Use folded style (>) for this long single command instead
         # of literal style (|).
         run: |
-          pw workflow run www -i '{
-          "resource1": "pw://pwdemo.stefan/labgpu", 
-          "resource2": "pw://pwdemo.stefan/labgpu", 
-          "command": "echo ${{ secrets.GITHUB_TOKEN }}"
+          pw workflow run superlearner -i '{
+            "repositories": {
+              "ml_arch_repo": "${{ github.event.repository.name }}",
+              "ml_arch_branch": "${{ github.ref_name }}",
+              "ml_arch_token": ${{ secrets.GITHUB_TOKEN }},
+              "push_to_gh": true,
+              "ml_code_repo": "https://github.com/parallelworks/sl_core",
+              "ml_data_repo": "https://github.com/parallelworks/global-river-databases"
+            },
+            "resources": {
+              "whost": "pw://pwdemo.stefan/gce",
+              "miniconda_loc": "/home/${USER}/.miniconda3",
+              "my_env": "superlearner"
+            },
+            "superlearner": {
+              "train_test_data": "scripts/prep_06_output_final_train.csv",
+              "train_test_groups": "scripts/prep_06_output_final_gid.csv",
+              "predict_data": "scripts/prep_06_output_final_predict",
+              "num_inputs": 25,
+              "superlearner_conf": "sample_inputs/superlearner_conf.py",
+              "work_dir_base": "ml_models/sl_",
+              "hpo": true,
+              "cross_val_score": true,
+              "smogn": false,
+              "onnx": false,
+              "backend": "loky",
+              "n_jobs": 8,
+              "num_inst": 10,
+              "fpi_corr_cutoff": 50
+            }
           }' --name "modex-iteration-cloud-pw"
