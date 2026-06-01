@@ -1,8 +1,24 @@
 name: Run SuperLearner
 run-name: Run SuperLearner workflow ${{ github.event.inputs.workflow-name }} as user ${{ github.event.inputs.pw-user }}
 on:
-  release:
-    types: [published]
+  #------------------------------------------------------------
+  # We previously launched the workflow on release. However,
+  # a releas/tag is a static thing and points only to the state
+  # of the repository BEFORE the machine learning runs (i.e.
+  # when the new input data is uploaded) so the release itself
+  # was not a snapshot of the final result.
+  #release:
+  #  types: [published]
+  #------------------------------------------------------------
+  # Instead, launch workflow anytime a push, on any branch, that
+  # modifies a file in input_data matching the pattern of the core 
+  # input files, ICON-ModEx_*.csv. Note that these files are NOT
+  # changed by the machine learning workflow when it makes a push
+  # back to GitHub so we don't end up in an infinite loop of
+  # push-launches.
+  push:
+    paths:
+      - 'input_data/ICON-ModEx_*.csv'
 
 jobs:
   run-workflow:
@@ -15,15 +31,19 @@ jobs:
     steps:
       - name: Install PW CLI
         # See more installation instructions at https://parallelworks.com/docs/cli
+        # To keep environment changes persistent step to step, must write to special
+        # file $GITHUB_ENV.
         run: |
           mkdir -p ~/bin
           wget "https://activate.parallel.works/cli/pw-linux-amd64" -O ~/bin/pw
-          export PATH=$PATH:~/bin
+          chmod u+x ~/bin/pw
+          echo "PATH=${PATH}:~/bin" >> $GITHUB_ENV
       - name: Authenticate to PW CLI
         run: |
-          pw auth apikey $PW_API_KEY
+          pw auth apikey "${PW_API_KEY}"
           pw auth whoami
-      - name: Run workflow
+      - name: Launch workflow
+        #------------------------------------
         # OLD API LAUNCH HERE
         #id: run-cloud-pw
         #uses: parallelworks/test-workflow-action@v7.1
@@ -33,4 +53,64 @@ jobs:
         #  workflow-name: 'sl_core'
         #  workflow-parameters: '{"startCmd": "workflow.sh", "repos": { "ml_arch_repo": "git@github.com:parallelworks/dynamic-learning-rivers", "ml_arch_branch": "ICON-ModEx-v2", "push_to_gh": "true", "ml_code_repo": "https://github.com/parallelworks/sl_core", "ml_data_repo": "https://github.com/parallelworks/global-river-databases", "whost": { "type": "computeResource", "id": "636dec4b565b200008495822" }, "miniconda_loc": "/home/__USER__/.miniconda3", "my_env": "superlearner" }, "superlearner": { "train_test_data": "scripts/prep_06_output_final_train.csv", "predict_data": "scripts/prep_06_output_final_predict", "num_inputs": "25", "superlearner_conf": "sample_inputs/superlearner_conf_TTR_mms_log10_neg.py", "work_dir_base": "ml_models/sl_", "hpo": "true", "cross_val_score": "false", "smogn": "false", "onnx": "false", "backend": "loky", "n_jobs": "8", "num_inst": "10", "fpi_corr_cutoff": "50" } }'
         # PW CLI-based launch
-        pw workflow run www -i '{"resource1": "pw://pwdemo.stefan/labgpu", "resource2": "pw://pwdemo.stefan/labgpu", "command": ""}' --name "modex-iteration-cloud-pw"
+        # Use folded style (>) for this long single command instead
+        # of literal style (|).
+        #-----------------------------------
+        # The launching process, pw workflow run,
+        # will exit as soon as the workflow is running
+        # when it is used non-interactively. (When
+        # used interactively, it takes over the terminal
+        # so the user can browse progress, but this
+        # persistence does not happen in the GitHub
+        # runner's context. Therefore, another step
+        # is required to monitor for the completion
+        # of the pw workflow-executor execute
+        # process that is launched by pw workflow run.
+        run: >
+          pw workflow run superlearner -i '{
+            "repositories": {
+              "ml_arch_repo": "https://github.com/${{ github.repository }}",
+              "ml_arch_branch": "${{ github.ref_name }}",
+              "ml_arch_token": "${{ secrets.GITHUB_TOKEN }}",
+              "push_to_gh": true,
+              "ml_code_repo": "https://github.com/parallelworks/sl_core",
+              "ml_data_repo": "https://github.com/parallelworks/global-river-databases"
+            },
+            "resources": {
+              "whost": "pw://pwdemo.stefan/gce",
+              "miniconda_loc": "/home/${USER}/.miniconda3",
+              "my_env": "superlearner"
+            },
+            "superlearner": {
+              "train_test_data": "scripts/prep_06_output_final_train.csv",
+              "train_test_groups": "scripts/prep_06_output_final_gid.csv",
+              "predict_data": "scripts/prep_06_output_final_predict",
+              "num_inputs": 25,
+              "superlearner_conf": "sample_inputs/superlearner_conf.py",
+              "work_dir_base": "ml_models/sl_",
+              "hpo": true,
+              "cross_val_score": true,
+              "smogn": false,
+              "onnx": false,
+              "backend": "loky",
+              "n_jobs": 8,
+              "num_inst": 10,
+              "fpi_corr_cutoff": 50
+            }
+          }' --name "modex-iteration-cloud-pw"
+      - name: Wait for workflow completion
+        # We need to wait for the workflow to complete, even though
+        # it is NOT running on the GitHub runner because the short
+        # term GITHUB_TOKEN used for authentication is valid only
+        # during the lifetime of the workflow. In the future, for
+        # very long running workflows, consider using SSH deploy
+        # key authentication instead of GitHub tokens (max 6 hours).
+        run: |
+          sleep 999
+          while pgrep -x pw > /dev/null; do
+            echo pw workflow-executor is still running as process ID:
+            pgrep -x pw
+            echo Wait 5 seconds...
+            sleep 5
+          done
+          echo "All instances of pw have finished; workflow complete."
