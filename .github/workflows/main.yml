@@ -106,6 +106,7 @@ jobs:
         # very long running workflows, consider using SSH deploy
         # key authentication instead of GitHub tokens (max 6 hours).
         run: |
+	  sleep 999
           while pgrep -x pw > /dev/null; do
             echo pw workflow-executor is still running as process ID:
             pgrep -x pw
