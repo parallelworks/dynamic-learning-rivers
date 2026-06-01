@@ -71,7 +71,7 @@ jobs:
             "repositories": {
               "ml_arch_repo": "https://github.com/${{ github.repository }}",
               "ml_arch_branch": "${{ github.ref_name }}",
-              "ml_arch_token": "${{ secrets.GITHUB_TOKEN }}",
+              "ml_arch_token": "${{ secrets.PAT_FOR_PUSH }}",
               "push_to_gh": true,
               "ml_code_repo": "https://github.com/parallelworks/sl_core",
               "ml_data_repo": "https://github.com/parallelworks/global-river-databases"
