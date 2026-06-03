@@ -57,6 +57,12 @@ jobs:
         run: |
           git clone https://github.com/parallelworks/sl_core
           cd sl_core
+      - name: Check context
+        run: |
+          echo Print pwd
+          pwd
+          echo List directories
+          ls -alh
       - name: Launch workflow
         # PW CLI-based launch
         # Use folded style (>) for this long single command instead
