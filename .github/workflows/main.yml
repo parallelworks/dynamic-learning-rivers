@@ -5,8 +5,9 @@ on:
   # We previously launched the workflow on release. However,
   # a releas/tag is a static thing and points only to the state
   # of the repository BEFORE the machine learning runs (i.e.
-  # when the new input data is uploaded) so the release itself
-  # was not a snapshot of the final result.
+  # when the new input data is uploaded to start the ML
+  # workflow) so the release itself did not have a snapshot 
+  # of the final result (the ML models and their outputs).
   #release:
   #  types: [published]
   #------------------------------------------------------------
@@ -42,16 +43,21 @@ jobs:
         run: |
           pw auth apikey "${PW_API_KEY}"
           pw auth whoami
+      - name: Get Workflow
+        # We are going to use the workflow.yaml
+        # which defines the SuperLearner workflow
+        # directly from its repository and run it
+        # "inline" on ACTIVATE in the next step.
+        # An inline run means the SuperLearner
+        # workflow does not need to be added to 
+        # the user's ACTIVATE account in advance;
+        # the workflow definition is grabbed on-the-fly
+        # and based on the local state on this GitHub
+        # runner.
+        run: |
+          git clone https://github.com/parallelworks/sl_core
+          cd sl_core
       - name: Launch workflow
-        #------------------------------------
-        # OLD API LAUNCH HERE
-        #id: run-cloud-pw
-        #uses: parallelworks/test-workflow-action@v7.1
-        #with:
-        #  pw-user: 'sfgary'
-        #  resource-names: 'cloud'
-        #  workflow-name: 'sl_core'
-        #  workflow-parameters: '{"startCmd": "workflow.sh", "repos": { "ml_arch_repo": "git@github.com:parallelworks/dynamic-learning-rivers", "ml_arch_branch": "ICON-ModEx-v2", "push_to_gh": "true", "ml_code_repo": "https://github.com/parallelworks/sl_core", "ml_data_repo": "https://github.com/parallelworks/global-river-databases", "whost": { "type": "computeResource", "id": "636dec4b565b200008495822" }, "miniconda_loc": "/home/__USER__/.miniconda3", "my_env": "superlearner" }, "superlearner": { "train_test_data": "scripts/prep_06_output_final_train.csv", "predict_data": "scripts/prep_06_output_final_predict", "num_inputs": "25", "superlearner_conf": "sample_inputs/superlearner_conf_TTR_mms_log10_neg.py", "work_dir_base": "ml_models/sl_", "hpo": "true", "cross_val_score": "false", "smogn": "false", "onnx": "false", "backend": "loky", "n_jobs": "8", "num_inst": "10", "fpi_corr_cutoff": "50" } }'
         # PW CLI-based launch
         # Use folded style (>) for this long single command instead
         # of literal style (|).
@@ -67,7 +73,7 @@ jobs:
         # of the pw workflow-executor execute
         # process that is launched by pw workflow run.
         run: >
-          pw workflow run superlearner -i '{
+          pw workflow run workflow.yaml -i '{
             "repositories": {
               "ml_arch_repo": "https://github.com/${{ github.repository }}",
               "ml_arch_branch": "${{ github.ref_name }}",
