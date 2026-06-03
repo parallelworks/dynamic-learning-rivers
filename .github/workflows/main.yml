@@ -126,7 +126,7 @@ jobs:
             echo Wait 5 seconds...
             sleep 5
             echo Counting number of workflows that match filters...
-            flag=$( pw workflow runs ls | grep $slug | grep running )
-            echo Found ${flag} running workflows.
+            flag=$( pw workflow runs ls | grep $slug | grep running | wc -l )
+            echo Found ${flag} running ${slug} workflows.
           done
           echo "All instances of ${slug} have finished; workflow complete."
