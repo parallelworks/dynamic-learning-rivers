@@ -104,7 +104,7 @@ jobs:
               "num_inst": 10,
               "fpi_corr_cutoff": 50
             }
-          }' --name "modex-iteration-cloud-pw > pw-workflow-run.log"
+          }' --name "modex-iteration-cloud-pw" > pw-workflow-run.log
       - name: Wait for workflow completion
         # We need to wait for the workflow to complete, even though
         # it is NOT running on the GitHub runner because the short
