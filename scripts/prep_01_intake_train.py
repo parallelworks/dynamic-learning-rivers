@@ -23,7 +23,9 @@ data = pd.read_csv("../input_data/ICON-ModEx_Data.csv")
 # List the variables we want here.
 # Order of the list sets left-to-right column order in dataframe/csv output
 # Sample_Kit_ID is not unique - shared among sites
+# but we want to use it to assign group IDs for GroupShuffleSplit later.
 vars_to_use=[
+    'Sample_Kit_ID',
     'Sample_ID',
     'Sample_Longitude',
     'Sample_Latitude',
