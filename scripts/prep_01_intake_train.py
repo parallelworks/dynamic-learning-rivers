@@ -123,7 +123,7 @@ targets = core_vars.dropna(
 targets['gid'] = targets['Sample_Kit_ID'].astype('category').cat.codes
 
 # Drop Sample_Kit_ID
-targets.drop(columns=['Sample_Kit_ID'], inplace=true)
+targets.drop(columns=['Sample_Kit_ID'], inplace=True)
 
 # Reorder columns:
 vars_to_use[0] = 'Sample_ID'
