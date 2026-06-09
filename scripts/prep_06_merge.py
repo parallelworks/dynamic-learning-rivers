@@ -63,7 +63,7 @@ predict_merged_large = pd.read_csv('prep_05_output_large_predict.csv')
 # so predictions are made at all points exactly the
 # same way. Training predict sites can be filtered
 # out by site ID later. Training set has extra
-# target column, but this is transparently added
+# target and gid columns, but this is transparently added
 # and filled with NaN for the rows of the true
 # predict.  We drop this column later during the
 # writing to csv.
@@ -211,6 +211,13 @@ train_merged.to_csv(
     columns=csv_cols,
     mode='w',
     index=False)
+
+# Add gid for train ixy:
+ixy_cols = [
+    "Sample_ID",
+    "gid",
+    "Sample_Longitude",
+    "Sample_Latitude"]
 
 train_merged.to_csv(
     'prep_06_output_final_train.ixy',

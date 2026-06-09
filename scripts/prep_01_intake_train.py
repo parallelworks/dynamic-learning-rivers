@@ -22,8 +22,8 @@ data = pd.read_csv("../input_data/ICON-ModEx_Data.csv")
 
 # List the variables we want here.
 # Order of the list sets left-to-right column order in dataframe/csv output
-# Sample_Kit_ID is not unique - shared among sites
-# but we want to use it to assign group IDs for GroupShuffleSplit later.
+# Sample_Kit_ID is not unique - shared among sites but we keep it here
+# for group ID construction for GroupShuffleSplit
 vars_to_use=[
     'Sample_Kit_ID',
     'Sample_ID',
@@ -119,7 +119,19 @@ targets = core_vars.dropna(
 #            # Compute any missing DOSAT from T and DO_mg_per_L.
 #            targets.at[index,'Mean_DO_percent_saturation'] = 100.0*row['Mean_DO_mg_per_L']/o2_sat_mg_per_l 
 
+# Convert Sample_Kit_ID to group IDs:
+targets['gid'] = targets['Sample_Kit_ID'].astype('category').cat.codes
+
+# Drop Sample_Kit_ID
+targets.drop(columns=['Sample_Kit_ID'], inplace=true)
+
+# Reorder columns:
+vars_to_use[0] = 'Sample_ID'
+vars_to_use[1] = 'gid'
+targets = targets[vars_to_use]
+
 # Save results
 # Drop dataframe index
 # Overwrite existing file
 targets.to_csv('prep_01_output_train.csv', mode='w', index=False)
+

@@ -42,7 +42,10 @@ cd $prep_dir
 # Run multiple instances of run_colocate, one for each site
 # Careful - if running on many nodes, this can result in 
 # many docker pulls!
-awk -F, -v grd=${grd_abs_path} ' NR>1 {system("cd "grd"/scripts; sbatch -n 1 -c 1 --mem=0 --output=$HOME/slurm-%j.out --wrap \"./run_colocate.sh "$1" "$2" "$3"\"")}' prep_01_output_train.csv
+# Grabbing $1, $3, $4 from training set to skip $2 (group ID)
+# Equivalent lines for predict use $1, $2, $3 since there is
+# no group ID for predict data.
+awk -F, -v grd=${grd_abs_path} ' NR>1 {system("cd "grd"/scripts; sbatch -n 1 -c 1 --mem=0 --output=$HOME/slurm-%j.out --wrap \"./run_colocate.sh "$1" "$3" "$4"\"")}' prep_01_output_train.csv
 
 # Wait for queue to empty
 n_squeue="2"
