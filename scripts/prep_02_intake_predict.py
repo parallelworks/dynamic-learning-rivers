@@ -8,7 +8,6 @@ data = pd.read_csv("../input_data/ICON-ModEx_Collaborator_Site_Water_Chemistry_D
 
 # List the variables we want here.
 # Order of the list sets left-to-right column order in dataframe/csv output
-# Sample_Kit_ID is not unique - shared among sites
 # Put oxygen last b/c need to add DOSAT on the left side.
 vars_to_use=[
     'Site_ID',
