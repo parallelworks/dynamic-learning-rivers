@@ -84,7 +84,7 @@ jobs:
               "ml_data_repo": "https://github.com/parallelworks/global-river-databases"
             },
             "resources": {
-              "whost": "pw://pwdemo.stefan/gce",
+              "whost": "pw://pwdemo.stefan/superlearner",
               "miniconda_loc": "/home/${USER}/.miniconda3",
               "my_env": "superlearner"
             },
