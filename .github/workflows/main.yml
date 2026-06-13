@@ -90,7 +90,7 @@ jobs:
             },
             "superlearner": {
               "train_test_data": "scripts/prep_06_output_final_train.csv",
-              "train_test_groups": "scripts/prep_06_output_final_gid.csv",
+              "train_test_groups": "scripts/prep_06_output_final_train.ixy",
               "predict_data": "scripts/prep_06_output_final_predict",
               "num_inputs": 25,
               "superlearner_conf": "sample_inputs/superlearner_conf.py",
