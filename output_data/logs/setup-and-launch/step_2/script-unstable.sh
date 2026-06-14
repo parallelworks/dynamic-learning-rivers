@@ -1,0 +1,43 @@
+#!/bin/bash
+export CI=true
+export GITHUB_TOKEN='ghs_15368_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOjE1MzY4LCJhdWQiOiIvdHdpcnAvZ2l0aHViLmF1dGhlbnRpY2F0aW9uLnYwLkNyZWRlbnRpYWxNYW5hZ2VyLyIsImF6YyI6WyJzaXRlLzE4NzExMTk3OTIzIl0sImV4cCI6MTc4MTQ2NzQxMiwiaWF0IjoxNzgxNDYzODEyLCJpc3MiOiJnaXRodWIiLCJqdGkiOiI4NDA5YTA3MS1kYWQ0LTQ5YzQtODFmNy1iMDk0MGU0ZGIwMWQiLCJzdWIiOiJpbnRlZ3JhdGlvbi8xNTM2OCJ9.04du_Uk-ps8jiNqkx0aV4v-f0ExYyQx52QBVN_2ev_tGJLE2yOudZ-lWW5SGXX6JnDbBg7Nesrlq8cxcV9YDUA'
+export GH_TOKEN='ghs_15368_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOjE1MzY4LCJhdWQiOiIvdHdpcnAvZ2l0aHViLmF1dGhlbnRpY2F0aW9uLnYwLkNyZWRlbnRpYWxNYW5hZ2VyLyIsImF6YyI6WyJzaXRlLzE4NzExMTk3OTIzIl0sImV4cCI6MTc4MTQ2NzQxMiwiaWF0IjoxNzgxNDYzODEyLCJpc3MiOiJnaXRodWIiLCJqdGkiOiI4NDA5YTA3MS1kYWQ0LTQ5YzQtODFmNy1iMDk0MGU0ZGIwMWQiLCJzdWIiOiJpbnRlZ3JhdGlvbi8xNTM2OCJ9.04du_Uk-ps8jiNqkx0aV4v-f0ExYyQx52QBVN_2ev_tGJLE2yOudZ-lWW5SGXX6JnDbBg7Nesrlq8cxcV9YDUA'
+export PW_USER="pwdemo.stefan"
+export PW_PARENT_JOB_DIR="/home/pwdemo.stefan/pw/jobs/advanced-bobcat"
+export PW_JOB_DIR="/home/pwdemo.stefan/pw/jobs/advanced-bobcat"
+export PW_PARENT_NAME="inline.advanced-bobcat"
+export PW_WORKFLOW_NAME="inline.advanced-bobcat"
+export PW_JOB_NUMBER="00001"
+export PW_JOBS_DIR="/home/pwdemo.stefan/pw/jobs/"
+export PW_JOB_ID="inline.advanced-bobcat-00001"
+export PW_API_KEY="eyJhbGciOiJSUzI1NiIsImtpZCI6InUxY21pS0pvNEI2LXVkY0xtZEJ3dUtMZHlaaDY2dF8xTXptVTFYNUw3aDgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ3b3JrZmxvdy1ydW46NmEyZWZiMDdjNGUyNjRmZTUxODM1OGRjIiwic3ViIjoidXNlcjpwd2RlbW8uc3RlZmFuIiwiYXVkIjpbIndvcmtmbG93LXJ1bjo2YTJlZmIwN2M0ZTI2NGZlNTE4MzU4ZGMiXSwiZXhwIjoxNzg0MDU1ODE1LCJpYXQiOjE3ODE0NjM4MTUsInBsYXRmb3JtX2hvc3QiOiJhY3RpdmF0ZS5wYXJhbGxlbC53b3JrcyIsImdyb3VwcyI6W10sImZlYXR1cmVzIjpudWxsfQ.uw3jE02h7yYw7loycyokeQDamm7KN6DwFCKY_PM_RDfES-An8waEDIvrHzTcObD58Y4Ha_9ofqsQxZQeyabl_nBF_vwh_CkK7XZS-DdwDa81TTDc0TnuhJbE2ZIV9STux9KH9iBpBE7aazBfXjtgrIaB31awQlGeOQ-mEeGIBYb-C3Gx0_Kayn4R6ZiG8HaJJwlNAaifycrQBVDVHzElMgV8i9qRB-BCsskAn_H9fb4G5SBH-Gne24YdiYGDh5GNYrhn2y05QXQ6y4cK6vZe_WVCbDByRSEQh0uaBWyrAQXjqyCk-w_CCuGDFRD-esty52LvCchepU9gksj-gL9QYxAfk5pSrAGSxUXqOcwrk86yaXei0gZe6NeAokmNh4a03Ag3M23xlIOsy5e3o4JAIPzVLXzznkUWEIctdKzTasPgmPVs-a5SZpBWJBTwSIJ3qdxaoqg506zkNr9gSYI88HW6O7bZTmY3aXco1aFg2PoVmYe7JBzUR_n5o13MmdXOPay3N-H72zvEetLFhHDEGfuM3YYSppnP8d36sU90hvWlKgqgJ3-Sle4k5ycvuGVf5s3-vatPpYI2Pm8F5MOANFikGclrQXQUeVuyVfmAhHXj2AdCEmHBnH2boquXVthVSspCRiOTMpox2NMOyvotkTQ2JFcy5EkK8LXpnZviWKc"
+export PW_PLATFORM_HOST="activate.parallel.works"
+export PW_RUN_SLUG="advanced-bobcat"
+export PW_WORKFLOW_STEP_CURRENT_RETRY=0
+export PW_WORKFLOW_STEP_MAX_RETRIES=0
+export OUTPUTS="/home/pwdemo.stefan/pw/jobs/advanced-bobcat/logs/setup-and-launch/outputs-unstable"
+cd /home/pwdemo.stefan/pw/jobs/advanced-bobcat/logs/setup-and-launch/step_2
+echo $$ > step.pid
+cd /home/pwdemo.stefan/pw/jobs/advanced-bobcat
+
+export "PATH=${PATH}:~/bin/gh/bin"
+echo "Length check:"
+echo "len=${#GH_TOKEN}"
+echo "Start check:"
+echo "first=${GH_TOKEN:0:4}"
+echo $GITHUB_TOKEN | gh auth login --with-token
+#gh auth status
+if [[ ${GH_TOKEN:0:4} == "ghs_" ]]; then
+  # Using GITHUB_TOKEN from Action
+  gh_login_name="github-actions[bot]"
+else
+  # Using a PAT
+  gh_login_name=$(gh api user -q ".login" 2>/dev/null)
+fi
+# Autodectect one liner does not always work.
+#gh_login_name=$(gh api user -q ".login" 2>/dev/null || echo "github-actions[bot]")
+echo Detected GitHub login name: ${gh_login_name}
+git config --global user.name ${gh_login_name}
+git config --global user.email ${gh_login_name}@users.noreply.github.com
+gh auth setup-git
+
