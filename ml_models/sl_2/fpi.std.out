@@ -1,0 +1,57 @@
+Parsing SuperLearner FPI arguments...
+--model_dir
+--predict_var
+--num_inputs
+--corr_cutoff
+--predict_data
+Submodels within SuperLearner and their weights:
+['nusvr-rbf', 'nusvr-lin', 'nusvr-poly', 'nusvr-sig', 'knn-uni', 'knn-dist', 'pls', 'mlp', 'ridge', 'lasso', 'linear', 'enet', 'huber', 'xgb', 'etr']
+[10.6347218  0.         0.         0.         0.         0.490118
+  0.         0.         0.         0.         0.         0.
+  0.         0.         0.       ]
+Did not detect any one-hot features.
+Started with 25 features.
+Finishing with 19 features in 4 groups.
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse;RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva;Mean_DO_percent_saturation,Mean_DO_mg_per_L;slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse,prm_pc_cse
+Loading model for job: 0
+FPI on stacked ensemble...
+FPI on ML model: nusvr-rbf...
+FPI on ML model: knn-dist...
+                                                    Avg_Ratiostack0  Std_Ratiostack0
+Feature                                                                             
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst...         1.615823         0.032388
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                   1.734344         0.037714
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                1.301048         0.019035
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_...         1.856709         0.054340
+ppd_pk_cav                                                 1.195083         0.019005
+crp_pc_cse                                                 1.271067         0.022568
+ire_pc_cse                                                 1.165143         0.020437
+gla_pc_cse                                                 1.003170         0.004040
+pH                                                         1.302238         0.020823
+sgr_dk_rav                                                 1.089412         0.009315
+--------nusvr-rbf---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                               1.000392
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                             1.001291
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                                          1.001191
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse,prm_pc_cse    1.003207
+ppd_pk_cav                                                                           1.000386
+crp_pc_cse                                                                           1.000888
+ire_pc_cse                                                                           1.000428
+gla_pc_cse                                                                           1.000025
+pH                                                                                   1.000503
+sgr_dk_rav                                                                           1.000063
+Name: Avg_Rationusvr-rbf0, dtype: float64
+--------knn-dist---------
+Feature
+run_mm_cyr,pre_mm_cyr,pre_mm_cdi,tmp_dc_cdi,pst_pc_cse                               2.122434
+RA_SO,RA_dm,RA_ms_di,RA_ms_av,dor_pc_pva                                             2.331774
+Mean_DO_percent_saturation,Mean_DO_mg_per_L                                          1.424841
+slp_dg_cav,gwt_cm_cav,ele_mt_cav,Mean_Temp_Deg_C,tmp_dc_cyr,for_pc_cse,prm_pc_cse    2.657641
+ppd_pk_cav                                                                           1.227619
+crp_pc_cse                                                                           1.381727
+ire_pc_cse                                                                           1.232053
+gla_pc_cse                                                                           1.002382
+pH                                                                                   1.463332
+sgr_dk_rav                                                                           1.087553
+Name: Avg_Ratioknn-dist0, dtype: float64
