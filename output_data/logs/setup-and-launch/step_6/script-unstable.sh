@@ -1,0 +1,68 @@
+#!/bin/bash
+export CI=true
+export PW_USER="pwdemo.stefan"
+export PW_PARENT_JOB_DIR="/home/pwdemo.stefan/pw/jobs/engaging-lamb"
+export PW_JOB_DIR="/home/pwdemo.stefan/pw/jobs/engaging-lamb"
+export PW_PARENT_NAME="inline.engaging-lamb"
+export PW_WORKFLOW_NAME="inline.engaging-lamb"
+export PW_JOB_NUMBER="00001"
+export PW_JOBS_DIR="/home/pwdemo.stefan/pw/jobs/"
+export PW_JOB_ID="inline.engaging-lamb-00001"
+export PW_API_KEY="eyJhbGciOiJSUzI1NiIsImtpZCI6InUxY21pS0pvNEI2LXVkY0xtZEJ3dUtMZHlaaDY2dF8xTXptVTFYNUw3aDgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ3b3JrZmxvdy1ydW46NmEyZWEzNjljZDE4NmRmNjljZmJkZDZmIiwic3ViIjoidXNlcjpwd2RlbW8uc3RlZmFuIiwiYXVkIjpbIndvcmtmbG93LXJ1bjo2YTJlYTM2OWNkMTg2ZGY2OWNmYmRkNmYiXSwiZXhwIjoxNzg0MDMzMzg1LCJpYXQiOjE3ODE0NDEzODUsInBsYXRmb3JtX2hvc3QiOiJhY3RpdmF0ZS5wYXJhbGxlbC53b3JrcyIsImdyb3VwcyI6W10sImZlYXR1cmVzIjpudWxsfQ.1bIxNEZaAMCYLY1WTs-wcBJQmLKZ_coTPvbpX7CCfPiij0BNYh2G_F4zSUKlloQdkZbxQTPMPMFm3_NraK7MEZLqciGZKWDpqPHhLpM2zSReuLXr33J2Du-6DVdWni9dFXDJSZIb7yRBVp-Eh6agHpqSeMerwhDtnbB9t5C9Ky3CY-0JuOqI5V8gkem80tQX9wNyQg2ugdZ8AvQjwAKKlX_g927dMxw7750g2Ibyx22IP-ANIe7U3ZK4JaTLHTByaqQQRRmVUK4B-2hkhzynJxgCkvk3rXejP05ob3ApfRhoAE7jDz8Nws9wrPv9CKEU1MyW27x_GDkGI2ubGHcwFv77N6w6U0j170rmbx9Qdj_F_XHl-zjXh0j85ZpKdKHTy5oGIX-S5abDhQpQ-l1BwsIbqGsRnJq69BEBj93tAPXwhTlo5le6xbopyGcOjeBb07uDsmGquciknXkrx_Lj6wXBDirrsQ09GBd4f5hDYMjUbhj_LaP3SlXByXXL2aq1OGcpB62eMBRxQVKpIJYg9mqmlYi6PqFY81uzuM3nIoR15ZfR_VbKCLBJDxPbMVlceasxIs1aeVuD6srPory00hONy8KQnqyOYZx7gSYcY2gHGq_Ty7Kg0RGd9toMhSzV-tqTAVRKeIR-mu9p9AQpDPvKn3Jb2FCUXPC7ANVwNNw"
+export PW_PLATFORM_HOST="activate.parallel.works"
+export PW_RUN_SLUG="engaging-lamb"
+export PW_WORKFLOW_STEP_CURRENT_RETRY=0
+export PW_WORKFLOW_STEP_MAX_RETRIES=0
+export OUTPUTS="/home/pwdemo.stefan/pw/jobs/engaging-lamb/logs/setup-and-launch/outputs-unstable"
+cd /home/pwdemo.stefan/pw/jobs/engaging-lamb/logs/setup-and-launch/step_6
+echo $$ > step.pid
+cd /home/pwdemo.stefan/pw/jobs/engaging-lamb
+
+echo "===================================="
+echo "Setting target name..."
+target_name="Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment"
+echo "Set target name to ${target_name}"
+echo "===================================="
+echo "Converting FPI correlation cutoff from integer 1-100 to decimal 0-1..."
+echo "Starting with cutoff of 50"
+superlearner_fpi_corr_cutoff=`echo 50 | awk '{print $1/100}'`
+echo "Converted to $superlearner_fpi_corr_cutoff"
+echo "===================================="
+for (( ii=0; ii<10; ii++ ))
+do
+  # Launch a single SuperLearner job
+  work_dir=${HOME}/$(basename https://github.com/parallelworks/dynamic-learning-rivers )/ml_models/sl_${ii}
+  echo "=======> Deleting any existing data in ${work_dir}"
+  rm -rf ${work_dir}
+  echo "=======> Creating work dir: ${work_dir}"
+  mkdir -p ${work_dir}
+  echo "======> Building job card ${ii}"
+  cat << EOF > sl.Jul-2022-log10-gss.${ii}.sbatch
+#!/bin/bash
+#SBATCH --exclusive
+#SBATCH --job-name=Jul-2022-log10-gss.${ii}
+#SBATCH --output=sl.std.out.Jul-2022-log10-gss.${ii}
+cd ${HOME}/$(basename https://github.com/parallelworks/sl_core)
+./train_predict_eval.sh \
+  ${HOME}/$(basename https://github.com/parallelworks/dynamic-learning-rivers)/scripts/prep_06_output_final_train.csv \
+  ${HOME}/$(basename https://github.com/parallelworks/dynamic-learning-rivers)/scripts/prep_06_output_final_train.ixy \
+  25 \
+  ${HOME}/$(basename https://github.com/parallelworks/sl_core)/sample_inputs/superlearner_conf.py \
+  ${HOME}/$(basename https://github.com/parallelworks/dynamic-learning-rivers)/ml_models/sl_${ii} \
+  /home/${USER}/.miniconda3 \
+  superlearner \
+  true \
+  true \
+  false \
+  false \
+  8 \
+  loky \
+  ${target_name} \
+  ${HOME}/$(basename https://github.com/parallelworks/dynamic-learning-rivers)/scripts/prep_06_output_final_predict \
+  $superlearner_fpi_corr_cutoff
+EOF
+  echo "======> Launching SuperLearner ${ii}"
+  sbatch sl.Jul-2022-log10-gss.${ii}.sbatch
+done
+echo "===================================="
+

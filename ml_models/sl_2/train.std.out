@@ -1,0 +1,66 @@
+1.5.1
+Parsing SuperLearner input arguments...
+--conda_sh
+--superlearner_conf
+--n_jobs
+--num_inputs
+--predict_var
+--cross_val_score
+--model_dir
+--hpo
+--smogn
+--data
+--groups
+--backend
+NOTICE: Filling any NaN with mean values!
+NaN in training data will cause a crash.
+Loading SuperLearner configuration...
+Loading from: /home/pwdemo.stefan/sl_core/sample_inputs/superlearner_conf.py
+Dirname:  /home/pwdemo.stefan/sl_core/sample_inputs
+Basename: superlearner_conf
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator nusvr-rbf
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator nusvr-lin
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator nusvr-poly
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator nusvr-sig
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator knn-uni
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator knn-dist
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator pls
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator mlp
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator ridge
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator lasso
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator linear
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator enet
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator huber
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator xgb
+Running HPO for output Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment and estimator etr
+Defining estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Training estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Cross-validation metrics:
+{
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": {
+        "all": [
+            0.019091483183905855,
+            0.05136231727407714,
+            -0.03508140501626489,
+            -0.02157315800595927,
+            -1.0531825886751927
+        ],
+        "mean": -0.20787667024788678,
+        "std": 0.4237519777917329
+    }
+}
+Statistics of the cross-validation metrics:
+Evaluating estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Evaluating estimator on holdout(test) high/low set for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Hold out metrics:
+{
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": -0.100722148996236,
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment_high": -7.999178825984467,
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment_low": -597.2732681092075
+}
+Evaluating estimator for output: Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment
+Classical metrics:
+{
+    "Normalized_Respiration_Rate_mg_DO_per_H_per_L_sediment": 0.31466224517823427
+}
+Save train/test data
