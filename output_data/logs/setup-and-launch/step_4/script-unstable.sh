@@ -1,0 +1,32 @@
+#!/bin/bash
+export CI=true
+export PW_USER="pwdemo.stefan"
+export PW_PARENT_JOB_DIR="/home/pwdemo.stefan/pw/jobs/exciting-liger"
+export PW_JOB_DIR="/home/pwdemo.stefan/pw/jobs/exciting-liger"
+export PW_PARENT_NAME="inline.exciting-liger"
+export PW_WORKFLOW_NAME="inline.exciting-liger"
+export PW_JOB_NUMBER="00001"
+export PW_JOBS_DIR="/home/pwdemo.stefan/pw/jobs/"
+export PW_JOB_ID="inline.exciting-liger-00001"
+export PW_API_KEY="eyJhbGciOiJSUzI1NiIsImtpZCI6InUxY21pS0pvNEI2LXVkY0xtZEJ3dUtMZHlaaDY2dF8xTXptVTFYNUw3aDgiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJ3b3JrZmxvdy1ydW46NmEyZWQ1ODRjNGUyNjRmZTUxODM0NDUwIiwic3ViIjoidXNlcjpwd2RlbW8uc3RlZmFuIiwiYXVkIjpbIndvcmtmbG93LXJ1bjo2YTJlZDU4NGM0ZTI2NGZlNTE4MzQ0NTAiXSwiZXhwIjoxNzg0MDQ2MjEyLCJpYXQiOjE3ODE0NTQyMTIsInBsYXRmb3JtX2hvc3QiOiJhY3RpdmF0ZS5wYXJhbGxlbC53b3JrcyIsImdyb3VwcyI6W10sImZlYXR1cmVzIjpudWxsfQ.RLgrsXtSJXPNK2AxfkZ9aTKzo3CCVhUQWUl1f86UQ_m5RpzN4JMvlbdbU9V97WxWiaqfBrLn0vB7AMFf1OBmjSYmHa0N-tWMu4J3MdGT2Pv4F8FEwCwu9nafDZaTT4QZJ6ZoSmopso9yFe2FvE-gE_SUPfaXVUuuqPVGFqwy17mI0sQ5yMNYxyG582rrChqY35RYZKMIqehF8gdad6-qRPqF3vE1k7JzY9DYkn4bppKib5GO_iqvDOq3BEu2jNyYvITgZEl-o7EGf-UG6qA5UFYKJahifezQH1M-dmUVUtUJY4eywSHLrLHn2PqSG2tX9JzITNA-m2oy4apsQ9jUFDIQTMk7fAoLSHwtnZQ8xBvUHlYRQZp3tVxY2feIwn7wF8iqPq_zzCNKJZzaadKVfXbsvr0aGju0-4xdSSlcunfm7DtXLQUTQEz9qyK7luLTYztrUlO60570LPLGQAbjhmcrmia13WM2VN1yW0QzIleXqq3SbjMgtqHZALcVpRUoW5IT7XVXlwaPOwv1r7RdKj3j90qULbVTRsFFohUbRGtskirF0mG9FAYnDLMLq_UEVXQ16Q4BiSdjs0QY4yHxv2TgkpEALeEKohVvLmTIH_ot-0ieTnpFSMJmJTZypFZ0VS8iRDeL0Inql9p6X9CzOf-mV9mPnmdb0GLKRr3mA1U"
+export PW_PLATFORM_HOST="activate.parallel.works"
+export PW_RUN_SLUG="exciting-liger"
+export PW_WORKFLOW_STEP_CURRENT_RETRY=0
+export PW_WORKFLOW_STEP_MAX_RETRIES=0
+export OUTPUTS="/home/pwdemo.stefan/pw/jobs/exciting-liger/logs/setup-and-launch/outputs-unstable"
+cd /home/pwdemo.stefan/pw/jobs/exciting-liger/logs/setup-and-launch/step_4
+echo $$ > step.pid
+cd /home/pwdemo.stefan/pw/jobs/exciting-liger
+
+echo "======> Test for presence of Conda environment"
+ls /home/${USER}/.miniconda3
+if [ $? -ne 0 ]; then
+  echo "======> No Conda found; install Conda environment for SuperLearner."
+  echo This process can take several minutes.
+  cd ${HOME}
+  cd $(basename https://github.com/parallelworks/sl_core )
+  ./create_conda_env.sh /home/${USER}/.miniconda3 superlearner
+else
+  echo "======> Conda found!  Assuming no need to install."
+fi
+
