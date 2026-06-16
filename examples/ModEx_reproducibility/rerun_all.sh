@@ -28,8 +28,14 @@ echo Running in $PWD sandbox dir
 # Clone the repo (do this once in advance)
 git clone https://github.com/parallelworks/dynamic-learning-rivers
 cd dynamic-learning-rivers
+echo Now in $PWD
+git pull
 
 # Define the branches we want to rerun
+#list_branches=( \
+#    "test-y2023m09-w-log" \
+#    "Summer-2019-log10" )
+
 list_branches=( \
     'Dec-2021a-log10' \
     'Dec-2021b-log10' \
@@ -57,9 +63,10 @@ for rerun_branch in "${list_branches[@]}"; do
 
     # Checkout
     git checkout $rerun_branch
+    git pull
 
     # Copy input files out of repo
-    cp -iv ./input_files/ICON-ModEx_*.csv ../
+    cp -iv ./input_data/ICON-ModEx_*.csv ../
 
     # Define output branch name with gss
     # ending for GroupShuffleSplit. Only keep
@@ -69,14 +76,17 @@ for rerun_branch in "${list_branches[@]}"; do
     new_branch=$(echo $rerun_branch | awk -F- '{OFS="-"; print $1,$2,$3,"gss"}')
     
     # Create output branch from main
+    git checkout main
+    git pull
     echo Creating new branch $new_branch
     git branch $new_branch main
 
     # Checkout output branch
     git checkout $new_branch
+    git pull
 
     # Move input files from prevous branch into input_data, overwriting.
-    mv -vf ../ICON-ModEx_*.csv ./input_files/
+    mv -vf ../ICON-ModEx_*.csv ./input_data/
 
     # Add, commit, and push. This launches the GitHub Action which start workflow on platform
     git add .
@@ -84,9 +94,15 @@ for rerun_branch in "${list_branches[@]}"; do
     git push origin $new_branch
 
     # Force loop to wait until the GitHub Action (and the workflow) is complete
+    echo Wait 60 s for Action to start running...
+    sleep 60
     run_id=$(gh run list --repo parallelworks/dynamic-learning-rivers --workflow .github/workflows/main.yml --limit 1 --json databaseId -q '.[0].databaseId')
-    echo Waiting on run ID $run_id
-    gh run watch "$run_id" --repo parallelworks/dynamic-learning-rivers --exit-status
+    echo Waiting on run ID $run_id for another 60 s...
+    sleep 60
+    echo Starting gh run watch...
+    gh run watch "$run_id" --repo parallelworks/dynamic-learning-rivers --interval 30 --exit-status | cat
+    echo Done waiting on run ID $run_id
+    echo Moving to next branch...
 done
 
 
