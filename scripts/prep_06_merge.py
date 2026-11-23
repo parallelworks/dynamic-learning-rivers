@@ -225,3 +225,8 @@ train_merged.to_csv(
     mode='w',
     index=False)
 
+# Print out one more file with all training data.
+train_merged.to_csv(
+    'prep_06_output_ALL_train.csv',
+    mode='w',
+    index=False)
